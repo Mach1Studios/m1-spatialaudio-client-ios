@@ -1,0 +1,9 @@
+CF_APP_NAME = DEV - Mach1 Spatial Music Player
+CF_APP_VERSION = 0.1
+CF_APP_BUNDLE_IDENTIFIER = com.mach1.dev.spatial.music.player
+CF_APP_ICON = AppIconDevelopment
+CF_BACKEND_URL = https:\/\/dev.api.mach1.com\/res\/v1
+CF_TIME_OUT_INTERVAL_FOR_REQUEST = 30
+CF_TIME_OUT_INTERVAL_FOR_RESOURCE = 200
+CF_HTTP_MAXIMUM_CONNECTIONS_PER_HOST = 20
+CF_REQUEST_CACHE_ENABLED = false
