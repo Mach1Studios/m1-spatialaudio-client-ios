@@ -1,6 +1,7 @@
 import SwiftUI
 
 enum Mach1Margin: CGFloat {
+    case VBig = 24.0
     case Big = 16.0
     case Normal = 12.0
     case Small = 8.0
@@ -21,6 +22,10 @@ enum Mach1TextSize: CGFloat {
 }
 
 struct Constants {
+    
+    struct Dimension {
+        static let progressBar: CGFloat = 100.0
+    }
     
     struct Rounded {
         static let value: CGFloat = 8.0

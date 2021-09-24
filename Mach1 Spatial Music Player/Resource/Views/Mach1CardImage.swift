@@ -50,8 +50,7 @@ struct Mach1CardImage: View {
 
 struct Mach1CardImage_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Color.Mach1Dark.ignoresSafeArea()
+        Mach1View {
             Mach1CardImage(
                 title: "Title",
                 url: URL(string: ""),

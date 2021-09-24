@@ -25,8 +25,7 @@ struct CorrugatedRectangle: Shape {
 
 struct CorrugatedShape_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Color.Mach1Dark.ignoresSafeArea()
+        Mach1View {
             CorrugatedRectangle()
                 .fill(LinearGradient(gradient: Gradient(colors: [.Mach1Dark, .Mach1Yellow]), startPoint: .bottom, endPoint: .top))
                 .foregroundColor(.Mach1Yellow)

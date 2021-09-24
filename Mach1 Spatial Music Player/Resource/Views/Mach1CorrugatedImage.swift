@@ -35,8 +35,7 @@ struct Mach1CorrugatedImage: View {
 
 struct Mach1CorrugatedImage_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Color.Mach1Dark.ignoresSafeArea()
+        Mach1View {
             Mach1CorrugatedImage(
                 url: URL(string: ""),
                 height: Constants.Image.Dimension.VeryBig,

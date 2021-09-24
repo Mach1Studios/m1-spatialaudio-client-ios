@@ -33,8 +33,7 @@ struct Mach1SegmentedPicker<TYPE: Hashable>: View {
 struct Mach1SegmentedPicker_Previews: PreviewProvider {
     @State static private var selectedTab: ExampleType = .One
     static var previews: some View {
-        ZStack {
-            Color.Mach1Dark.ignoresSafeArea()
+        Mach1View {
             Mach1SegmentedPicker($selectedTab, options: ExampleType.allCases)
         }
     }

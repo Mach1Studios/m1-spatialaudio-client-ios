@@ -16,6 +16,12 @@
 	<string>$(CF_TIME_OUT_INTERVAL_FOR_RESOURCE)</string>
 	<key>Time out resource</key>
 	<string>$(CF_TIME_OUT_INTERVAL_FOR_RESOURCE)</string>
+	<key>App name</key>
+	<string>${CF_APP_NAME}</string>
+	<key>Is log enabled</key>
+	<string>$(CF_LOG_ENABLED)</string>
+	<key>Need mocked repositories</key>
+	<string>$(CF_MOCKED_REPOSITORIES)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>ProximaNovaRegular.otf</string>

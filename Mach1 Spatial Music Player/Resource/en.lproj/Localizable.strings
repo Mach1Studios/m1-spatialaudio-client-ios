@@ -1,2 +1,11 @@
 "Invalid URL" = "Invalid URL";
 "Unexpected response from the server" = "Unexpected error";
+"Not implemented" = "Functionality is not implemented";
+"Sign up" = "Sign up";
+"Login" = "Login";
+"Insert username" = "Insert username";
+"Insert password" = "Insert password";
+"Error" = "Error";
+"Close" = "Close";
+"Insert email" = "Insert email address";
+"Register" = "Register";

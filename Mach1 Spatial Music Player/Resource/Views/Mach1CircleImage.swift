@@ -46,8 +46,7 @@ struct Mach1CircleImage: View {
 
 struct Mach1CircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Color.Mach1Dark.ignoresSafeArea()
+        Mach1View {
             Mach1CircleImage(
             url: URL(string: ""),
             dimension: Constants.Image.Dimension.Big,

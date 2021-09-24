@@ -51,8 +51,7 @@ extension Text {
 
 struct TextStyles_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Color.Mach1Dark.ignoresSafeArea()
+        Mach1View {
             VStack {
                 Text("Title").foregroundColor(Color.Mach1Yellow).textStyle(TitleStyle())
                 Text("Sub title").textStyle(SubTitleStyle())

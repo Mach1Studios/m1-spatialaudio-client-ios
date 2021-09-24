@@ -45,8 +45,7 @@ private struct PlaceholderStyle: ViewModifier {
 struct Mach1TextField_Previews: PreviewProvider {
     @State static private var inputField = ""
     static var previews: some View {
-        ZStack {
-            Color.Mach1Dark.ignoresSafeArea()
+        Mach1View {
             Mach1TextField(text: $inputField, placeHolder: "Enter..").padding()
         }
     }

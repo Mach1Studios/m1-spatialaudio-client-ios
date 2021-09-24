@@ -18,19 +18,19 @@ protocol WebSessionProviding {
 
 struct WebSessionProvider: WebSessionProviding {
     @Inject(\.authorization) var userAuthorization: UserAuthorization
-    @ConfigurationProperty var timeOutRequest: String = "Time out request"
-    @ConfigurationProperty var timeOutResource: String = "Time out resource"
-    @ConfigurationProperty var maxHttpConnectionPerHost: String = "Max http connection per host"
-    @ConfigurationProperty var isRequestCacheEnabled: String = "Is request cache enabled"
+    @ConfigurationProperty(key: "Time out request", defaultValue: 15) var timeOutRequest: Int
+    @ConfigurationProperty(key: "Time out resource", defaultValue: 120) var timeOutResource: Int
+    @ConfigurationProperty(key: "Max http connection per host", defaultValue: 5) var maxHttpConnectionPerHost: Int
+    @ConfigurationProperty(key: "Is request cache enabled", defaultValue: false) var isRequestCacheEnabled: Bool
     
     func configured() -> URLSession {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = TimeInterval(timeOutRequest) ?? 15
-        configuration.timeoutIntervalForResource = TimeInterval(timeOutResource) ?? 120
+        configuration.timeoutIntervalForRequest = TimeInterval(timeOutRequest)
+        configuration.timeoutIntervalForResource = TimeInterval(timeOutResource)
         configuration.httpAdditionalHeaders = getHeaders()
         configuration.waitsForConnectivity = true
-        configuration.httpMaximumConnectionsPerHost = Int(maxHttpConnectionPerHost) ?? 5
-        if (Bool(isRequestCacheEnabled) ?? false) {
+        configuration.httpMaximumConnectionsPerHost = Int(maxHttpConnectionPerHost)
+        if (isRequestCacheEnabled) {
             // HEADER: "Cache-Control max-age: 60"
             configuration.requestCachePolicy = .returnCacheDataElseLoad
             configuration.urlCache = .shared
