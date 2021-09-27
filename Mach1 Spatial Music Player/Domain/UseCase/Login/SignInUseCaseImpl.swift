@@ -13,13 +13,14 @@ extension InjectedValues {
 
 actor SignInUseCaseImpl: SignInUseCase {
     @Inject(\.logger) private var logger: LoggerFactory
-    @Inject(\.signInRepository) var repository: SignInRepository
+    @Inject(\.signInRepository) private var repository: SignInRepository
+    @Inject(\.authorization) private var userAuthorization: UserAuthorization
     
     func execute(params: SignIn) async throws {
         logger.info("USE CASE: \(type(of: self))", LoggerCategoryType.Login)
         logger.info("Sign in with \(params.username), \(params.password)", LoggerCategoryType.Login)
         let response = try await repository.signIn(dto: SignInRequestDTO(userName: params.username, password: params.password))
         logger.info("Response sign in token \(response.token)", LoggerCategoryType.Login)
-        // TODO save to user defaults and update authorization class Token(value: response)
+        userAuthorization.save(token: response.token)
     }
 }

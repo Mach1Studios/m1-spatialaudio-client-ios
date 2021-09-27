@@ -60,6 +60,8 @@
 		98D22D8526EF39B800285854 /* Mach1_Spatial_Music_PlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D22D8426EF39B800285854 /* Mach1_Spatial_Music_PlayerApp.swift */; };
 		98D22D8926EF39B900285854 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D22D8826EF39B900285854 /* Icons.xcassets */; };
 		98D22DB326EF405200285854 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 98D22DB226EF405200285854 /* Preview Content */; };
+		98D887DE2701FD4D00C09F2D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D887DD2701FD4D00C09F2D /* HomeView.swift */; };
+		98E443712701ED000003338A /* AppRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E443702701ED000003338A /* AppRoutingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +123,8 @@
 		98D22DB126EF3E9200285854 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		98D22DB226EF405200285854 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Preview Content"; sourceTree = "<group>"; };
 		98D22DB426EF4AE200285854 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		98D887DD2701FD4D00C09F2D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		98E443702701ED000003338A /* AppRoutingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoutingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				983FC03C26FDF23900F98089 /* Interfaces */,
+				98E4436F2701ECF10003338A /* Routing */,
 				98B91E9226FB6783008EA8D2 /* Login */,
+				98D887DA2701FCDD00C09F2D /* Home */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -509,6 +515,38 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		98D887DA2701FCDD00C09F2D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				98D887DB2701FD3300C09F2D /* View */,
+				98D887DC2701FD3800C09F2D /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		98D887DB2701FD3300C09F2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98D887DD2701FD4D00C09F2D /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		98D887DC2701FD3800C09F2D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		98E4436F2701ECF10003338A /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				98E443702701ED000003338A /* AppRoutingView.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -589,6 +627,7 @@
 				98827BDF26F3408000C6BA8E /* Mach1CircleImage.swift in Sources */,
 				983FC03126FDC17A00F98089 /* SignUpViewModel.swift in Sources */,
 				98B91EA926FB6B4A008EA8D2 /* SignInRepositoryImpl.swift in Sources */,
+				98E443712701ED000003338A /* AppRoutingView.swift in Sources */,
 				988B7B8126EF86E900622B89 /* InjectionFactory.swift in Sources */,
 				98BCEC2D26F089CF00691C16 /* StyleConstants.swift in Sources */,
 				98B4EF0A26FC6D7300C33AA9 /* Mach1View.swift in Sources */,
@@ -612,6 +651,7 @@
 				98B5AF7E26EF6CDF0007C292 /* Translate.swift in Sources */,
 				98B91EB126FB6F3F008EA8D2 /* Token.swift in Sources */,
 				98827BE726F48E1D00C6BA8E /* ViewExtension.swift in Sources */,
+				98D887DE2701FD4D00C09F2D /* HomeView.swift in Sources */,
 				98B91EA226FB686B008EA8D2 /* SignInRepository.swift in Sources */,
 				98BCEC3326F0B1A700691C16 /* Mach1TextField.swift in Sources */,
 				98B4EF1326FCBE6300C33AA9 /* SignUpView.swift in Sources */,

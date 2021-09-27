@@ -17,7 +17,7 @@ protocol WebSessionProviding {
 }
 
 struct WebSessionProvider: WebSessionProviding {
-    @Inject(\.authorization) var userAuthorization: UserAuthorization
+    @Inject(\.authorization) internal var userAuthorization: UserAuthorization
     @ConfigurationProperty(key: "Time out request", defaultValue: 15) var timeOutRequest: Int
     @ConfigurationProperty(key: "Time out resource", defaultValue: 120) var timeOutResource: Int
     @ConfigurationProperty(key: "Max http connection per host", defaultValue: 5) var maxHttpConnectionPerHost: Int

@@ -4,7 +4,7 @@ import SwiftUI
 class SignUpViewModel: ObservableObject {
     @Inject(\.logger) private var logger: LoggerFactory
     @Inject(\.signUpUseCase) private var singUpUseCase: SignUpUseCase
-    @Published private(set) var uiState: SignInState = .Init
+    @Published private(set) var uiState: SignUpState = .Init
     @Published var username: String = ""
     @Published var email: String = ""
     @Published var password: String = ""
@@ -14,7 +14,6 @@ class SignUpViewModel: ObservableObject {
         self.uiState = .Loading
         do {
             try await singUpUseCase.execute(params: SignUp.init(username: username, email: email, password: password))
-            // TODO navigate to home
         } catch {
             logger.error("Error when sign in: \(error)", LoggerCategoryType.Login)
             self.uiState = .Error(error.localizedDescription)
@@ -22,7 +21,7 @@ class SignUpViewModel: ObservableObject {
     }
 }
 
-enum SignUnState {
+enum SignUpState {
     case Init
     case Loading
     case Error(String)

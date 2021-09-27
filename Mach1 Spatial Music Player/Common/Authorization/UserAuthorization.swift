@@ -23,8 +23,9 @@ enum UserAuthorizationStatus {
     case UNATHORIZED
 }
 
+fileprivate let key = "TOKEN"
+
 class UserAuthorizationImpl: UserAuthorization {
-    private let key = "TOKEN"
     func getStatus() -> UserAuthorizationStatus {
         guard getToken() != nil else { return .UNATHORIZED }
         return .AUTHORIZED
@@ -33,9 +34,16 @@ class UserAuthorizationImpl: UserAuthorization {
         return UserDefaults.standard.string(forKey: key)
     }
     func save(token: String) {
-        UserDefaults.standard.set(token, forKey: key)
+        UserDefaults.standard.token = token
     }
     func invalidate() {
-        UserDefaults.standard.removeObject(forKey: key)
+        UserDefaults.standard.token = nil
+    }
+}
+
+extension UserDefaults {
+    @objc dynamic var token: String? {
+        get { return string(forKey: key) }
+        set { set(newValue, forKey: key) }
     }
 }

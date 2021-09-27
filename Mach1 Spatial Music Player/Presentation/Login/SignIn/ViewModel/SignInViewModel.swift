@@ -13,7 +13,6 @@ class SignInViewModel: ObservableObject {
         self.uiState = .Loading
         do {
             try await singInUseCase.execute(params: SignIn.init(username: username, password: password))
-            // TODO navigate to home
         } catch {
             logger.error("Error when sign in: \(error)", LoggerCategoryType.Login)
             self.uiState = .Error(error.localizedDescription)

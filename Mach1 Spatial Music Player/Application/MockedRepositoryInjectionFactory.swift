@@ -6,5 +6,6 @@ class MockedRepositoryInjectionFactory {
         @ConfigurationProperty(key: "Need mocked repositories", defaultValue: false) var needMockedRepo: Bool
         if !needMockedRepo { return }
         InjectedValues[\.signInRepository] = MockedSignInRepositoryImpl()
+        InjectedValues[\.signUpRepository] = MockedSignUpRepositoryImpl()
     }
 }

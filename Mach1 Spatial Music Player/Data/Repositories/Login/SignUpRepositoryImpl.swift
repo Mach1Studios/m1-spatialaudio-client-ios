@@ -19,6 +19,6 @@ class SignUpRepositoryImpl: SignUpRepository {
 
 class MockedSignUpRepositoryImpl: SignUpRepository {
     func signUp(dto: SignUpRequestDTO) async throws -> SignUpResponseDTO {
-        throw "Mocked sign up repository"
+        return SignUpResponseDTO(token: "MockedTokenSignUp")
     }
 }
