@@ -49,6 +49,7 @@ struct Constants {
             case VeryBig = 300
             case Big = 120
             case Normal = 60
+            case TabIcon = 30
         }
         enum Default: String {
             case Person = "person.fill"
@@ -78,14 +79,18 @@ struct Constants {
             case PauseTrack = "pause.circle" // 􀊗
             case Logout = "escape" // 􀆧
         }
-    }
-    
-    struct Blur {
-        static let value: CGFloat = 1.1
+        enum Custom: String {
+            case Mach1Logo = "Logo"
+            case Mach1LogoTabItem = "LogoTabItem"
+        }
     }
     
     struct Shadow {
         static let value: CGFloat = 2
+    }
+    
+    struct Opacity {
+        static let value: CGFloat = 0.6
     }
     
 }

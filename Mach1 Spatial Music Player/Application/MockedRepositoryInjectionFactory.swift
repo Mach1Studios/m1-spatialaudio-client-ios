@@ -7,5 +7,6 @@ class MockedRepositoryInjectionFactory {
         if !needMockedRepo { return }
         InjectedValues[\.signInRepository] = MockedSignInRepositoryImpl()
         InjectedValues[\.signUpRepository] = MockedSignUpRepositoryImpl()
+        InjectedValues[\.sectionedPlaylistRepository] = MockedSectionedPlaylistRepositoryImpl()
     }
 }

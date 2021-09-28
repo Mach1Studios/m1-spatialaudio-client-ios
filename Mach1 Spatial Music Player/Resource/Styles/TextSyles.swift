@@ -17,6 +17,14 @@ struct SubTitleStyle: ViewModifier {
     }
 }
 
+struct SubTitleBoldStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(Constants.Fonts.subTitleBold)
+            .foregroundColor(.Mach1Light)
+    }
+}
+
 struct BodyStyle: ViewModifier {
     func body(content: Content) -> some View {
         content

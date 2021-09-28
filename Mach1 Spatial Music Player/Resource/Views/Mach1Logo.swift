@@ -3,10 +3,11 @@ import SwiftUI
 struct Mach1Logo: View {
     let dimension: Constants.Image.Dimension
     var body: some View {
-        Image("Logo")
+        Image(Constants.Image.Custom.Mach1Logo.rawValue)
             .resizable()
-            .frame(width: Constants.Image.Dimension.Big.rawValue,
-                   height: Constants.Image.Dimension.Big.rawValue, alignment: .center)
+            .frame(width: dimension.rawValue,
+                   height: dimension.rawValue,
+                   alignment: .center)
     }
 }
 

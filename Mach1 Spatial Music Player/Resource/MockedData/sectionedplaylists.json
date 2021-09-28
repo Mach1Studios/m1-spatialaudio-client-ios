@@ -1,0 +1,49 @@
+[
+    {
+        "section": "Favorite",
+        "items": [
+            {
+            "title": "Pop playlist",
+            "url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxheWxpc3R8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+            },
+            {
+            "title": "Rock playlist",
+            "url": "https://images.unsplash.com/photo-1499415479124-43c32433a620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxNTMxNTY2fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
+            },
+            {
+            "title": "Country playlist",
+            "url": "https://st.depositphotos.com/1741969/4731/i/600/depositphotos_47312181-stock-photo-old-records.jpg"
+            },
+            {
+            "title": "Jazz playlist",
+            "url": "https://wallpaperaccess.com/full/5841665.jpg"
+            }
+        ]
+    },
+    {
+        "section": "My playlist",
+        "items": [
+            {
+            "title": "Blues playlist",
+            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjSIONPi0TlzLynVwH-IB4iNbccqwm1GLVSA&usqp=CAU"
+            },
+            {
+            "title": "Popular playlist",
+            "url": "https://ak.picdn.net/shutterstock/videos/21640690/thumb/1.jpg"
+            }
+        ]
+    },
+    {
+        "section": "Public playlist",
+        "items": [
+            {
+            "title": "Classical playlist",
+            "url": "https://wallpaperaccess.com/full/2054031.jpg"
+            },
+            {
+            "title": "Reggae playlist",
+            "url": "https://wallpapercave.com/wp/wp2703690.jpg"
+            }
+        ]
+    }
+]

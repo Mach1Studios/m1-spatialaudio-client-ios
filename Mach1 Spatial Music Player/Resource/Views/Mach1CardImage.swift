@@ -14,7 +14,7 @@ struct Mach1CardImage: View {
                 transaction: Transaction(animation: .easeInOut)) { phase in
                     switch phase {
                     case .empty:
-                        Mach1ProgressBar(shape: Rectangle(), height: height.rawValue).withBlur()
+                        Mach1ProgressBar(shape: Rectangle(), height: height.rawValue).withDarkOverlay()
                     case .success(let image):
                         self.applyStyle(image)
                     case .failure:
@@ -41,7 +41,7 @@ struct Mach1CardImage: View {
             .centerCropped()
             .clipShape(RoundedRectangle(cornerRadius: Constants.Rounded.value))
             .frame(height: height.rawValue)
-            .withBlur()
+            .withDarkOverlay()
             .withCenterTransition()
     }
 }
