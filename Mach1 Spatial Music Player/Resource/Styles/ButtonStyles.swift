@@ -9,7 +9,7 @@ struct Mach1ButtonStyle: ButtonStyle {
             .foregroundColor(.white)
             .background(Color.Mach1Yellow)
             .scaleEffect(configuration.isPressed ? 1.1 : 1.0)
-            .cornerRadius(Constants.Rounded.value)
+            .cornerRadius(Constants.Rounded.normal.rawValue)
             .font(Constants.Fonts.subTitleBold)
             .textCase(.uppercase)
             

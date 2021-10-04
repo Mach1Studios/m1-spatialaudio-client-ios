@@ -18,7 +18,7 @@ private struct Mach1FieldStyle: TextFieldStyle {
             .font(Constants.Fonts.subBody)
             .foregroundColor(.white)
             .background(
-                RoundedRectangle(cornerRadius: Constants.Rounded.value, style: .continuous)
+                RoundedRectangle(cornerRadius: Constants.Rounded.normal.rawValue, style: .continuous)
                     .stroke(Color.Mach1Gray, lineWidth: Constants.LineWidtch.value)
             )
         }

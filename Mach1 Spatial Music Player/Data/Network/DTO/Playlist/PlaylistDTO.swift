@@ -6,6 +6,13 @@ struct SectionedPlaylistResponseDTO: Codable, Equatable {
 }
 
 struct PlaylistItemDTO: Codable, Equatable {
+    let id: UUID
+    let title: String
+    let url: String?
+}
+
+struct PlaylistDTO: Codable, Equatable {
+    let id: UUID
     let title: String
     let url: String?
 }

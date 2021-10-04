@@ -9,7 +9,7 @@ struct HomeView: View {
     var body: some View {
         Mach1View {
             TabView {
-                PlayListsView().tabItem { Image(Constants.Image.Custom.Mach1LogoTabItem.rawValue).renderingMode(.template) }
+                SectionedPlayistsView().tabItem { Image(Constants.Image.Custom.Mach1LogoTabItem.rawValue).renderingMode(.template) }
                 ProfileView().tabItem { Image(systemName: Constants.Image.System.Person.rawValue) }
             }
         }

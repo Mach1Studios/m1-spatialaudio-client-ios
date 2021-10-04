@@ -3,18 +3,22 @@
         "section": "Favorite",
         "items": [
             {
+            "id": "0ca2c758-465a-4f2e-b8c4-86ad515bbc9e",
             "title": "Pop playlist",
             "url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGxheWxpc3R8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
             },
             {
+            "id": "2f37309c-8015-46aa-b68b-b4a89587580f",
             "title": "Rock playlist",
             "url": "https://images.unsplash.com/photo-1499415479124-43c32433a620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxNTMxNTY2fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
             },
             {
+            "id": "0d4e6068-57bb-4839-a7fd-0734501a7d29",
             "title": "Country playlist",
             "url": "https://st.depositphotos.com/1741969/4731/i/600/depositphotos_47312181-stock-photo-old-records.jpg"
             },
             {
+            "id": "88209bcb-3463-4536-a957-37b40fb40030",
             "title": "Jazz playlist",
             "url": "https://wallpaperaccess.com/full/5841665.jpg"
             }
@@ -24,10 +28,12 @@
         "section": "My playlist",
         "items": [
             {
+            "id": "668197c0-81f9-467c-8ef7-b95518b9ff86",
             "title": "Blues playlist",
             "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjSIONPi0TlzLynVwH-IB4iNbccqwm1GLVSA&usqp=CAU"
             },
             {
+            "id": "74df05d6-c4b7-4f87-bda5-f9a4dcbaf018",
             "title": "Popular playlist",
             "url": "https://ak.picdn.net/shutterstock/videos/21640690/thumb/1.jpg"
             }
@@ -37,10 +43,12 @@
         "section": "Public playlist",
         "items": [
             {
+            "id": "f709a62b-91e9-4ee9-bf2b-7872472eb794",
             "title": "Classical playlist",
             "url": "https://wallpaperaccess.com/full/2054031.jpg"
             },
             {
+            "id": "c8f331bc-833a-49ac-95b0-34c6d355081c",
             "title": "Reggae playlist",
             "url": "https://wallpapercave.com/wp/wp2703690.jpg"
             }

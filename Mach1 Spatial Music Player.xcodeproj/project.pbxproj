@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */; };
-		9806800327030E2B00A4588A /* SectionedPlaylistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800227030E2B00A4588A /* SectionedPlaylistDTO.swift */; };
+		9806800327030E2B00A4588A /* PlaylistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800227030E2B00A4588A /* PlaylistDTO.swift */; };
 		9806800627030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */; };
 		980680092703122100A4588A /* GetSectionedPlaylistsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980680082703122100A4588A /* GetSectionedPlaylistsUseCaseImpl.swift */; };
 		9806800C2703125B00A4588A /* GetSectionedPlaylistsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800B2703125B00A4588A /* GetSectionedPlaylistsUseCase.swift */; };
-		9806800F2703129D00A4588A /* SectionedPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800E2703129D00A4588A /* SectionedPlaylist.swift */; };
+		9806800F2703129D00A4588A /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800E2703129D00A4588A /* Playlist.swift */; };
 		98068011270314B700A4588A /* SectionedPlaylistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98068010270314B700A4588A /* SectionedPlaylistsViewModel.swift */; };
 		98068014270333A700A4588A /* Mach1SectionedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98068013270333A700A4588A /* Mach1SectionedList.swift */; };
 		980680162703340C00A4588A /* Mach1Sectioned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980680152703340C00A4588A /* Mach1Sectioned.swift */; };
@@ -20,8 +20,13 @@
 		9806801D270346BF00A4588A /* ReadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806801C270346BF00A4588A /* ReadFile.swift */; };
 		9806801F270348FB00A4588A /* MockedResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806801E270348FB00A4588A /* MockedResource.swift */; };
 		9806802127034A9500A4588A /* valid_token.json in Resources */ = {isa = PBXBuildFile; fileRef = 9806802027034A9500A4588A /* valid_token.json */; };
+		981DAF9427070B720001CD04 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAF9327070B720001CD04 /* ToolbarView.swift */; };
+		981DAF9627070E680001CD04 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAF9527070E670001CD04 /* UIApplicationExtensions.swift */; };
+		981DAF9A270724AA0001CD04 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAF99270724AA0001CD04 /* Track.swift */; };
+		981DAF9D270725F80001CD04 /* PlaylistDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981DAF9C270725F80001CD04 /* PlaylistDetailsViewModel.swift */; };
 		983465E126FB277D00271537 /* LoggerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983465E026FB277D00271537 /* LoggerFactory.swift */; };
 		983465E426FB4FF300271537 /* LoggerCategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983465E326FB4FF300271537 /* LoggerCategoryType.swift */; };
+		9839C094270B44FC003DCF69 /* tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = 9839C093270B44FC003DCF69 /* tracks.json */; };
 		983FC03126FDC17A00F98089 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983FC03026FDC17A00F98089 /* SignUpViewModel.swift */; };
 		983FC03326FDC39600F98089 /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983FC03226FDC39600F98089 /* SignUpRepository.swift */; };
 		983FC03526FDC3A400F98089 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983FC03426FDC3A400F98089 /* SignUp.swift */; };
@@ -77,15 +82,27 @@
 		98D887E6270206E900C09F2D /* SectionedPlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D887E5270206E900C09F2D /* SectionedPlaylistsView.swift */; };
 		98D887E82702072500C09F2D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D887E72702072500C09F2D /* ProfileView.swift */; };
 		98E443712701ED000003338A /* AppRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E443702701ED000003338A /* AppRoutingView.swift */; };
+		98EDCAA22704506700BC61D4 /* PlaylistDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDCAA12704506700BC61D4 /* PlaylistDetailsView.swift */; };
+		98EDCAA52704760400BC61D4 /* HeaderPlaylistDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDCAA42704760400BC61D4 /* HeaderPlaylistDetailsView.swift */; };
+		98EDCAA8270476E000BC61D4 /* PlaylistTrackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDCAA7270476E000BC61D4 /* PlaylistTrackItemView.swift */; };
+		98F73100270B1E8B0028D0C9 /* GetPlaylistDetailsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F730FF270B1E8B0028D0C9 /* GetPlaylistDetailsUseCaseImpl.swift */; };
+		98F73102270B1EB40028D0C9 /* TrackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73101270B1EB40028D0C9 /* TrackDTO.swift */; };
+		98F73104270B1F860028D0C9 /* GetPlaylistDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73103270B1F860028D0C9 /* GetPlaylistDetailsUseCase.swift */; };
+		98F73106270B20680028D0C9 /* PlaylistDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73105270B20680028D0C9 /* PlaylistDetailsRepository.swift */; };
+		98F73108270B20C20028D0C9 /* PlaylistDetailsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73107270B20C20028D0C9 /* PlaylistDetailsRepositoryImpl.swift */; };
+		98F7310C270B25480028D0C9 /* TracksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7310B270B25480028D0C9 /* TracksRepository.swift */; };
+		98F7310F270B259B0028D0C9 /* TracksRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7310E270B259B0028D0C9 /* TracksRepositoryImpl.swift */; };
+		98F73114270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73113270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift */; };
+		98F73117270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73116270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistsRepository.swift; sourceTree = "<group>"; };
-		9806800227030E2B00A4588A /* SectionedPlaylistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistDTO.swift; sourceTree = "<group>"; };
+		9806800227030E2B00A4588A /* PlaylistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDTO.swift; sourceTree = "<group>"; };
 		9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistRepositoryImpl.swift; sourceTree = "<group>"; };
 		980680082703122100A4588A /* GetSectionedPlaylistsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSectionedPlaylistsUseCaseImpl.swift; sourceTree = "<group>"; };
 		9806800B2703125B00A4588A /* GetSectionedPlaylistsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSectionedPlaylistsUseCase.swift; sourceTree = "<group>"; };
-		9806800E2703129D00A4588A /* SectionedPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylist.swift; sourceTree = "<group>"; };
+		9806800E2703129D00A4588A /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		98068010270314B700A4588A /* SectionedPlaylistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistsViewModel.swift; sourceTree = "<group>"; };
 		98068013270333A700A4588A /* Mach1SectionedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1SectionedList.swift; sourceTree = "<group>"; };
 		980680152703340C00A4588A /* Mach1Sectioned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1Sectioned.swift; sourceTree = "<group>"; };
@@ -93,8 +110,13 @@
 		9806801C270346BF00A4588A /* ReadFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadFile.swift; sourceTree = "<group>"; };
 		9806801E270348FB00A4588A /* MockedResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedResource.swift; sourceTree = "<group>"; };
 		9806802027034A9500A4588A /* valid_token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = valid_token.json; sourceTree = "<group>"; };
+		981DAF9327070B720001CD04 /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
+		981DAF9527070E670001CD04 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
+		981DAF99270724AA0001CD04 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		981DAF9C270725F80001CD04 /* PlaylistDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsViewModel.swift; sourceTree = "<group>"; };
 		983465E026FB277D00271537 /* LoggerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerFactory.swift; sourceTree = "<group>"; };
 		983465E326FB4FF300271537 /* LoggerCategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerCategoryType.swift; sourceTree = "<group>"; };
+		9839C093270B44FC003DCF69 /* tracks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tracks.json; sourceTree = "<group>"; };
 		983FC03026FDC17A00F98089 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		983FC03226FDC39600F98089 /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
 		983FC03426FDC3A400F98089 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
@@ -155,6 +177,18 @@
 		98D887E5270206E900C09F2D /* SectionedPlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistsView.swift; sourceTree = "<group>"; };
 		98D887E72702072500C09F2D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		98E443702701ED000003338A /* AppRoutingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoutingView.swift; sourceTree = "<group>"; };
+		98EDCAA12704506700BC61D4 /* PlaylistDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsView.swift; sourceTree = "<group>"; };
+		98EDCAA42704760400BC61D4 /* HeaderPlaylistDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPlaylistDetailsView.swift; sourceTree = "<group>"; };
+		98EDCAA7270476E000BC61D4 /* PlaylistTrackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTrackItemView.swift; sourceTree = "<group>"; };
+		98F730FF270B1E8B0028D0C9 /* GetPlaylistDetailsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistDetailsUseCaseImpl.swift; sourceTree = "<group>"; };
+		98F73101270B1EB40028D0C9 /* TrackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDTO.swift; sourceTree = "<group>"; };
+		98F73103270B1F860028D0C9 /* GetPlaylistDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistDetailsUseCase.swift; sourceTree = "<group>"; };
+		98F73105270B20680028D0C9 /* PlaylistDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsRepository.swift; sourceTree = "<group>"; };
+		98F73107270B20C20028D0C9 /* PlaylistDetailsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsRepositoryImpl.swift; sourceTree = "<group>"; };
+		98F7310B270B25480028D0C9 /* TracksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRepository.swift; sourceTree = "<group>"; };
+		98F7310E270B259B0028D0C9 /* TracksRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRepositoryImpl.swift; sourceTree = "<group>"; };
+		98F73113270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistTracksUseCase.swift; sourceTree = "<group>"; };
+		98F73116270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistTracksUseCaseImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */,
+				98F73105270B20680028D0C9 /* PlaylistDetailsRepository.swift */,
 			);
 			path = Playlist;
 			sourceTree = "<group>";
@@ -179,7 +214,8 @@
 		9806800127030E1400A4588A /* Playlist */ = {
 			isa = PBXGroup;
 			children = (
-				9806800227030E2B00A4588A /* SectionedPlaylistDTO.swift */,
+				9806800227030E2B00A4588A /* PlaylistDTO.swift */,
+				98F73101270B1EB40028D0C9 /* TrackDTO.swift */,
 			);
 			path = Playlist;
 			sourceTree = "<group>";
@@ -188,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */,
+				98F73107270B20C20028D0C9 /* PlaylistDetailsRepositoryImpl.swift */,
 			);
 			path = Playlist;
 			sourceTree = "<group>";
@@ -196,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				980680082703122100A4588A /* GetSectionedPlaylistsUseCaseImpl.swift */,
+				98F730FF270B1E8B0028D0C9 /* GetPlaylistDetailsUseCaseImpl.swift */,
 			);
 			path = Playlist;
 			sourceTree = "<group>";
@@ -205,6 +243,7 @@
 			children = (
 				9806800B2703125B00A4588A /* GetSectionedPlaylistsUseCase.swift */,
 				980680152703340C00A4588A /* Mach1Sectioned.swift */,
+				98F73103270B1F860028D0C9 /* GetPlaylistDetailsUseCase.swift */,
 			);
 			path = Playlist;
 			sourceTree = "<group>";
@@ -212,7 +251,7 @@
 		9806800D2703128300A4588A /* Playlist */ = {
 			isa = PBXGroup;
 			children = (
-				9806800E2703129D00A4588A /* SectionedPlaylist.swift */,
+				9806800E2703129D00A4588A /* Playlist.swift */,
 			);
 			path = Playlist;
 			sourceTree = "<group>";
@@ -230,9 +269,18 @@
 			children = (
 				9806801A2703448500A4588A /* sectionedplaylists.json */,
 				9806802027034A9500A4588A /* valid_token.json */,
+				9839C093270B44FC003DCF69 /* tracks.json */,
 				9806801E270348FB00A4588A /* MockedResource.swift */,
 			);
 			path = MockedData;
+			sourceTree = "<group>";
+		};
+		981DAF9B270725EC0001CD04 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				981DAF9C270725F80001CD04 /* PlaylistDetailsViewModel.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		983465DA26F9CC7A00271537 /* Common */ = {
@@ -300,6 +348,7 @@
 			children = (
 				98B91EA726FB6B33008EA8D2 /* Login */,
 				9806800427030F0A00A4588A /* Playlist */,
+				98F7310D270B257D0028D0C9 /* Track */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -319,6 +368,7 @@
 			children = (
 				98B91E9D26FB6828008EA8D2 /* Login */,
 				9806800D2703128300A4588A /* Playlist */,
+				98F73109270B24EE0028D0C9 /* Track */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,6 +378,7 @@
 			children = (
 				98B91EA026FB685C008EA8D2 /* Login */,
 				98067FFE27030D8900A4588A /* Playlist */,
+				98F7310A270B24FE0028D0C9 /* Track */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -337,6 +388,7 @@
 			children = (
 				98B91EAC26FB6E50008EA8D2 /* Login */,
 				980680072703120100A4588A /* Playlist */,
+				98F73115270B3D670028D0C9 /* Track */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -346,6 +398,7 @@
 			children = (
 				983FC04026FDF26900F98089 /* Login */,
 				9806800A2703124100A4588A /* Playlist */,
+				98F73112270B3D1C0028D0C9 /* Track */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -436,6 +489,7 @@
 				98827BE626F48E1D00C6BA8E /* ViewExtension.swift */,
 				98B91EAA26FB6C41008EA8D2 /* StringExtensions.swift */,
 				9806801C270346BF00A4588A /* ReadFile.swift */,
+				981DAF9527070E670001CD04 /* UIApplicationExtensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -651,6 +705,8 @@
 			isa = PBXGroup;
 			children = (
 				98068012270332D300A4588A /* Base */,
+				98EDCAA3270475E700BC61D4 /* Details */,
+				98EDCAA6270476C900BC61D4 /* List */,
 				98D887E5270206E900C09F2D /* SectionedPlaylistsView.swift */,
 			);
 			path = View;
@@ -659,6 +715,7 @@
 		98D887E1270206BF00C09F2D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				981DAF9B270725EC0001CD04 /* Details */,
 				98068010270314B700A4588A /* SectionedPlaylistsViewModel.swift */,
 			);
 			path = ViewModel;
@@ -694,6 +751,64 @@
 				98E443702701ED000003338A /* AppRoutingView.swift */,
 			);
 			path = Routing;
+			sourceTree = "<group>";
+		};
+		98EDCAA3270475E700BC61D4 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				98EDCAA12704506700BC61D4 /* PlaylistDetailsView.swift */,
+				98EDCAA42704760400BC61D4 /* HeaderPlaylistDetailsView.swift */,
+				981DAF9327070B720001CD04 /* ToolbarView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		98EDCAA6270476C900BC61D4 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				98EDCAA7270476E000BC61D4 /* PlaylistTrackItemView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		98F73109270B24EE0028D0C9 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				981DAF99270724AA0001CD04 /* Track.swift */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		98F7310A270B24FE0028D0C9 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				98F7310B270B25480028D0C9 /* TracksRepository.swift */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		98F7310D270B257D0028D0C9 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				98F7310E270B259B0028D0C9 /* TracksRepositoryImpl.swift */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		98F73112270B3D1C0028D0C9 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				98F73113270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		98F73115270B3D670028D0C9 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				98F73116270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift */,
+			);
+			path = Track;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -759,6 +874,7 @@
 				98D22D8926EF39B900285854 /* Icons.xcassets in Resources */,
 				98B5AF7726EF6BF90007C292 /* Localizable.strings in Resources */,
 				9806801B2703448500A4588A /* sectionedplaylists.json in Resources */,
+				9839C094270B44FC003DCF69 /* tracks.json in Resources */,
 				98B5AF8D26EF7B7E0007C292 /* ProximaNovaItalic.otf in Resources */,
 				98B5AF8926EF7A480007C292 /* ProximaNovaSemibold.otf in Resources */,
 				988B7B9126EF98BA00622B89 /* Colors.xcassets in Resources */,
@@ -775,20 +891,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98F73114270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift in Sources */,
+				98F73108270B20C20028D0C9 /* PlaylistDetailsRepositoryImpl.swift in Sources */,
 				98827BDF26F3408000C6BA8E /* Mach1CircleImage.swift in Sources */,
+				98EDCAA8270476E000BC61D4 /* PlaylistTrackItemView.swift in Sources */,
 				983FC03126FDC17A00F98089 /* SignUpViewModel.swift in Sources */,
 				98B91EA926FB6B4A008EA8D2 /* SignInRepositoryImpl.swift in Sources */,
 				98E443712701ED000003338A /* AppRoutingView.swift in Sources */,
 				980680162703340C00A4588A /* Mach1Sectioned.swift in Sources */,
+				981DAF9627070E680001CD04 /* UIApplicationExtensions.swift in Sources */,
 				988B7B8126EF86E900622B89 /* InjectionFactory.swift in Sources */,
 				98BCEC2D26F089CF00691C16 /* StyleConstants.swift in Sources */,
-				9806800327030E2B00A4588A /* SectionedPlaylistDTO.swift in Sources */,
+				98F73104270B1F860028D0C9 /* GetPlaylistDetailsUseCase.swift in Sources */,
+				9806800327030E2B00A4588A /* PlaylistDTO.swift in Sources */,
 				98B4EF0A26FC6D7300C33AA9 /* Mach1View.swift in Sources */,
 				9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */,
 				9806800C2703125B00A4588A /* GetSectionedPlaylistsUseCase.swift in Sources */,
 				988B7B9426EF9B2700622B89 /* Colors.swift in Sources */,
+				98F73117270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift in Sources */,
 				9806801D270346BF00A4588A /* ReadFile.swift in Sources */,
 				9806800627030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift in Sources */,
+				98F73106270B20680028D0C9 /* PlaylistDetailsRepository.swift in Sources */,
+				981DAF9D270725F80001CD04 /* PlaylistDetailsViewModel.swift in Sources */,
 				98B91E9C26FB680D008EA8D2 /* SignInViewModel.swift in Sources */,
 				98B5AF8026EF6DA30007C292 /* ConfigurationProperty.swift in Sources */,
 				983FC04426FDF9CA00F98089 /* SignInUseCase.swift in Sources */,
@@ -796,17 +920,24 @@
 				983FC03526FDC3A400F98089 /* SignUp.swift in Sources */,
 				983FC03926FDC4A100F98089 /* SignUpRepositoryImpl.swift in Sources */,
 				98B4EF0E26FC9C2800C33AA9 /* Mach1Alert.swift in Sources */,
+				98F7310F270B259B0028D0C9 /* TracksRepositoryImpl.swift in Sources */,
+				98F7310C270B25480028D0C9 /* TracksRepository.swift in Sources */,
+				981DAF9A270724AA0001CD04 /* Track.swift in Sources */,
 				98B91EA626FB6AB5008EA8D2 /* SignInDTO.swift in Sources */,
 				988B7B8F26EF96F400622B89 /* ButtonStyles.swift in Sources */,
+				98F73100270B1E8B0028D0C9 /* GetPlaylistDetailsUseCaseImpl.swift in Sources */,
 				980680092703122100A4588A /* GetSectionedPlaylistsUseCaseImpl.swift in Sources */,
 				988B7B8426EF87C700622B89 /* ApiCall.swift in Sources */,
+				981DAF9427070B720001CD04 /* ToolbarView.swift in Sources */,
 				988B7B8B26EF884300622B89 /* UserAuthorization.swift in Sources */,
 				98B91E9A26FB67F8008EA8D2 /* SignInView.swift in Sources */,
 				988B7B8826EF87F400622B89 /* WebRepository.swift in Sources */,
+				98EDCAA22704506700BC61D4 /* PlaylistDetailsView.swift in Sources */,
 				98827BE526F4816B00C6BA8E /* ImageExtensions.swift in Sources */,
 				983FC03B26FDC53100F98089 /* SignUpUseCaseImpl.swift in Sources */,
 				983465E426FB4FF300271537 /* LoggerCategoryType.swift in Sources */,
 				98B5AF7E26EF6CDF0007C292 /* Translate.swift in Sources */,
+				98F73102270B1EB40028D0C9 /* TrackDTO.swift in Sources */,
 				98B91EB126FB6F3F008EA8D2 /* Token.swift in Sources */,
 				98D887E82702072500C09F2D /* ProfileView.swift in Sources */,
 				98827BE726F48E1D00C6BA8E /* ViewExtension.swift in Sources */,
@@ -818,7 +949,7 @@
 				98B91E9F26FB6836008EA8D2 /* SignIn.swift in Sources */,
 				98B91EAB26FB6C41008EA8D2 /* StringExtensions.swift in Sources */,
 				98B5AF8B26EF7A8A0007C292 /* TextSyles.swift in Sources */,
-				9806800F2703129D00A4588A /* SectionedPlaylist.swift in Sources */,
+				9806800F2703129D00A4588A /* Playlist.swift in Sources */,
 				983465E126FB277D00271537 /* LoggerFactory.swift in Sources */,
 				98068014270333A700A4588A /* Mach1SectionedList.swift in Sources */,
 				983FC03326FDC39600F98089 /* SignUpRepository.swift in Sources */,
@@ -826,6 +957,7 @@
 				983FC04226FDF27F00F98089 /* SignUpCase.swift in Sources */,
 				98827BE326F3895900C6BA8E /* Mach1CardImage.swift in Sources */,
 				9806801F270348FB00A4588A /* MockedResource.swift in Sources */,
+				98EDCAA52704760400BC61D4 /* HeaderPlaylistDetailsView.swift in Sources */,
 				98827BDB26F32CB100C6BA8E /* Mach1SegmentedPicker.swift in Sources */,
 				98827BEB26F4B00200C6BA8E /* Mach1CorrugatedImage.swift in Sources */,
 				98068011270314B700A4588A /* SectionedPlaylistsViewModel.swift in Sources */,

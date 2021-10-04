@@ -11,13 +11,13 @@ extension InjectedValues {
     }
 }
 
-class SignInRepositoryImpl: SignInRepository {
+actor SignInRepositoryImpl: SignInRepository {
     func signIn(dto: SignInRequestDTO) async throws -> SignInResponseDTO {
         throw "Not implemented"
     }
 }
 
-class MockedSignInRepositoryImpl: SignInRepository {
+actor MockedSignInRepositoryImpl: SignInRepository {
     func signIn(dto: SignInRequestDTO) async throws -> SignInResponseDTO {
         return try ReadFile.json(resource: .ValidToken)
     }

@@ -15,10 +15,24 @@ struct SectionedPlaylist: Codable, Equatable, Mach1Sectioned {
 }
 
 struct SectionedPlaylistItem: Codable, Equatable, Mach1SectionItem {
+    var id: UUID
     let title: String
     let url: String?
     
     init(_ dto: PlaylistItemDTO) {
+        self.id = dto.id
+        self.title = dto.title
+        self.url = dto.url
+    }
+}
+
+struct Playlist: Codable {
+    var id: UUID
+    let title: String
+    let url: String?
+    
+    init(_ dto: PlaylistDTO) {
+        self.id = dto.id
         self.title = dto.title
         self.url = dto.url
     }

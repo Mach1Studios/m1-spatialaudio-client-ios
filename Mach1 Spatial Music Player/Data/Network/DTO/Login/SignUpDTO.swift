@@ -6,6 +6,6 @@ struct SignUpRequestDTO {
     let password: String
 }
 
-struct SignUpResponseDTO {
+struct SignUpResponseDTO: Decodable {
     let token: String
 }

@@ -27,8 +27,9 @@ struct Constants {
         static let progressBar: CGFloat = 100.0
     }
     
-    struct Rounded {
-        static let value: CGFloat = 8.0
+    enum Rounded: CGFloat {
+        case normal = 8.0
+        case none = 0.0
     }
     
     struct LineWidtch {
@@ -49,6 +50,7 @@ struct Constants {
             case VeryBig = 300
             case Big = 120
             case Normal = 60
+            case Small = 40
             case TabIcon = 30
         }
         enum Default: String {
@@ -57,14 +59,15 @@ struct Constants {
             case PlayList = "DefaultPlaylist"
         }
         enum System: String {
+            case Back = "chevron.backward" // 􀯶
             case CheckMark = "checkmark" // 􀆅
             case Person = "person.crop.circle" // 􀉭
             case NotFavourite = "heart" // 􀊴
             case Favourite = "heart.fill" // 􀊵
             case Favourites = "heart.circle" // 􀊸
             case Option = "option" // 􀆕
-            case Shuffle = "shuffle.circle" // 􀵉
-            case Repeat = "repeat.circle" // 􀵋
+            case Shuffle = "shuffle" // 􀊝
+            case Repeat = "repeat" // 􀊞
             case Play = "play.fill" // 􀊄
             case Friends = "person.2.circle" // 􀠃
             case Add = "plus.circle" // 􀁌
