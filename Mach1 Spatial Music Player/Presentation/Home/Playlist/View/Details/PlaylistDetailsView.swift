@@ -17,7 +17,7 @@ struct PlaylistDetailsView: View {
                     VStack{
                         HeaderPlaylistDetailsView(playlist: playlist) { showToolbar = $0 }
                         VStack(spacing: Mach1Margin.Small.rawValue) {
-                            ForEach(tracks, id: \.id) { PlaylistTrackItemView(track: $0).padding(.bottom) }
+                            ForEach(tracks, id: \.id) { TrackItemView(track: $0).padding(.bottom) }
                         }.padding()
                         Spacer()
                     }

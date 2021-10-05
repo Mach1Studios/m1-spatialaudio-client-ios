@@ -75,6 +75,8 @@
 		98B91EB126FB6F3F008EA8D2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B91EB026FB6F3F008EA8D2 /* Token.swift */; };
 		98BCEC2D26F089CF00691C16 /* StyleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BCEC2C26F089CF00691C16 /* StyleConstants.swift */; };
 		98BCEC3326F0B1A700691C16 /* Mach1TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BCEC3226F0B1A700691C16 /* Mach1TextField.swift */; };
+		98BE3893270C34EA00B65B5D /* PlayTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE3892270C34EA00B65B5D /* PlayTrackView.swift */; };
+		98BE3896270C364600B65B5D /* TrackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BE3895270C364600B65B5D /* TrackDTO.swift */; };
 		98D22D8526EF39B800285854 /* Mach1_Spatial_Music_PlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D22D8426EF39B800285854 /* Mach1_Spatial_Music_PlayerApp.swift */; };
 		98D22D8926EF39B900285854 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98D22D8826EF39B900285854 /* Icons.xcassets */; };
 		98D22DB326EF405200285854 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 98D22DB226EF405200285854 /* Preview Content */; };
@@ -84,9 +86,8 @@
 		98E443712701ED000003338A /* AppRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E443702701ED000003338A /* AppRoutingView.swift */; };
 		98EDCAA22704506700BC61D4 /* PlaylistDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDCAA12704506700BC61D4 /* PlaylistDetailsView.swift */; };
 		98EDCAA52704760400BC61D4 /* HeaderPlaylistDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDCAA42704760400BC61D4 /* HeaderPlaylistDetailsView.swift */; };
-		98EDCAA8270476E000BC61D4 /* PlaylistTrackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDCAA7270476E000BC61D4 /* PlaylistTrackItemView.swift */; };
+		98EDCAA8270476E000BC61D4 /* TrackItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDCAA7270476E000BC61D4 /* TrackItemView.swift */; };
 		98F73100270B1E8B0028D0C9 /* GetPlaylistDetailsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F730FF270B1E8B0028D0C9 /* GetPlaylistDetailsUseCaseImpl.swift */; };
-		98F73102270B1EB40028D0C9 /* TrackDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73101270B1EB40028D0C9 /* TrackDTO.swift */; };
 		98F73104270B1F860028D0C9 /* GetPlaylistDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73103270B1F860028D0C9 /* GetPlaylistDetailsUseCase.swift */; };
 		98F73106270B20680028D0C9 /* PlaylistDetailsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73105270B20680028D0C9 /* PlaylistDetailsRepository.swift */; };
 		98F73108270B20C20028D0C9 /* PlaylistDetailsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73107270B20C20028D0C9 /* PlaylistDetailsRepositoryImpl.swift */; };
@@ -167,6 +168,8 @@
 		98B91EB026FB6F3F008EA8D2 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		98BCEC2C26F089CF00691C16 /* StyleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConstants.swift; sourceTree = "<group>"; };
 		98BCEC3226F0B1A700691C16 /* Mach1TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1TextField.swift; sourceTree = "<group>"; };
+		98BE3892270C34EA00B65B5D /* PlayTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTrackView.swift; sourceTree = "<group>"; };
+		98BE3895270C364600B65B5D /* TrackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDTO.swift; sourceTree = "<group>"; };
 		98D22D8126EF39B800285854 /* Mach1 Spatial Music Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mach1 Spatial Music Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D22D8426EF39B800285854 /* Mach1_Spatial_Music_PlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1_Spatial_Music_PlayerApp.swift; sourceTree = "<group>"; };
 		98D22D8826EF39B900285854 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Icons.xcassets; path = "Mach1 Spatial Music Player/Resource/Icons.xcassets"; sourceTree = SOURCE_ROOT; };
@@ -179,9 +182,8 @@
 		98E443702701ED000003338A /* AppRoutingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoutingView.swift; sourceTree = "<group>"; };
 		98EDCAA12704506700BC61D4 /* PlaylistDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsView.swift; sourceTree = "<group>"; };
 		98EDCAA42704760400BC61D4 /* HeaderPlaylistDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPlaylistDetailsView.swift; sourceTree = "<group>"; };
-		98EDCAA7270476E000BC61D4 /* PlaylistTrackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTrackItemView.swift; sourceTree = "<group>"; };
+		98EDCAA7270476E000BC61D4 /* TrackItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackItemView.swift; sourceTree = "<group>"; };
 		98F730FF270B1E8B0028D0C9 /* GetPlaylistDetailsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistDetailsUseCaseImpl.swift; sourceTree = "<group>"; };
-		98F73101270B1EB40028D0C9 /* TrackDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDTO.swift; sourceTree = "<group>"; };
 		98F73103270B1F860028D0C9 /* GetPlaylistDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistDetailsUseCase.swift; sourceTree = "<group>"; };
 		98F73105270B20680028D0C9 /* PlaylistDetailsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsRepository.swift; sourceTree = "<group>"; };
 		98F73107270B20C20028D0C9 /* PlaylistDetailsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -215,7 +217,6 @@
 			isa = PBXGroup;
 			children = (
 				9806800227030E2B00A4588A /* PlaylistDTO.swift */,
-				98F73101270B1EB40028D0C9 /* TrackDTO.swift */,
 			);
 			path = Playlist;
 			sourceTree = "<group>";
@@ -320,6 +321,7 @@
 				983FC03C26FDF23900F98089 /* Interfaces */,
 				98E4436F2701ECF10003338A /* Routing */,
 				98B91E9226FB6783008EA8D2 /* Login */,
+				98BE388F270C349400B65B5D /* Track */,
 				98D887DA2701FCDD00C09F2D /* Home */,
 			);
 			path = Presentation;
@@ -569,6 +571,7 @@
 		98B91EA326FB6A92008EA8D2 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				98BE3894270C363700B65B5D /* Track */,
 				9806800127030E1400A4588A /* Playlist */,
 				98B91EA426FB6AA9008EA8D2 /* Login */,
 			);
@@ -616,6 +619,39 @@
 				98B4EF0D26FC9C2800C33AA9 /* Mach1Alert.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		98BE388F270C349400B65B5D /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				98BE3891270C34CA00B65B5D /* View */,
+				98BE3890270C34BA00B65B5D /* ViewModel */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		98BE3890270C34BA00B65B5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		98BE3891270C34CA00B65B5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98BE3892270C34EA00B65B5D /* PlayTrackView.swift */,
+				98EDCAA7270476E000BC61D4 /* TrackItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		98BE3894270C363700B65B5D /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				98BE3895270C364600B65B5D /* TrackDTO.swift */,
+			);
+			path = Track;
 			sourceTree = "<group>";
 		};
 		98D22D7826EF39B800285854 = {
@@ -706,7 +742,6 @@
 			children = (
 				98068012270332D300A4588A /* Base */,
 				98EDCAA3270475E700BC61D4 /* Details */,
-				98EDCAA6270476C900BC61D4 /* List */,
 				98D887E5270206E900C09F2D /* SectionedPlaylistsView.swift */,
 			);
 			path = View;
@@ -761,14 +796,6 @@
 				981DAF9327070B720001CD04 /* ToolbarView.swift */,
 			);
 			path = Details;
-			sourceTree = "<group>";
-		};
-		98EDCAA6270476C900BC61D4 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				98EDCAA7270476E000BC61D4 /* PlaylistTrackItemView.swift */,
-			);
-			path = List;
 			sourceTree = "<group>";
 		};
 		98F73109270B24EE0028D0C9 /* Track */ = {
@@ -894,7 +921,7 @@
 				98F73114270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift in Sources */,
 				98F73108270B20C20028D0C9 /* PlaylistDetailsRepositoryImpl.swift in Sources */,
 				98827BDF26F3408000C6BA8E /* Mach1CircleImage.swift in Sources */,
-				98EDCAA8270476E000BC61D4 /* PlaylistTrackItemView.swift in Sources */,
+				98EDCAA8270476E000BC61D4 /* TrackItemView.swift in Sources */,
 				983FC03126FDC17A00F98089 /* SignUpViewModel.swift in Sources */,
 				98B91EA926FB6B4A008EA8D2 /* SignInRepositoryImpl.swift in Sources */,
 				98E443712701ED000003338A /* AppRoutingView.swift in Sources */,
@@ -912,6 +939,7 @@
 				9806801D270346BF00A4588A /* ReadFile.swift in Sources */,
 				9806800627030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift in Sources */,
 				98F73106270B20680028D0C9 /* PlaylistDetailsRepository.swift in Sources */,
+				98BE3896270C364600B65B5D /* TrackDTO.swift in Sources */,
 				981DAF9D270725F80001CD04 /* PlaylistDetailsViewModel.swift in Sources */,
 				98B91E9C26FB680D008EA8D2 /* SignInViewModel.swift in Sources */,
 				98B5AF8026EF6DA30007C292 /* ConfigurationProperty.swift in Sources */,
@@ -919,6 +947,7 @@
 				988B7B8626EF87E700622B89 /* WebSessionProvider.swift in Sources */,
 				983FC03526FDC3A400F98089 /* SignUp.swift in Sources */,
 				983FC03926FDC4A100F98089 /* SignUpRepositoryImpl.swift in Sources */,
+				98BE3893270C34EA00B65B5D /* PlayTrackView.swift in Sources */,
 				98B4EF0E26FC9C2800C33AA9 /* Mach1Alert.swift in Sources */,
 				98F7310F270B259B0028D0C9 /* TracksRepositoryImpl.swift in Sources */,
 				98F7310C270B25480028D0C9 /* TracksRepository.swift in Sources */,
@@ -937,7 +966,6 @@
 				983FC03B26FDC53100F98089 /* SignUpUseCaseImpl.swift in Sources */,
 				983465E426FB4FF300271537 /* LoggerCategoryType.swift in Sources */,
 				98B5AF7E26EF6CDF0007C292 /* Translate.swift in Sources */,
-				98F73102270B1EB40028D0C9 /* TrackDTO.swift in Sources */,
 				98B91EB126FB6F3F008EA8D2 /* Token.swift in Sources */,
 				98D887E82702072500C09F2D /* ProfileView.swift in Sources */,
 				98827BE726F48E1D00C6BA8E /* ViewExtension.swift in Sources */,

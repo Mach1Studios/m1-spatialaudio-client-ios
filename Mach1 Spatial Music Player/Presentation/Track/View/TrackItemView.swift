@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PlaylistTrackItemView: View {
+struct TrackItemView: View {
     let track: Track
     var body: some View {
         HStack {
@@ -14,7 +14,6 @@ struct PlaylistTrackItemView: View {
             }
             Spacer()
             Image(systemName: Constants.Image.System.Play.rawValue).foregroundColor(.Mach1Light)
-            Image(systemName: Constants.Image.System.Option.rawValue).foregroundColor(.Mach1Light)
         }
     }
 }
@@ -24,7 +23,7 @@ struct PlaylistTrackItemView: View {
 struct TrackItemView_Previews: PreviewProvider {
     static var previews: some View {
         Mach1View {
-            PlaylistTrackItemView(track: findTrack())
+            TrackItemView(track: findTrack())
         }
     }
     
