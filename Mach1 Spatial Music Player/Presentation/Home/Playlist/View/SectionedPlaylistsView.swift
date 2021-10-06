@@ -22,7 +22,7 @@ struct SectionedPlayistsView: View {
     private var observeUiState: some View {
         switch viewModel.uiState {
         case .Loading:
-            Mach1ProgressBar(shape: Circle(), height: Constants.Dimension.progressBar, backgroundColor: .clear)
+            Mach1ProgressBar(shape: Circle(), height: Constants.Dimension.progressBar.rawValue, backgroundColor: .clear)
         case .Error(let error):
             Mach1Alert(errorTitle, description: error)
         case .Success(let sectionedPlaylist):

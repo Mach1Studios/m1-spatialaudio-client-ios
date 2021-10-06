@@ -11,7 +11,7 @@ struct PlaylistDetailsView: View {
         Mach1View {
             switch viewModel.uiState {
             case .Loading:
-                Mach1ProgressBar(shape: Circle(), height: Constants.Dimension.progressBar, backgroundColor: .clear)
+                Mach1ProgressBar(shape: Circle(), height: Constants.Dimension.progressBar.rawValue, backgroundColor: .clear)
             case .Success(let playlist, let tracks):
                 ScrollView(.vertical, showsIndicators: false, content: {
                     VStack{

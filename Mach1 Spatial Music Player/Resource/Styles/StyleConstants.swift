@@ -1,10 +1,12 @@
 import SwiftUI
 
 enum Mach1Margin: CGFloat {
+    case VVBig = 44.0
     case VBig = 24.0
     case Big = 16.0
-    case Normal = 12.0
+    case Normal = 14.0
     case Small = 8.0
+    case VSmall = 4.0
 }
 
 enum Mach1Font: String {
@@ -23,17 +25,23 @@ enum Mach1TextSize: CGFloat {
 
 struct Constants {
     
-    struct Dimension {
-        static let progressBar: CGFloat = 100.0
+    enum Dimension: CGFloat {
+        case progressBar = 100.0
+        case orientationCard = 200.0
     }
     
     enum Rounded: CGFloat {
-        case normal = 8.0
+        case normal = 4.0
         case none = 0.0
     }
     
-    struct LineWidtch {
-        static let value: CGFloat = 0.4
+    struct LineWidth {
+        static let thick: CGFloat = 1.0
+        static let normal: CGFloat = 0.4
+    }
+    
+    struct LineDashedLength {
+        static let normal: CGFloat = 4
     }
     
     struct Fonts {
@@ -94,6 +102,10 @@ struct Constants {
     
     struct Opacity {
         static let value: CGFloat = 0.6
+    }
+    
+    struct OrientationCardAspectRatio {
+        static let value: CGFloat = 9 / 21
     }
     
 }

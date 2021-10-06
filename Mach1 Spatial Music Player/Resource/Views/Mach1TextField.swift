@@ -19,7 +19,7 @@ private struct Mach1FieldStyle: TextFieldStyle {
             .foregroundColor(.white)
             .background(
                 RoundedRectangle(cornerRadius: Constants.Rounded.normal.rawValue, style: .continuous)
-                    .stroke(Color.Mach1Gray, lineWidth: Constants.LineWidtch.value)
+                    .stroke(Color.Mach1Gray, lineWidth: Constants.LineWidth.normal)
             )
         }
 }

@@ -4,14 +4,7 @@ struct TrackItemView: View {
     let track: Track
     var body: some View {
         HStack {
-            Mach1CircleImage(
-                url: URL(string: track.url ?? "_"),
-                dimension: Constants.Image.Dimension.Small,
-                defaultSystemImage: .Track)
-            VStack(alignment: .leading) {
-                Text(track.name).foregroundColor(Color.Mach1Light).textStyle(SubBodyStyle())
-                Text(track.description).foregroundColor(Color.Mach1Gray).textStyle(SmallBodyStyle())
-            }
+            TrackItemInfoView(track: track)
             Spacer()
             Image(systemName: Constants.Image.System.Play.rawValue).foregroundColor(.Mach1Light)
         }
