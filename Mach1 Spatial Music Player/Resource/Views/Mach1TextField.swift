@@ -4,10 +4,36 @@ import SwiftUI
 struct Mach1TextField: View {
     let text: Binding<String>
     let placeHolder: String
+    var isMultiline: Bool = false
+    
     var body: some View {
-        TextField("", text: text)
-            .modifier(PlaceholderStyle(showPlaceHolder: text.wrappedValue.isEmpty, placeholder: placeHolder))
-            .textFieldStyle(Mach1FieldStyle())
+        if isMultiline {
+            //TODO: napraviti da placeholder
+            ZStack {
+                VStack {
+                    TextEditor(text: text)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 150)
+                        .foregroundColor(Color.white)
+                        .padding(5)
+                }.overlay(
+                    RoundedRectangle(cornerRadius: Constants.Rounded.value)
+                        .stroke(Color.Mach1Gray, lineWidth: 0.5)
+                )
+                
+                if text.wrappedValue.isEmpty {
+                    Text(placeHolder)
+                        .foregroundColor(Color.Mach1Gray)
+                        .padding(.horizontal)
+                        .padding(.vertical)
+                        .offset(x: -135, y: -55)
+                }
+            }
+                
+        } else {
+            TextField("", text: text)
+                .modifier(PlaceholderStyle(showPlaceHolder: text.wrappedValue.isEmpty, placeholder: placeHolder))
+                .textFieldStyle(Mach1FieldStyle())
+        }
     }
 }
 
@@ -44,9 +70,14 @@ private struct PlaceholderStyle: ViewModifier {
 
 struct Mach1TextField_Previews: PreviewProvider {
     @State static private var inputField = ""
+    @State static private var multilineField = ""
+    
     static var previews: some View {
         Mach1View {
-            Mach1TextField(text: $inputField, placeHolder: "Enter..").padding()
+            VStack {
+                Mach1TextField(text: $inputField, placeHolder: "Enter...").padding()
+                Mach1TextField(text: $multilineField, placeHolder: "Enter...", isMultiline: true).padding()
+            }
         }
     }
 }

@@ -47,6 +47,8 @@ struct Constants {
     struct Image {
         enum Dimension: CGFloat {
             case VeryBig = 300
+            case MediumBig = 250
+            case Bigger = 170
             case Big = 120
             case Normal = 60
             case TabIcon = 30
@@ -62,6 +64,7 @@ struct Constants {
             case NotFavourite = "heart" // 􀊴
             case Favourite = "heart.fill" // 􀊵
             case Favourites = "heart.circle" // 􀊸
+            case Find = "magnifyingglass.circle" // 􀒒
             case Option = "option" // 􀆕
             case Shuffle = "shuffle.circle" // 􀵉
             case Repeat = "repeat.circle" // 􀵋
@@ -73,6 +76,7 @@ struct Constants {
             case RemovePerson = "person.crop.circle.badge.xmark" // 􀉵
             case Camera = "camera.circle.fill" // 􀌡
             case Navigate = "chevron.forward" // 􀯻
+            case Back = "chevron.backward" // 􀯶
             case PreviousTrack = "backward.circle" // 􀺃
             case NextTrack = "forward.circle" // 􀺅
             case PlayTrack = "play.circle" // 􀊕

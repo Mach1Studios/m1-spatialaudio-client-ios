@@ -77,6 +77,15 @@
 		98D887E6270206E900C09F2D /* SectionedPlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D887E5270206E900C09F2D /* SectionedPlaylistsView.swift */; };
 		98D887E82702072500C09F2D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D887E72702072500C09F2D /* ProfileView.swift */; };
 		98E443712701ED000003338A /* AppRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E443702701ED000003338A /* AppRoutingView.swift */; };
+		BF6B1636270D9FFC00520C4C /* Mach1ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1635270D9FFC00520C4C /* Mach1ListView.swift */; };
+		BF6B163D270DC8B000520C4C /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B163C270DC8B000520C4C /* EditProfileView.swift */; };
+		BF6B1644270EE99500520C4C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1643270EE99500520C4C /* Profile.swift */; };
+		BF6B1647270EEC6D00520C4C /* ProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1646270EEC6D00520C4C /* ProfileDTO.swift */; };
+		BF6B164A270EFE0900520C4C /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1649270EFE0900520C4C /* ProfileRepository.swift */; };
+		BF6B164D270F15EA00520C4C /* BaseProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B164C270F15EA00520C4C /* BaseProfileDTO.swift */; };
+		BF6B1650270F199B00520C4C /* ProfileRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B164F270F199B00520C4C /* ProfileRepositoryImpl.swift */; };
+		BFF4EB84270B30CA001F5051 /* Mach1NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4EB83270B30CA001F5051 /* Mach1NavigationView.swift */; };
+		BFF4EB86270B4682001F5051 /* Mach1ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4EB85270B4682001F5051 /* Mach1ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +164,15 @@
 		98D887E5270206E900C09F2D /* SectionedPlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistsView.swift; sourceTree = "<group>"; };
 		98D887E72702072500C09F2D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		98E443702701ED000003338A /* AppRoutingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoutingView.swift; sourceTree = "<group>"; };
+		BF6B1635270D9FFC00520C4C /* Mach1ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1ListView.swift; sourceTree = "<group>"; };
+		BF6B163C270DC8B000520C4C /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		BF6B1643270EE99500520C4C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		BF6B1646270EEC6D00520C4C /* ProfileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDTO.swift; sourceTree = "<group>"; };
+		BF6B1649270EFE0900520C4C /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		BF6B164C270F15EA00520C4C /* BaseProfileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProfileDTO.swift; sourceTree = "<group>"; };
+		BF6B164F270F199B00520C4C /* ProfileRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepositoryImpl.swift; sourceTree = "<group>"; };
+		BFF4EB83270B30CA001F5051 /* Mach1NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1NavigationView.swift; sourceTree = "<group>"; };
+		BFF4EB85270B4682001F5051 /* Mach1ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +316,7 @@
 		983465E526FB55CC00271537 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B164E270F194E00520C4C /* Profile */,
 				98B91EA726FB6B33008EA8D2 /* Login */,
 				9806800427030F0A00A4588A /* Playlist */,
 			);
@@ -317,6 +336,7 @@
 		983465E726FB560E00271537 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B1642270EE94E00520C4C /* Profile */,
 				98B91E9D26FB6828008EA8D2 /* Login */,
 				9806800D2703128300A4588A /* Playlist */,
 			);
@@ -326,6 +346,7 @@
 		983465E826FB561500271537 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B1648270EFDEC00520C4C /* Profile */,
 				98B91EA026FB685C008EA8D2 /* Login */,
 				98067FFE27030D8900A4588A /* Playlist */,
 			);
@@ -515,6 +536,7 @@
 		98B91EA326FB6A92008EA8D2 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B1645270EEC2B00520C4C /* Profile */,
 				9806800127030E1400A4588A /* Playlist */,
 				98B91EA426FB6AA9008EA8D2 /* Login */,
 			);
@@ -560,6 +582,9 @@
 				98B4EF0926FC6D7300C33AA9 /* Mach1View.swift */,
 				98B4EF0B26FC86D700C33AA9 /* Mach1Logo.swift */,
 				98B4EF0D26FC9C2800C33AA9 /* Mach1Alert.swift */,
+				BFF4EB83270B30CA001F5051 /* Mach1NavigationView.swift */,
+				BFF4EB85270B4682001F5051 /* Mach1ProfileHeaderView.swift */,
+				BF6B1635270D9FFC00520C4C /* Mach1ListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -684,6 +709,7 @@
 			isa = PBXGroup;
 			children = (
 				98D887E72702072500C09F2D /* ProfileView.swift */,
+				BF6B163C270DC8B000520C4C /* EditProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -694,6 +720,47 @@
 				98E443702701ED000003338A /* AppRoutingView.swift */,
 			);
 			path = Routing;
+			sourceTree = "<group>";
+		};
+		BF6B1642270EE94E00520C4C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B1643270EE99500520C4C /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF6B1645270EEC2B00520C4C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B164B270F15C600520C4C /* Base */,
+				BF6B1646270EEC6D00520C4C /* ProfileDTO.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF6B1648270EFDEC00520C4C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B1649270EFE0900520C4C /* ProfileRepository.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF6B164B270F15C600520C4C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B164C270F15EA00520C4C /* BaseProfileDTO.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		BF6B164E270F194E00520C4C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B164F270F199B00520C4C /* ProfileRepositoryImpl.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -791,6 +858,7 @@
 				9806800627030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift in Sources */,
 				98B91E9C26FB680D008EA8D2 /* SignInViewModel.swift in Sources */,
 				98B5AF8026EF6DA30007C292 /* ConfigurationProperty.swift in Sources */,
+				BF6B1644270EE99500520C4C /* Profile.swift in Sources */,
 				983FC04426FDF9CA00F98089 /* SignInUseCase.swift in Sources */,
 				988B7B8626EF87E700622B89 /* WebSessionProvider.swift in Sources */,
 				983FC03526FDC3A400F98089 /* SignUp.swift in Sources */,
@@ -800,6 +868,7 @@
 				988B7B8F26EF96F400622B89 /* ButtonStyles.swift in Sources */,
 				980680092703122100A4588A /* GetSectionedPlaylistsUseCaseImpl.swift in Sources */,
 				988B7B8426EF87C700622B89 /* ApiCall.swift in Sources */,
+				BF6B164A270EFE0900520C4C /* ProfileRepository.swift in Sources */,
 				988B7B8B26EF884300622B89 /* UserAuthorization.swift in Sources */,
 				98B91E9A26FB67F8008EA8D2 /* SignInView.swift in Sources */,
 				988B7B8826EF87F400622B89 /* WebRepository.swift in Sources */,
@@ -809,25 +878,32 @@
 				98B5AF7E26EF6CDF0007C292 /* Translate.swift in Sources */,
 				98B91EB126FB6F3F008EA8D2 /* Token.swift in Sources */,
 				98D887E82702072500C09F2D /* ProfileView.swift in Sources */,
+				BF6B163D270DC8B000520C4C /* EditProfileView.swift in Sources */,
 				98827BE726F48E1D00C6BA8E /* ViewExtension.swift in Sources */,
 				98D887DE2701FD4D00C09F2D /* HomeView.swift in Sources */,
 				98B91EA226FB686B008EA8D2 /* SignInRepository.swift in Sources */,
 				98BCEC3326F0B1A700691C16 /* Mach1TextField.swift in Sources */,
+				BF6B164D270F15EA00520C4C /* BaseProfileDTO.swift in Sources */,
+				BF6B1650270F199B00520C4C /* ProfileRepositoryImpl.swift in Sources */,
 				98B4EF1326FCBE6300C33AA9 /* SignUpView.swift in Sources */,
 				98D22D8526EF39B800285854 /* Mach1_Spatial_Music_PlayerApp.swift in Sources */,
 				98B91E9F26FB6836008EA8D2 /* SignIn.swift in Sources */,
 				98B91EAB26FB6C41008EA8D2 /* StringExtensions.swift in Sources */,
+				BF6B1636270D9FFC00520C4C /* Mach1ListView.swift in Sources */,
 				98B5AF8B26EF7A8A0007C292 /* TextSyles.swift in Sources */,
 				9806800F2703129D00A4588A /* SectionedPlaylist.swift in Sources */,
 				983465E126FB277D00271537 /* LoggerFactory.swift in Sources */,
 				98068014270333A700A4588A /* Mach1SectionedList.swift in Sources */,
 				983FC03326FDC39600F98089 /* SignUpRepository.swift in Sources */,
 				98827BE126F3780000C6BA8E /* Mach1ProgressBar.swift in Sources */,
+				BF6B1647270EEC6D00520C4C /* ProfileDTO.swift in Sources */,
 				983FC04226FDF27F00F98089 /* SignUpCase.swift in Sources */,
 				98827BE326F3895900C6BA8E /* Mach1CardImage.swift in Sources */,
+				BFF4EB86270B4682001F5051 /* Mach1ProfileHeaderView.swift in Sources */,
 				9806801F270348FB00A4588A /* MockedResource.swift in Sources */,
 				98827BDB26F32CB100C6BA8E /* Mach1SegmentedPicker.swift in Sources */,
 				98827BEB26F4B00200C6BA8E /* Mach1CorrugatedImage.swift in Sources */,
+				BFF4EB84270B30CA001F5051 /* Mach1NavigationView.swift in Sources */,
 				98068011270314B700A4588A /* SectionedPlaylistsViewModel.swift in Sources */,
 				98B4EF0826FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift in Sources */,
 				98B4EF0C26FC86D700C33AA9 /* Mach1Logo.swift in Sources */,
