@@ -10,5 +10,6 @@ class MockedRepositoryInjectionFactory {
         InjectedValues[\.sectionedPlaylistRepository] = MockedSectionedPlaylistRepositoryImpl()
         InjectedValues[\.playlistDetailsRepository] = MockedPlaylistDetailsRepositoryImpl()
         InjectedValues[\.tracksRepository] = MockedTracksRepositoryImpl()
+        InjectedValues[\.friendRepository] = MockedFriendRepositoryImpl()
     }
 }

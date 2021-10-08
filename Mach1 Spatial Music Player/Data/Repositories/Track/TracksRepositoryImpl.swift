@@ -15,11 +15,21 @@ actor TracksRepositoryImpl: TracksRepository {
     func get(playlist: UUID) async throws -> [TrackDTO] {
         throw "Not implemented"
     }
+    
+    func getFavourites(search: String?) async throws -> [TrackDTO] {
+        throw "Not implemented"
+    }
 }
 
 actor MockedTracksRepositoryImpl: TracksRepository {
     func get(playlist: UUID) async throws -> [TrackDTO] {
         return try ReadFile.json(resource: .Tracks)
+    }
+    
+    func getFavourites(search: String?) async throws -> [TrackDTO] {
+        let tracks: [TrackDTO] = try ReadFile.json(resource: .Tracks)
+        guard let searchText = search, !searchText.isEmpty else { return tracks }
+        return tracks.filter { $0.name.contains(searchText) }
     }
 }
 
