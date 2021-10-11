@@ -19,41 +19,37 @@ extension InjectedValues {
 }
 
 class ProfileRepositoryImpl: ProfileRepository {
-    func getProfileInfo(dto: ProfileRequestDTO) async throws -> ProfileResponseDTO {
+    func getProfileInfo() async throws -> ProfileResponseDTO {
         throw "Not implemented"
     }
     
-    func getProfileForEdit(dto: ProfileForEditRequestDTO) async throws -> ProfileForEditResponseDTO {
+    func getProfileForEdit() async throws -> ProfileForEditResponseDTO {
         throw "Not implemented"
     }
     
-    func editProfile(dto: EditProfileRequestDTO) async throws -> EditProfileResponseDTO {
+    func editProfile(dto: EditProfileRequestDTO) async throws -> Void {
         throw "Not implemented"
     }
     
-    func changePassword(dto: ChangeProfilePasswordRequestDTO) async throws -> ChangeProfilePasswordResponseDTO {
+    func changePassword(dto: ChangeProfilePasswordRequestDTO) async throws -> Void {
         throw "Not implemented"
     }
 }
 
 class MockedProfileRepositoryImpl: ProfileRepository {
-    func getProfileInfo(dto: ProfileRequestDTO) async throws -> ProfileResponseDTO {
-        //TODO: implementirati
-        throw "Not implemented"
+    func getProfileInfo() async throws -> ProfileResponseDTO {
+        return try ReadFile.json(resource: .Profile)
     }
     
-    func getProfileForEdit(dto: ProfileForEditRequestDTO) async throws -> ProfileForEditResponseDTO {
-        //TODO: implementirati
-        throw "Not implemented"
+    func getProfileForEdit() async throws -> ProfileForEditResponseDTO {
+        return try ReadFile.json(resource: .EditProfile)
     }
     
-    func editProfile(dto: EditProfileRequestDTO) async throws -> EditProfileResponseDTO {
-        //TODO: implementirati
-        throw "Not implemented"
+    func editProfile(dto: EditProfileRequestDTO) async throws -> Void {
+        print("Saving changes for: \(dto)")
     }
     
-    func changePassword(dto: ChangeProfilePasswordRequestDTO) async throws -> ChangeProfilePasswordResponseDTO {
-        //TODO: implementirati
-        throw "Not implemented"
+    func changePassword(dto: ChangeProfilePasswordRequestDTO) async throws -> Void {
+        
     }
 }

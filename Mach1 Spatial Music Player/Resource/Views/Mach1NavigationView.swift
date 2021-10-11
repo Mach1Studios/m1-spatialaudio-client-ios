@@ -18,7 +18,7 @@ struct Mach1NavigationView: View {
                     Image(systemName: Constants.Image.System.Back.rawValue).foregroundColor(.Mach1Light)
                 }
             }
-            Text(title ?? "").textStyle(TitleStyle()).padding()
+            Text(title ?? "").textStyle(TitleStyle()).padding().withShadow()
         }
     }
 }

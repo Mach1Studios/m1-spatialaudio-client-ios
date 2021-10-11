@@ -2,35 +2,41 @@
 //  EditProfileView.swift
 //  Mach1 Spatial Music Player
 //
-//  Created by EurobitDev on 6. 10. 2021..
+//  Created by EurobitDev on 8. 10. 2021..
 //
 
 import SwiftUI
 
 struct EditProfileView: View {
-    @State var usernameText = ""
-    @State var bioText = ""
+    @StateObject private var viewModel = EditProfileViewModel()
+    @Translate private var errorTitle = "Error"
+    
     init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor(.Mach1Gray)
         UITabBar.appearance().backgroundColor = UIColor(.Mach1Darkest)
         UITabBar.appearance().barTintColor = UIColor(.Mach1Darkest)
         UITextView.appearance().backgroundColor = UIColor(.Mach1Dark)
     }
+    
     var body: some View {
         Mach1View {
-            GeometryReader { geometry in
-                VStack {
-                    Mach1ProfileHeaderView(isRoot: false, isEditable: true, title: "", geometry: geometry)
-                    VStack {
-                        Mach1TextField(text: $usernameText, placeHolder: "Enter username").padding()
-                        Button("Change password") {print("Change password")}
-                        .buttonStyle(Mach1TextButtonStyle()).padding()
-                        Mach1TextField(text: $bioText, placeHolder: "Enter bio", isMultiline: true).padding()
-                    }
-                    Button("Save changes") {print("Save changes")}
-                    .buttonStyle(Mach1ButtonStyle()).padding()
-                }.ignoresSafeArea()
-            }
+            observeUiState.task { await viewModel.get() }
+        }
+    }
+    
+    @ViewBuilder
+    private var observeUiState: some View {
+        switch viewModel.uiState {
+            case .Loading:
+                Mach1ProgressBar(shape: Circle(), height: Constants.Dimension.progressBar, backgroundColor: .clear)
+            case .Error(let error):
+                Mach1Alert(errorTitle, description: error)
+            case .GetSuccess(let profile):
+                Mach1BaseEditProfileView(profile: profile)
+            case .OnSavingChanges(let profile):
+                Mach1BaseEditProfileView(profile: profile, savingChanges: true)
+            case .OnSavedSuccess(let profile):
+                Mach1BaseEditProfileView(profile: profile, savingChanges: false)
         }
     }
 }

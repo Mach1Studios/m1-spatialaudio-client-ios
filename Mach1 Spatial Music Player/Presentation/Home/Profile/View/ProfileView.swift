@@ -1,7 +1,15 @@
+//
+//  ProfileView.swift
+//  Mach1 Spatial Music Player
+//
+//  Created by EurobitDev on 8. 10. 2021..
+//
+
 import SwiftUI
 
 struct ProfileView: View {
-    @State var showEditProfileView = false
+    @StateObject private var viewModel = ProfileViewModel()
+    @Translate private var errorTitle = "Error"
     
     init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor(.Mach1Gray)
@@ -11,29 +19,23 @@ struct ProfileView: View {
     
     var body: some View {
         Mach1View {
-            GeometryReader { geometry in
-                VStack {
-                    Mach1ProfileHeaderView(isRoot: true, isEditable: false, title: "Username", geometry: geometry)
-                    VStack {
-                    HStack {
-                        Button("2 friends") {print("2 friends")}
-                        .buttonStyle(Mach1TextButtonStyle(icon: Constants.Image.System.Friends.rawValue))
-                        _HSpacer()
-                        Button("") {self.showEditProfileView.toggle()}.sheet(isPresented: $showEditProfileView) {
-                            EditProfileView()
-                        }
-                        .buttonStyle(Mach1ImageButtonStyle(icon: Constants.Image.System.Edit.rawValue))
-                    }.padding(.horizontal)
-                        Divider()
-                            .frame(height: 1)
-                            .background(Color.Mach1Darkest).padding(.vertical)
-                    }.offset(y: -24).padding(.vertical, -24)
-                    Mach1ListView(items: [
-                        Mach1ListItem(icon: Constants.Image.System.Favourites.rawValue, title: "Favourite tracks", action: {print("Favourites tracks")}),
-                        Mach1ListItem(icon: Constants.Image.System.Find.rawValue, title: "Find friends", action: {print("Find friends")}),
-                        Mach1ListItem(icon: Constants.Image.System.Logout.rawValue, title: "Logout", action: {print("Logout")})])
-                }.ignoresSafeArea()
-            }
+            observeUiState.task { await viewModel.get() }
+        }
+    }
+    
+    func logout() async {
+        await viewModel.logout()
+    }
+    
+    @ViewBuilder
+    private var observeUiState: some View {
+        switch viewModel.uiState {
+        case .Loading:
+            Mach1ProgressBar(shape: Circle(), height: Constants.Dimension.progressBar, backgroundColor: .clear)
+        case .Error(let error):
+            Mach1Alert(errorTitle, description: error)
+        case .Success(let profile):
+            Mach1BaseProfileView(profile: profile)
         }
     }
 }
