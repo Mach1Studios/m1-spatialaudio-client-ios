@@ -26,6 +26,11 @@ struct SearchFavoutireTracksView: View {
                     .searchable(text: $viewModel.searchText)
                     .navigationTitle(Text(favouritesTracks))
             }.task { await viewModel.filter() }
+            .sheet(isPresented: $viewModel.isTrackSelected) {
+                self.viewModel.unselectTrack()
+            } content: {
+                if let track = self.viewModel.track { PlayTrackView(track: track) }
+            }
         }.foregroundColor(.Mach1Light)
     }
     
@@ -38,7 +43,7 @@ struct SearchFavoutireTracksView: View {
             Mach1Alert(errorTitle, description: error)
         case .Success(let tracks):
             List {
-                ForEach(tracks, id: \.id) { TrackItemView(track: $0) }
+                ForEach(tracks, id: \.id) { TrackItemView(track: $0) { track in self.viewModel.selectTrack(track) }}
                 .listRowBackground(Color.Mach1Darkest)
             }
         case .NoResults:

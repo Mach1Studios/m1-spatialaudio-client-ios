@@ -17,7 +17,9 @@ struct PlaylistDetailsView: View {
                     VStack{
                         HeaderPlaylistDetailsView(playlist: playlist) { showToolbar = $0 }
                         VStack(spacing: Mach1Margin.Small.rawValue) {
-                            ForEach(tracks, id: \.id) { TrackItemView(track: $0).padding(.bottom) }
+                            ForEach(tracks, id: \.id) { TrackItemView(track: $0) { track in
+                                viewModel.selectTrack(track)
+                            }.padding(.bottom) }
                         }.padding()
                         Spacer()
                     }
@@ -32,6 +34,11 @@ struct PlaylistDetailsView: View {
                 Mach1Alert(errorTitle, description: error)
             }
         }.task { await viewModel.getPlaylist(id: self.id) }
+        .sheet(isPresented: $viewModel.isTrackSelected) {
+            self.viewModel.unselectTrack()
+        } content: {
+            if let track = self.viewModel.track { PlayTrackView(track: track) }
+        }
     }
 }
 

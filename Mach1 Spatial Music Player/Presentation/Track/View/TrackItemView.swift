@@ -2,11 +2,17 @@ import SwiftUI
 
 struct TrackItemView: View {
     let track: Track
+    var action: ((Track) -> Void)
+    
     var body: some View {
-        HStack {
-            TrackItemInfoView(track: track)
-            Spacer()
-            Image(systemName: Constants.Image.System.Play.rawValue).foregroundColor(.Mach1Light)
+        Button {
+            action(self.track)
+        } label: {
+            HStack {
+                TrackItemInfoView(track: track)
+                Spacer()
+                Image(systemName: Constants.Image.System.Play.rawValue).foregroundColor(.Mach1Light)
+            }
         }
     }
 }
@@ -16,7 +22,9 @@ struct TrackItemView: View {
 struct TrackItemView_Previews: PreviewProvider {
     static var previews: some View {
         Mach1View {
-            TrackItemView(track: findTrack())
+            TrackItemView(track: findTrack()) { track in
+                print("Selected track \(track.name)")
+            }
         }
     }
     

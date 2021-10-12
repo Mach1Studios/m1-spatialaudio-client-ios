@@ -5,6 +5,8 @@ class FavouritesTracksViewModel: ObservableObject {
     @Inject(\.getFavouriteTracksUseCase) private var getFavouriteTracksUseCase: GetFavouriteTracksUseCase
     @Published var searchText = ""
     @Published private(set) var uiState: FavouriteTracksState = .Loading
+    @Published var isTrackSelected: Bool = false
+    @Published private(set) var track: Track? = nil
     
     @MainActor
     func filter() async {
@@ -18,6 +20,15 @@ class FavouritesTracksViewModel: ObservableObject {
         }
     }
     
+    func selectTrack(_ track: Track) {
+        self.track = track
+        self.isTrackSelected = true
+    }
+    
+    func unselectTrack() {
+        self.track = nil
+        self.isTrackSelected = false
+    }
 }
 
 enum FavouriteTracksState {

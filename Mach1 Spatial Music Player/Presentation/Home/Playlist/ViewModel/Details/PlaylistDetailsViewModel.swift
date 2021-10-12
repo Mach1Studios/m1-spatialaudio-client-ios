@@ -6,6 +6,8 @@ class PlaylistDetailsViewModel: ObservableObject {
     @Inject(\.getPlaylistDetailsUseCase) private var getPlaylistDetails: GetPlaylistDetailsUseCase
     @Inject(\.getPlaylistTracksUseCase) private var getPlaylistTracks: GetPlaylistTracksUseCase
     @Published private(set) var uiState: PlaylistDetailsState = .Loading
+    @Published var isTrackSelected: Bool = false
+    @Published private(set) var track: Track? = nil
     
     @MainActor
     func getPlaylist(id: UUID) async {
@@ -17,6 +19,16 @@ class PlaylistDetailsViewModel: ObservableObject {
             logger.error("Error when get playlist \(id): \(error)", LoggerCategoryType.Playlist)
             self.uiState = .Error(error.localizedDescription)
         }
+    }
+    
+    func selectTrack(_ track: Track) {
+        self.track = track
+        self.isTrackSelected = true
+    }
+    
+    func unselectTrack() {
+        self.track = nil
+        self.isTrackSelected = false
     }
 }
 
