@@ -35,3 +35,11 @@ struct ChangeProfilePasswordRequestDTO: Codable, Equatable {
     let oldPassword: String
     let newPassword: String
 }
+
+struct ProfileFavouriteTracksResponseDTO: Codable, Equatable {
+    let id: String
+    let username: String
+    let coverImage: String?
+    let profileImage: String?
+    let playlists: [PlaylistItemDTO]
+}

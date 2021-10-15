@@ -50,7 +50,7 @@ struct Mach1BaseEditProfileView: View {
                 }
                 if(!savingChanges) {
                     Button(saveChanges) {
-                        Task.init {
+                        Task.init(priority: .high) {
                             self.viewModel.username = $usernameText.wrappedValue
                             self.viewModel.biography = $bioText.wrappedValue
                             

@@ -1,14 +1,14 @@
 //
-//  ProfileView.swift
+//  FavouriteTracksView.swift
 //  Mach1 Spatial Music Player
 //
-//  Created by EurobitDev on 8. 10. 2021..
+//  Created by EurobitDev on 11. 10. 2021..
 //
 
 import SwiftUI
 
-struct ProfileView: View {
-    @StateObject private var viewModel = ProfileViewModel()
+struct ProfileFavouriteTracksView: View {
+    @StateObject private var viewModel = ProfileFavouriteTracksViewModel()
     @Translate private var errorTitle = "Error"
     
     init() {
@@ -19,7 +19,9 @@ struct ProfileView: View {
     
     var body: some View {
         Mach1View {
-            observeUiState.task { await viewModel.get() }
+            observeUiState.task {
+                await viewModel.get()
+            }
         }
     }
     
@@ -30,14 +32,14 @@ struct ProfileView: View {
             Mach1ProgressBar(shape: Circle(), height: Constants.Dimension.progressBar, backgroundColor: .clear)
         case .Error(let error):
             Mach1Alert(errorTitle, description: error)
-        case .Success(let profile):
-            Mach1BaseProfileView(profile: profile)
+        case .GetSuccess(let profile):
+            Mach1BaseProfileFavouriteTracksView(profile: profile)
         }
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct ProfileFavouriteTracksView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileFavouriteTracksView()
     }
 }

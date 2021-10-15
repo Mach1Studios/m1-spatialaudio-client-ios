@@ -20,9 +20,10 @@ struct Mach1ListView: View {
                             }
                             Text(item.title).foregroundColor(.Mach1GrayLight)
                         }
-                        
-                            Spacer()
-                            Button("") {onClick()}
+                        Spacer()
+                        Button("") {onClick()}.sheet(isPresented: item.isPressed) {
+                                item.navigateTo
+                            }
                             .buttonStyle(Mach1ImageButtonStyle(icon: Constants.Image.System.Navigate.rawValue))
                         
                     }.padding(.horizontal).padding(.vertical, 5).contentShape(Rectangle()).onTapGesture(perform: {onClick()})
@@ -38,6 +39,9 @@ struct Mach1ListItem: Equatable, Identifiable, Hashable {
     var icon: String?
     let title: String
     var action: (() -> Void)? = nil
+    var isPressed: Binding<Bool>
+    var navigateTo: AnyView
+
     
     static func == (lhs: Mach1ListItem, rhs: Mach1ListItem) -> Bool {
         return lhs.id == rhs.id && lhs.title == rhs.title && lhs.icon == rhs.icon
@@ -60,9 +64,9 @@ struct Mach1ListView_Previews: PreviewProvider {
     static var previews: some View {
         Mach1View {
             let items = [
-                Mach1ListItem(icon: Constants.Image.System.Favourites.rawValue, title: "Favourite tracks", action: {print("Favourites tracks")}),
-                Mach1ListItem(icon: Constants.Image.System.Find.rawValue, title: "Find friends", action: {print("Find friends")}),
-                Mach1ListItem(icon: Constants.Image.System.Logout.rawValue, title: "Logout", action: {print("Logout")})
+                Mach1ListItem(icon: Constants.Image.System.Favourites.rawValue, title: "Favourite tracks", action: {print("Favourites tracks")}, isPressed: State(initialValue: true).projectedValue, navigateTo: AnyView(ProfileFavouriteTracksView.init())),
+                Mach1ListItem(icon: Constants.Image.System.Find.rawValue, title: "Find friends", action: {print("Find friends")}, isPressed: State(initialValue: true).projectedValue, navigateTo: AnyView(ProfileFavouriteTracksView.init())),
+                Mach1ListItem(icon: Constants.Image.System.Logout.rawValue, title: "Logout", action: {print("Logout")}, isPressed: State(initialValue: true).projectedValue, navigateTo: AnyView(ProfileFavouriteTracksView.init()))
             ]
             Mach1ListView(items: items)
         }

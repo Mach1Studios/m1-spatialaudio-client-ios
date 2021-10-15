@@ -34,6 +34,10 @@ class ProfileRepositoryImpl: ProfileRepository {
     func changePassword(dto: ChangeProfilePasswordRequestDTO) async throws -> Void {
         throw "Not implemented"
     }
+    
+    func getProfileFavouriteTracks() async throws -> ProfileFavouriteTracksResponseDTO {
+        throw "Not implemented"
+    }
 }
 
 class MockedProfileRepositoryImpl: ProfileRepository {
@@ -51,5 +55,9 @@ class MockedProfileRepositoryImpl: ProfileRepository {
     
     func changePassword(dto: ChangeProfilePasswordRequestDTO) async throws -> Void {
         
+    }
+    
+    func getProfileFavouriteTracks() async throws -> ProfileFavouriteTracksResponseDTO {
+        return try ReadFile.json(resource: .ProfileFavouriteTracks)
     }
 }

@@ -103,6 +103,13 @@
 		BFE5F58B27108ACB00253D53 /* Mach1FavouriteTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F58A27108ACB00253D53 /* Mach1FavouriteTracks.swift */; };
 		BFE5F58D27108CF000253D53 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F58C27108CF000253D53 /* LogoutUseCase.swift */; };
 		BFE5F58F27108D3100253D53 /* LogoutUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F58E27108D3100253D53 /* LogoutUseCaseImpl.swift */; };
+		BFE5F5912714585800253D53 /* ProfileFavouriteTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F5902714585800253D53 /* ProfileFavouriteTracks.swift */; };
+		BFE5F59327145C9400253D53 /* Mach1BaseProfileFavouriteTracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59227145C9400253D53 /* Mach1BaseProfileFavouriteTracksView.swift */; };
+		BFE5F59527146CDD00253D53 /* profilefavouritetracks.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE5F59427146CDD00253D53 /* profilefavouritetracks.json */; };
+		BFE5F59727146F8F00253D53 /* ProfileFavouriteTracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59627146F8F00253D53 /* ProfileFavouriteTracksView.swift */; };
+		BFE5F59927146FC600253D53 /* ProfileFavouriteTracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59827146FC600253D53 /* ProfileFavouriteTracksViewModel.swift */; };
+		BFE5F59B271470DE00253D53 /* GetProfileFavouriteTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59A271470DE00253D53 /* GetProfileFavouriteTracksUseCase.swift */; };
+		BFE5F59D2714716400253D53 /* GetProfileFavouriteTracksUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59C2714716400253D53 /* GetProfileFavouriteTracksUseCaseImpl.swift */; };
 		BFF4EB84270B30CA001F5051 /* Mach1NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4EB83270B30CA001F5051 /* Mach1NavigationView.swift */; };
 		BFF4EB86270B4682001F5051 /* Mach1ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4EB85270B4682001F5051 /* Mach1ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
@@ -209,6 +216,13 @@
 		BFE5F58A27108ACB00253D53 /* Mach1FavouriteTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1FavouriteTracks.swift; sourceTree = "<group>"; };
 		BFE5F58C27108CF000253D53 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
 		BFE5F58E27108D3100253D53 /* LogoutUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCaseImpl.swift; sourceTree = "<group>"; };
+		BFE5F5902714585800253D53 /* ProfileFavouriteTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFavouriteTracks.swift; sourceTree = "<group>"; };
+		BFE5F59227145C9400253D53 /* Mach1BaseProfileFavouriteTracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1BaseProfileFavouriteTracksView.swift; sourceTree = "<group>"; };
+		BFE5F59427146CDD00253D53 /* profilefavouritetracks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profilefavouritetracks.json; sourceTree = "<group>"; };
+		BFE5F59627146F8F00253D53 /* ProfileFavouriteTracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFavouriteTracksView.swift; sourceTree = "<group>"; };
+		BFE5F59827146FC600253D53 /* ProfileFavouriteTracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFavouriteTracksViewModel.swift; sourceTree = "<group>"; };
+		BFE5F59A271470DE00253D53 /* GetProfileFavouriteTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileFavouriteTracksUseCase.swift; sourceTree = "<group>"; };
+		BFE5F59C2714716400253D53 /* GetProfileFavouriteTracksUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileFavouriteTracksUseCaseImpl.swift; sourceTree = "<group>"; };
 		BFF4EB83270B30CA001F5051 /* Mach1NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1NavigationView.swift; sourceTree = "<group>"; };
 		BFF4EB85270B4682001F5051 /* Mach1ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -286,6 +300,7 @@
 			children = (
 				BFE5F5712710411300253D53 /* profile.json */,
 				BFE5F58127106E3600253D53 /* editprofile.json */,
+				BFE5F59427146CDD00253D53 /* profilefavouritetracks.json */,
 				9806801A2703448500A4588A /* sectionedplaylists.json */,
 				9806802027034A9500A4588A /* valid_token.json */,
 				9806801E270348FB00A4588A /* MockedResource.swift */,
@@ -747,6 +762,7 @@
 				BFE5F5682710307100253D53 /* Base */,
 				BFE5F56B271030EF00253D53 /* ProfileView.swift */,
 				BFE5F5732710482100253D53 /* EditProfileView.swift */,
+				BFE5F59627146F8F00253D53 /* ProfileFavouriteTracksView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -764,6 +780,7 @@
 			children = (
 				BF6B1643270EE99500520C4C /* Profile.swift */,
 				BFE5F57727104A2600253D53 /* ProfileForEdit.swift */,
+				BFE5F5902714585800253D53 /* ProfileFavouriteTracks.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -797,6 +814,7 @@
 			children = (
 				BFE5F55E270F297C00253D53 /* ProfileViewModel.swift */,
 				BFE5F5752710491800253D53 /* EditProfileViewModel.swift */,
+				BFE5F59827146FC600253D53 /* ProfileFavouriteTracksViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -805,9 +823,10 @@
 			isa = PBXGroup;
 			children = (
 				BFE5F564270F30B000253D53 /* GetProfileInfoUseCaseImpl.swift */,
+				BFE5F58E27108D3100253D53 /* LogoutUseCaseImpl.swift */,
 				BFE5F57D2710500F00253D53 /* GetProfileForEditUseCaseImpl.swift */,
 				BFE5F58827107D6700253D53 /* SaveProfileChangesUseCaseImpl.swift */,
-				BFE5F58E27108D3100253D53 /* LogoutUseCaseImpl.swift */,
+				BFE5F59C2714716400253D53 /* GetProfileFavouriteTracksUseCaseImpl.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -829,6 +848,7 @@
 			children = (
 				98D887E72702072500C09F2D /* Mach1BaseProfileView.swift */,
 				BF6B163C270DC8B000520C4C /* Mach1BaseEditProfileView.swift */,
+				BFE5F59227145C9400253D53 /* Mach1BaseProfileFavouriteTracksView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -837,9 +857,10 @@
 			isa = PBXGroup;
 			children = (
 				BFE5F562270F2C1300253D53 /* GetProfileInfoUseCase.swift */,
+				BFE5F58C27108CF000253D53 /* LogoutUseCase.swift */,
 				BFE5F57B27104FAA00253D53 /* GetProfileForEditUseCase.swift */,
 				BFE5F58627107D0400253D53 /* SaveProfileChangesUseCase.swift */,
-				BFE5F58C27108CF000253D53 /* LogoutUseCase.swift */,
+				BFE5F59A271470DE00253D53 /* GetProfileFavouriteTracksUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -909,6 +930,7 @@
 				9806801B2703448500A4588A /* sectionedplaylists.json in Resources */,
 				98B5AF8D26EF7B7E0007C292 /* ProximaNovaItalic.otf in Resources */,
 				BFE5F5722710411300253D53 /* profile.json in Resources */,
+				BFE5F59527146CDD00253D53 /* profilefavouritetracks.json in Resources */,
 				98B5AF8926EF7A480007C292 /* ProximaNovaSemibold.otf in Resources */,
 				BFE5F58227106E3600253D53 /* editprofile.json in Resources */,
 				988B7B9126EF98BA00622B89 /* Colors.xcassets in Resources */,
@@ -928,12 +950,16 @@
 				98827BDF26F3408000C6BA8E /* Mach1CircleImage.swift in Sources */,
 				983FC03126FDC17A00F98089 /* SignUpViewModel.swift in Sources */,
 				98B91EA926FB6B4A008EA8D2 /* SignInRepositoryImpl.swift in Sources */,
+				BFE5F5912714585800253D53 /* ProfileFavouriteTracks.swift in Sources */,
 				98E443712701ED000003338A /* AppRoutingView.swift in Sources */,
+				BFE5F59727146F8F00253D53 /* ProfileFavouriteTracksView.swift in Sources */,
+				BFE5F59B271470DE00253D53 /* GetProfileFavouriteTracksUseCase.swift in Sources */,
 				980680162703340C00A4588A /* Mach1Sectioned.swift in Sources */,
 				988B7B8126EF86E900622B89 /* InjectionFactory.swift in Sources */,
 				BFE5F56C271030EF00253D53 /* ProfileView.swift in Sources */,
 				BFE5F5802710528400253D53 /* Mach1BaseProfile.swift in Sources */,
 				98BCEC2D26F089CF00691C16 /* StyleConstants.swift in Sources */,
+				BFE5F59327145C9400253D53 /* Mach1BaseProfileFavouriteTracksView.swift in Sources */,
 				9806800327030E2B00A4588A /* SectionedPlaylistDTO.swift in Sources */,
 				98B4EF0A26FC6D7300C33AA9 /* Mach1View.swift in Sources */,
 				9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */,
@@ -973,6 +999,7 @@
 				98D887E82702072500C09F2D /* Mach1BaseProfileView.swift in Sources */,
 				BF6B163D270DC8B000520C4C /* Mach1BaseEditProfileView.swift in Sources */,
 				98827BE726F48E1D00C6BA8E /* ViewExtension.swift in Sources */,
+				BFE5F59927146FC600253D53 /* ProfileFavouriteTracksViewModel.swift in Sources */,
 				98D887DE2701FD4D00C09F2D /* HomeView.swift in Sources */,
 				98B91EA226FB686B008EA8D2 /* SignInRepository.swift in Sources */,
 				98BCEC3326F0B1A700691C16 /* Mach1TextField.swift in Sources */,
@@ -1006,6 +1033,7 @@
 				98068011270314B700A4588A /* SectionedPlaylistsViewModel.swift in Sources */,
 				98B4EF0826FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift in Sources */,
 				98B4EF0C26FC86D700C33AA9 /* Mach1Logo.swift in Sources */,
+				BFE5F59D2714716400253D53 /* GetProfileFavouriteTracksUseCaseImpl.swift in Sources */,
 				983FC03726FDC45100F98089 /* SignUpDTO.swift in Sources */,
 				98827BE926F4943200C6BA8E /* CorrugatedRectangle.swift in Sources */,
 				BFE5F563270F2C1300253D53 /* GetProfileInfoUseCase.swift in Sources */,

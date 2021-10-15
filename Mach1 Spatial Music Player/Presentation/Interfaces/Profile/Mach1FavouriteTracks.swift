@@ -8,5 +8,6 @@
 import Foundation
 
 protocol Mach1FavouriteTracks: Mach1BaseProfile {
-    var playlists: [Mach1SectionItem] { get }
+    var playlists: [SectionedPlaylistItem] { get }
+    //TODO: dodati tracks
 }

@@ -2,6 +2,11 @@ import SwiftUI
 
 struct Mach1BaseProfileView: View {
     @State var showEditProfileView = false
+    @State var showFavouriteTracksView = false
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    @StateObject private var viewModel = ProfileViewModel()
+    
     @Translate private var friendTitle = "friend"
     @Translate private var friendsTitle = "friends"
     @Translate private var favouriteTracksTitle = "Favourite tracks"
@@ -13,6 +18,9 @@ struct Mach1BaseProfileView: View {
     var body: some View {
             GeometryReader { geometry in
                 VStack {
+                    NavigationLink(destination: ProfileFavouriteTracksView(), isActive: $showFavouriteTracksView) {
+                        Text("")
+                    }.hidden()
                     Mach1ProfileHeaderView<Profile>(profile: profile, isRoot: true, isEditable: false, title: self.profile.username, geometry: geometry)
                     VStack {
                     HStack {
@@ -29,9 +37,19 @@ struct Mach1BaseProfileView: View {
                             .background(Color.Mach1Darkest).padding(.vertical)
                     }.offset(y: -24).padding(.vertical, -24)
                     Mach1ListView(items: [
-                        Mach1ListItem(icon: Constants.Image.System.Favourites.rawValue, title: favouriteTracksTitle, action: {print("Favourites tracks")}),
-                        Mach1ListItem(icon: Constants.Image.System.Find.rawValue, title: findFriendsTitle, action: {print("Find friends")}),
-                        Mach1ListItem(icon: Constants.Image.System.Logout.rawValue, title: logoutTitle, action: {print("Logout")})])
+                        Mach1ListItem(icon: Constants.Image.System.Favourites.rawValue, title: favouriteTracksTitle, action: {
+                            showFavouriteTracksView.toggle()
+                        }, isPressed: $showFavouriteTracksView, navigateTo: AnyView(ProfileFavouriteTracksView.init())),
+                        Mach1ListItem(icon: Constants.Image.System.Find.rawValue, title: findFriendsTitle, action: {
+                            print("Friends")
+                        }, isPressed: $showFavouriteTracksView, navigateTo: AnyView(ProfileFavouriteTracksView.init())),
+                        Mach1ListItem(icon: Constants.Image.System.Logout.rawValue, title: logoutTitle, action: {
+                            Task.init {
+                             await viewModel.logout()
+                            }
+                            
+                        }, isPressed: $showFavouriteTracksView, navigateTo: AnyView(ProfileFavouriteTracksView.init()))
+                    ])
                 }.ignoresSafeArea()
             }
         }
@@ -39,6 +57,8 @@ struct Mach1BaseProfileView: View {
 
 struct Mach1BaseProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        Mach1BaseProfileView(profile: Profile(ProfileResponseDTO(id: "4d9eff5f-2d95-4994-82f2-caf3959be2c8", username: "Username", coverImage: nil, profileImage: nil, numberOfFriends: 2)))
+        Mach1View {
+            Mach1BaseProfileView(profile: Profile(ProfileResponseDTO(id: "4d9eff5f-2d95-4994-82f2-caf3959be2c8", username: "Username", coverImage: nil, profileImage: nil, numberOfFriends: 2)))
+        }
     }
 }

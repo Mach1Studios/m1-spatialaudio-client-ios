@@ -7,4 +7,5 @@ enum LoggerCategoryType: LoggerCategory {
     case Playlist = "Playlist category"
     case Profile = "Profile category"
     case EditProfile = "Edit profile category"
+    case ProfileFavouriteTracks = "Profile favourite tracks category"
 }

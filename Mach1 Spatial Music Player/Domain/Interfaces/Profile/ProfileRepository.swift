@@ -12,4 +12,5 @@ protocol ProfileRepository {
     func getProfileForEdit() async throws -> ProfileForEditResponseDTO
     func editProfile(dto: EditProfileRequestDTO) async throws -> Void
     func changePassword(dto: ChangeProfilePasswordRequestDTO) async throws -> Void
+    func getProfileFavouriteTracks() async throws -> ProfileFavouriteTracksResponseDTO
 }

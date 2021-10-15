@@ -5,4 +5,5 @@ enum MockedResource: String {
     case SectionedPlaylists = "sectionedplaylists"
     case Profile = "profile"
     case EditProfile = "editprofile"
+    case ProfileFavouriteTracks = "profilefavouritetracks"
 }
