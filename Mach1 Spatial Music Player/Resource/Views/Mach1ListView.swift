@@ -64,9 +64,9 @@ struct Mach1ListView_Previews: PreviewProvider {
     static var previews: some View {
         Mach1View {
             let items = [
-                Mach1ListItem(icon: Constants.Image.System.Favourites.rawValue, title: "Favourite tracks", action: {print("Favourites tracks")}, isPressed: State(initialValue: true).projectedValue, navigateTo: AnyView(ProfileFavouriteTracksView.init())),
-                Mach1ListItem(icon: Constants.Image.System.Find.rawValue, title: "Find friends", action: {print("Find friends")}, isPressed: State(initialValue: true).projectedValue, navigateTo: AnyView(ProfileFavouriteTracksView.init())),
-                Mach1ListItem(icon: Constants.Image.System.Logout.rawValue, title: "Logout", action: {print("Logout")}, isPressed: State(initialValue: true).projectedValue, navigateTo: AnyView(ProfileFavouriteTracksView.init()))
+                Mach1ListItem(icon: Constants.Image.System.Favourites.rawValue, title: "Favourite tracks", action: {print("Favourites tracks")}, isPressed: State(initialValue: true).projectedValue, navigateTo: AnyView(EmptyView())),
+                Mach1ListItem(icon: Constants.Image.System.Find.rawValue, title: "Find friends", action: {print("Find friends")}, isPressed: State(initialValue: true).projectedValue, navigateTo: AnyView(EmptyView())),
+                Mach1ListItem(icon: Constants.Image.System.Logout.rawValue, title: "Logout", action: {print("Logout")}, isPressed: State(initialValue: true).projectedValue, navigateTo: AnyView(EmptyView()))
             ]
             Mach1ListView(items: items)
         }

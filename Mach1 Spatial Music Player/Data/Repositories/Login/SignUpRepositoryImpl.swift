@@ -11,14 +11,14 @@ extension InjectedValues {
     }
 }
 
-class SignUpRepositoryImpl: SignUpRepository {
+actor SignUpRepositoryImpl: SignUpRepository {
     func signUp(dto: SignUpRequestDTO) async throws -> SignUpResponseDTO {
         throw "Not implemented"
     }
 }
 
-class MockedSignUpRepositoryImpl: SignUpRepository {
+actor MockedSignUpRepositoryImpl: SignUpRepository {
     func signUp(dto: SignUpRequestDTO) async throws -> SignUpResponseDTO {
-        return SignUpResponseDTO(token: "MockedTokenSignUp")
+        return try ReadFile.json(resource: .ValidToken)
     }
 }

@@ -1,10 +1,12 @@
 import SwiftUI
 
 enum Mach1Margin: CGFloat {
+    case VVBig = 44.0
     case VBig = 24.0
     case Big = 16.0
-    case Normal = 12.0
+    case Normal = 14.0
     case Small = 8.0
+    case VSmall = 4.0
 }
 
 enum Mach1Font: String {
@@ -15,6 +17,7 @@ enum Mach1Font: String {
 }
 
 enum Mach1TextSize: CGFloat {
+    case Larger = 25.0
     case Large = 16.0
     case Medium = 14.0
     case Small = 12.0
@@ -23,19 +26,27 @@ enum Mach1TextSize: CGFloat {
 
 struct Constants {
     
-    struct Dimension {
-        static let progressBar: CGFloat = 100.0
+    enum Dimension: CGFloat {
+        case progressBar = 100.0
+        case orientationCard = 200.0
     }
     
-    struct Rounded {
-        static let value: CGFloat = 8.0
+    enum Rounded: CGFloat {
+        case normal = 4.0
+        case none = 0.0
     }
     
-    struct LineWidtch {
-        static let value: CGFloat = 0.4
+    struct LineWidth {
+        static let thick: CGFloat = 1.0
+        static let normal: CGFloat = 0.4
+    }
+    
+    struct LineDashedLength {
+        static let normal: CGFloat = 4
     }
     
     struct Fonts {
+        static let bigTitle: Font = .custom(Mach1Font.SemiBold.rawValue, size: Mach1TextSize.Larger.rawValue)
         static let title: Font = .custom(Mach1Font.SemiBold.rawValue, size: Mach1TextSize.Large.rawValue)
         static let subTitleBold: Font = .custom(Mach1Font.SemiBold.rawValue, size: Mach1TextSize.Medium.rawValue)
         static let subTitle: Font = .custom(Mach1Font.Medium.rawValue, size: Mach1TextSize.Medium.rawValue)
@@ -51,6 +62,7 @@ struct Constants {
             case Bigger = 170
             case Big = 120
             case Normal = 60
+            case Small = 40
             case TabIcon = 30
         }
         enum Default: String {
@@ -59,6 +71,7 @@ struct Constants {
             case PlayList = "DefaultPlaylist"
         }
         enum System: String {
+            case Back = "chevron.backward" // 􀯶
             case CheckMark = "checkmark" // 􀆅
             case Person = "person.crop.circle" // 􀉭
             case NotFavourite = "heart" // 􀊴
@@ -66,8 +79,8 @@ struct Constants {
             case Favourites = "heart.circle" // 􀊸
             case Find = "magnifyingglass.circle" // 􀒒
             case Option = "option" // 􀆕
-            case Shuffle = "shuffle.circle" // 􀵉
-            case Repeat = "repeat.circle" // 􀵋
+            case Shuffle = "shuffle" // 􀊝
+            case Repeat = "repeat" // 􀊞
             case Play = "play.fill" // 􀊄
             case Friends = "person.2.circle" // 􀠃
             case Add = "plus.circle" // 􀁌
@@ -76,7 +89,6 @@ struct Constants {
             case RemovePerson = "person.crop.circle.badge.xmark" // 􀉵
             case Camera = "camera.circle.fill" // 􀌡
             case Navigate = "chevron.forward" // 􀯻
-            case Back = "chevron.backward" // 􀯶
             case PreviousTrack = "backward.circle" // 􀺃
             case NextTrack = "forward.circle" // 􀺅
             case PlayTrack = "play.circle" // 􀊕
@@ -95,6 +107,10 @@ struct Constants {
     
     struct Opacity {
         static let value: CGFloat = 0.6
+    }
+    
+    struct OrientationCardAspectRatio {
+        static let value: CGFloat = 9 / 21
     }
     
 }

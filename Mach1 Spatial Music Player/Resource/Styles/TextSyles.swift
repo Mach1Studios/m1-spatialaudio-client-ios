@@ -1,6 +1,13 @@
 import Foundation
 import SwiftUI
 
+
+struct NavigationStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content.font(Constants.Fonts.bigTitle)
+    }
+}
+
 struct TitleStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -61,6 +68,7 @@ struct TextStyles_Previews: PreviewProvider {
     static var previews: some View {
         Mach1View {
             VStack {
+                Text("Navigation").textStyle(NavigationStyle())
                 Text("Title").foregroundColor(Color.Mach1Yellow).textStyle(TitleStyle())
                 Text("Sub title").textStyle(SubTitleStyle())
                 Text("Body").textStyle(BodyStyle())

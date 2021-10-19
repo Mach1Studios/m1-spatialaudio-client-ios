@@ -1,0 +1,43 @@
+[
+    {
+    "id": "897df639-a4af-41e2-abd3-759385c28dee",
+    "username": "Friend 1",
+    "coverImage": "https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "profileImage": "https://image.freepik.com/free-photo/beautiful-face-young-caucasian-woman-with-perfect-health-skin-isolated-white-skin-care-concept-female-model-touches-face_186202-5255.jpg"
+    },
+    {
+    "id": "d75b3345-7d25-4d91-b3fa-94c77976d7ed",
+    "username": "Friend 2",
+    "coverImage": "https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "profileImage": "https://image.freepik.com/free-photo/photo-beautiful-blond-woman-with-flower-closeup-attractive-sensual-face-white-woman-with-curly-hair-smokey-eye-makeup_186202-4631.jpg"
+    },
+    {
+    "id": "1b93e355-2c3a-4906-bc5c-e728c87788a4",
+    "username": "Friend 3",
+    "coverImage": "https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "profileImage": "https://image.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg"
+    },
+    {
+    "id": "eaaec6ca-d0e5-4102-af27-777e29170f49",
+    "username": "Friend 4",
+    "coverImage": "https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    },
+    {
+    "id": "49c056b0-53be-4365-ae5e-35805d1db7ed",
+    "username": "Friend 5",
+    "coverImage": "https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "profileImage": "https://image.freepik.com/free-photo/european-man-smiling-cheerful-expression-closeup-portrait_53876-129391.jpg"
+    },
+    {
+    "id": "33a4457f-713b-4fde-9c5a-2b413496b767",
+    "username": "Friend 6",
+    "coverImage": "https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "profileImage": "https://image.freepik.com/free-photo/carefree-enthusiastic-attractive-brunette-yellow-dress-shaking-hands-joyfully-laughing-out-loud-smiling-playful-joking-around-telling-hilarious-story-standing-white-wall_176420-36444.jpg"
+    },
+    {
+    "id": "f0ea0031-b152-4b90-916e-2e6630bb2398",
+    "username": "Friend 7",
+    "coverImage": "https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    }
+]
+

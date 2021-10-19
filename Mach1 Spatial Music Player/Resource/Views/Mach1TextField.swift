@@ -16,7 +16,7 @@ struct Mach1TextField: View {
                         .foregroundColor(Color.white)
                         .padding(5)
                 }.overlay(
-                    RoundedRectangle(cornerRadius: Constants.Rounded.value)
+                    RoundedRectangle(cornerRadius: Constants.Rounded.normal.rawValue)
                         .stroke(Color.Mach1Gray, lineWidth: 0.5)
                 )
                 
@@ -44,8 +44,8 @@ private struct Mach1FieldStyle: TextFieldStyle {
             .font(Constants.Fonts.subBody)
             .foregroundColor(.white)
             .background(
-                RoundedRectangle(cornerRadius: Constants.Rounded.value, style: .continuous)
-                    .stroke(Color.Mach1Gray, lineWidth: Constants.LineWidtch.value)
+                RoundedRectangle(cornerRadius: Constants.Rounded.normal.rawValue, style: .continuous)
+                    .stroke(Color.Mach1Gray, lineWidth: Constants.LineWidth.normal)
             )
         }
 }

@@ -3,8 +3,9 @@ import SwiftUI
 struct Mach1CardImage: View {
     let title: String
     let url: URL?
-    var height: Constants.Image.Dimension
+    let height: Constants.Image.Dimension
     let defaultImage: Constants.Image.Default
+    var rounded: Constants.Rounded = .normal
     var action: (() -> Void)? = nil
     
     var body: some View {
@@ -33,13 +34,14 @@ struct Mach1CardImage: View {
             .foregroundColor(Color.white)
             .textStyle(SubTitleStyle())
             .withShadow()
-            .padding(Mach1Margin.Small.rawValue)
+            .padding()
     }
     
     private func applyStyle(_ image: Image) -> some View {
         return image
+            .resizable()
             .centerCropped()
-            .clipShape(RoundedRectangle(cornerRadius: Constants.Rounded.value))
+            .clipShape(RoundedRectangle(cornerRadius: rounded.rawValue))
             .frame(height: height.rawValue)
             .withDarkOverlay()
             .withCenterTransition()

@@ -11,13 +11,13 @@ extension InjectedValues {
     }
 }
 
-class SectionedPlaylistRepositoryImpl: SectionedPlaylistRepository {
+actor SectionedPlaylistRepositoryImpl: SectionedPlaylistRepository {
     func get() async throws -> [SectionedPlaylistResponseDTO] {
         throw "Not implemented"
     }
 }
 
-class MockedSectionedPlaylistRepositoryImpl: SectionedPlaylistRepository {
+actor MockedSectionedPlaylistRepositoryImpl: SectionedPlaylistRepository {
     func get() async throws -> [SectionedPlaylistResponseDTO] {
         return try ReadFile.json(resource: .SectionedPlaylists)
     }

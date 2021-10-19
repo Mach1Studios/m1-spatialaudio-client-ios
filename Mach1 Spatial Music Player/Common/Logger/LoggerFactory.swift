@@ -1,4 +1,5 @@
 import os
+import Foundation
 
 private struct LoggerFactoryProviderKey: InjectionKey {
     static var currentValue: LoggerFactory = LoggerFactoryImpl()
@@ -22,7 +23,7 @@ protocol LoggerFactory {
 class LoggerFactoryImpl: LoggerFactory {
     @ConfigurationProperty(key: "App name", defaultValue: "Mach1") var applicationName: String
     @ConfigurationProperty(key: "Is log enabled", defaultValue: false) var isLogEnabled: Bool
-    var loggers: [String: Logger] = [:]
+    var loggers: [LoggerCategory: Logger] = [:]
     
     func info<T>(_ message: String, _ category: T) where T : RawRepresentable, T.RawValue == LoggerCategory {
         if !isLogEnabled { return }
@@ -43,6 +44,10 @@ class LoggerFactoryImpl: LoggerFactory {
     }
     
     private func find(_ category: LoggerCategory) {
-        if loggers[category] == nil { loggers[category] = Logger(subsystem: applicationName, category: category) }
+        if loggers[category] == nil {
+            DispatchQueue.main.async { [weak self] in
+                self?.loggers[category] = Logger(subsystem: self?.applicationName ?? "", category: category)
+            }
+        }
     }
 }

@@ -34,7 +34,7 @@ struct SignUpView: View {
         case .Init:
             EmptyView()
         case .Loading:
-            Mach1ProgressBar(shape: Circle(), height: Constants.Dimension.progressBar, backgroundColor: .clear)
+            Mach1ProgressBar(shape: Circle(), height: Constants.Dimension.progressBar.rawValue, backgroundColor: .clear)
         case .Error(let error):
             Mach1Alert(errorTitle, description: error)
         }

@@ -9,6 +9,7 @@
 "Close" = "Close";
 "Insert email" = "Insert email address";
 "Register" = "Register";
+"Friends" = "Friends";
 "friend" = "friend";
 "friends" = "friends";
 "Favourite tracks" = "Favourite tracks";
@@ -19,3 +20,12 @@
 "Change password" = "Change password";
 "Enter bio" = "Enter bio";
 "Save changes" = "Save changes";
+"Device" = "Device";
+"Headphones" = "Headphones";
+"Front" = "Front";
+"Favorite tracks" = "Favorite tracks";
+"Search" = "Search";
+"No results" = "There are no results";
+"Find friend" = "Find friends";
+"Common friend" = "common friend";
+"Common friends" = "common friends";

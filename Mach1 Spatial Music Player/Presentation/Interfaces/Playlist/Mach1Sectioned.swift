@@ -6,6 +6,7 @@ protocol Mach1Sectioned: Identifiable {
 }
 
 protocol Mach1SectionItem {
+    var id: UUID { get }
     var title: String { get }
     var url: String? { get }
 }

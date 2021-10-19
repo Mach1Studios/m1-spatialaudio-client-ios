@@ -35,7 +35,7 @@ class ProfileRepositoryImpl: ProfileRepository {
         throw "Not implemented"
     }
     
-    func getProfileFavouriteTracks() async throws -> ProfileFavouriteTracksResponseDTO {
+    func getFriendProfile(id: UUID) async throws -> FriendProfileResponseDTO {
         throw "Not implemented"
     }
 }
@@ -57,7 +57,19 @@ class MockedProfileRepositoryImpl: ProfileRepository {
         
     }
     
-    func getProfileFavouriteTracks() async throws -> ProfileFavouriteTracksResponseDTO {
-        return try ReadFile.json(resource: .ProfileFavouriteTracks)
+    func getFriendProfile(id: UUID) async throws -> FriendProfileResponseDTO {
+        let friends: [FriendProfileResponseDTO] = try ReadFile.json(resource: .FriendProfile)
+        let friend = friends.first(where: {
+            if let fid = UUID.init(uuidString: $0.id) {
+                    return fid == id
+                } else {
+                    return false
+                }
+        })
+        if let profile = friend {
+            return profile
+        } else {
+            throw "Friend profile does not exist"
+        }
     }
 }
