@@ -95,7 +95,7 @@ iOSInjectionProject/
 Thumbs.db
 
 # Pods
-/Pods/
+Pods/
 Podfile.lock 
 
 # Audio - Testing
