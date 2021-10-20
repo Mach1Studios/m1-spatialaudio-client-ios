@@ -118,6 +118,7 @@
 		98F7310F270B259B0028D0C9 /* TracksRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7310E270B259B0028D0C9 /* TracksRepositoryImpl.swift */; };
 		98F73114270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73113270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift */; };
 		98F73117270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73116270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift */; };
+		B4F6593D6758C5DE348261CE /* Pods_Mach1_Spatial_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B8DCBBDE11A1B505CEB0E7 /* Pods_Mach1_Spatial_Music_Player.framework */; };
 		BF6B1636270D9FFC00520C4C /* Mach1ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1635270D9FFC00520C4C /* Mach1ListView.swift */; };
 		BF6B163D270DC8B000520C4C /* Mach1BaseEditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B163C270DC8B000520C4C /* Mach1BaseEditProfileView.swift */; };
 		BF6B1644270EE99500520C4C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1643270EE99500520C4C /* Profile.swift */; };
@@ -161,13 +162,12 @@
 		BFE5F59D2714716400253D53 /* GetFriendProfileUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59C2714716400253D53 /* GetFriendProfileUseCaseImpl.swift */; };
 		BFF4EB84270B30CA001F5051 /* Mach1NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4EB83270B30CA001F5051 /* Mach1NavigationView.swift */; };
 		BFF4EB86270B4682001F5051 /* Mach1ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4EB85270B4682001F5051 /* Mach1ProfileHeaderView.swift */; };
-		D59B90EDB2473B1BA9E9B1C6 /* Pods_Mach1_Spatial_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FDDE0BC8E522C6537C4520 /* Pods_Mach1_Spatial_Music_Player.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		30FDDE0BC8E522C6537C4520 /* Pods_Mach1_Spatial_Music_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mach1_Spatial_Music_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58EF017EB0B449E9ED39300D /* Pods-Mach1 Spatial Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.debug.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.debug.xcconfig"; sourceTree = "<group>"; };
-		8370DDE72E32222672C2A6B0 /* Pods-Mach1 Spatial Music Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.release.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.release.xcconfig"; sourceTree = "<group>"; };
+		4261E9CDFFC687EBD42E341F /* Pods-Mach1 Spatial Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.debug.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.debug.xcconfig"; sourceTree = "<group>"; };
+		8F9B14B6E91B6A6E2337819D /* Pods-Mach1 Spatial Music Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.release.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.release.xcconfig"; sourceTree = "<group>"; };
+		95D89E6410F7AA502F214F47 /* Pods-Mach1 Spatial Music Player.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.development.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.development.xcconfig"; sourceTree = "<group>"; };
 		98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistsRepository.swift; sourceTree = "<group>"; };
 		9806800227030E2B00A4588A /* PlaylistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDTO.swift; sourceTree = "<group>"; };
 		9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -284,6 +284,7 @@
 		98F7310E270B259B0028D0C9 /* TracksRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRepositoryImpl.swift; sourceTree = "<group>"; };
 		98F73113270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistTracksUseCase.swift; sourceTree = "<group>"; };
 		98F73116270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistTracksUseCaseImpl.swift; sourceTree = "<group>"; };
+		A2B8DCBBDE11A1B505CEB0E7 /* Pods_Mach1_Spatial_Music_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mach1_Spatial_Music_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF6B1635270D9FFC00520C4C /* Mach1ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1ListView.swift; sourceTree = "<group>"; };
 		BF6B163C270DC8B000520C4C /* Mach1BaseEditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1BaseEditProfileView.swift; sourceTree = "<group>"; };
 		BF6B1643270EE99500520C4C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -334,29 +335,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D59B90EDB2473B1BA9E9B1C6 /* Pods_Mach1_Spatial_Music_Player.framework in Frameworks */,
+				B4F6593D6758C5DE348261CE /* Pods_Mach1_Spatial_Music_Player.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F3C2C64AB9AA88C2732E4A0 /* Pods */ = {
+		478EFCF96F924467E8369907 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				58EF017EB0B449E9ED39300D /* Pods-Mach1 Spatial Music Player.debug.xcconfig */,
-				8370DDE72E32222672C2A6B0 /* Pods-Mach1 Spatial Music Player.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		476748ECD4A299FEED742D7B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				30FDDE0BC8E522C6537C4520 /* Pods_Mach1_Spatial_Music_Player.framework */,
+				A2B8DCBBDE11A1B505CEB0E7 /* Pods_Mach1_Spatial_Music_Player.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F95CF9EABCE50659DE0EBB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4261E9CDFFC687EBD42E341F /* Pods-Mach1 Spatial Music Player.debug.xcconfig */,
+				8F9B14B6E91B6A6E2337819D /* Pods-Mach1 Spatial Music Player.release.xcconfig */,
+				95D89E6410F7AA502F214F47 /* Pods-Mach1 Spatial Music Player.development.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		98067FFE27030D8900A4588A /* Playlist */ = {
@@ -936,8 +937,8 @@
 			children = (
 				98D22D8326EF39B800285854 /* Mach1 Spatial Music Player */,
 				98D22D8226EF39B800285854 /* Products */,
-				0F3C2C64AB9AA88C2732E4A0 /* Pods */,
-				476748ECD4A299FEED742D7B /* Frameworks */,
+				6F95CF9EABCE50659DE0EBB3 /* Pods */,
+				478EFCF96F924467E8369907 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1212,11 +1213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98D22D8F26EF39B900285854 /* Build configuration list for PBXNativeTarget "Mach1 Spatial Music Player" */;
 			buildPhases = (
-				7C4E008A9BD667067B56944F /* [CP] Check Pods Manifest.lock */,
+				74E513B5D4F97A7CD6CA38EA /* [CP] Check Pods Manifest.lock */,
 				98D22D7D26EF39B800285854 /* Sources */,
 				98D22D7E26EF39B800285854 /* Frameworks */,
 				98D22D7F26EF39B800285854 /* Resources */,
-				8B96B0FDF3D6F39842539BAF /* [CP] Embed Pods Frameworks */,
+				93B74963B56AF297D051C97F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1288,7 +1289,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7C4E008A9BD667067B56944F /* [CP] Check Pods Manifest.lock */ = {
+		74E513B5D4F97A7CD6CA38EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1310,17 +1311,15 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8B96B0FDF3D6F39842539BAF /* [CP] Embed Pods Frameworks */ = {
+		93B74963B56AF297D051C97F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1617,7 +1616,7 @@
 		};
 		98D22D9026EF39B900285854 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98D22DB426EF4AE200285854 /* Development.xcconfig */;
+			baseConfigurationReference = 4261E9CDFFC687EBD42E341F /* Pods-Mach1 Spatial Music Player.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(CF_APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1638,8 +1637,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "$(CF_APP_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(CF_APP_BUNDLE_IDENTIFIER)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mach1.spatial.music.player;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1650,7 +1649,7 @@
 		};
 		98D22D9126EF39B900285854 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98D22DB126EF3E9200285854 /* Release.xcconfig */;
+			baseConfigurationReference = 8F9B14B6E91B6A6E2337819D /* Pods-Mach1 Spatial Music Player.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(CF_APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1671,8 +1670,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "$(CF_APP_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(CF_APP_BUNDLE_IDENTIFIER)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mach1.spatial.music.player;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
