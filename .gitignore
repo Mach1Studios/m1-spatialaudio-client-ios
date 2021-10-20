@@ -93,3 +93,7 @@ iOSInjectionProject/
 .DS_Store
 .Trashes
 Thumbs.db
+
+# Audio - Testing
+TestingAudioFiles/
+.aif
