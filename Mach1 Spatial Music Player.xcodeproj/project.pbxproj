@@ -101,7 +101,7 @@
 		98D22DB326EF405200285854 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 98D22DB226EF405200285854 /* Preview Content */; };
 		98D887DE2701FD4D00C09F2D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D887DD2701FD4D00C09F2D /* HomeView.swift */; };
 		98D887E6270206E900C09F2D /* SectionedPlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D887E5270206E900C09F2D /* SectionedPlaylistsView.swift */; };
-		98D887E82702072500C09F2D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D887E72702072500C09F2D /* ProfileView.swift */; };
+		98D887E82702072500C09F2D /* Mach1BaseProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D887E72702072500C09F2D /* Mach1BaseProfileView.swift */; };
 		98E443712701ED000003338A /* AppRoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E443702701ED000003338A /* AppRoutingView.swift */; };
 		98EDCAA22704506700BC61D4 /* PlaylistDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDCAA12704506700BC61D4 /* PlaylistDetailsView.swift */; };
 		98EDCAA52704760400BC61D4 /* HeaderPlaylistDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EDCAA42704760400BC61D4 /* HeaderPlaylistDetailsView.swift */; };
@@ -118,6 +118,49 @@
 		98F7310F270B259B0028D0C9 /* TracksRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F7310E270B259B0028D0C9 /* TracksRepositoryImpl.swift */; };
 		98F73114270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73113270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift */; };
 		98F73117270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F73116270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift */; };
+		BF6B1636270D9FFC00520C4C /* Mach1ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1635270D9FFC00520C4C /* Mach1ListView.swift */; };
+		BF6B163D270DC8B000520C4C /* Mach1BaseEditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B163C270DC8B000520C4C /* Mach1BaseEditProfileView.swift */; };
+		BF6B1644270EE99500520C4C /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1643270EE99500520C4C /* Profile.swift */; };
+		BF6B1647270EEC6D00520C4C /* ProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1646270EEC6D00520C4C /* ProfileDTO.swift */; };
+		BF6B164A270EFE0900520C4C /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1649270EFE0900520C4C /* ProfileRepository.swift */; };
+		BF6B1650270F199B00520C4C /* ProfileRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B164F270F199B00520C4C /* ProfileRepositoryImpl.swift */; };
+		BF7B317C2719A362004E335F /* GetPlaylistsForProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B317B2719A362004E335F /* GetPlaylistsForProfileUseCase.swift */; };
+		BF7B317E2719A3AF004E335F /* GetPlaylistsForProfileUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B317D2719A3AF004E335F /* GetPlaylistsForProfileUseCaseImpl.swift */; };
+		BF7B31802719A543004E335F /* playlistsoffriend.json in Resources */ = {isa = PBXBuildFile; fileRef = BF7B317F2719A543004E335F /* playlistsoffriend.json */; };
+		BF7B31822719B2FC004E335F /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B31812719B2FC004E335F /* FriendsView.swift */; };
+		BF7B31842719B3C5004E335F /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B31832719B3C5004E335F /* FriendsViewModel.swift */; };
+		BF7B31862719B486004E335F /* GetFriendsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B31852719B486004E335F /* GetFriendsUseCase.swift */; };
+		BF7B31882719B4CC004E335F /* GetFriendsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B31872719B4CC004E335F /* GetFriendsUseCaseImpl.swift */; };
+		BF7B318A2719B775004E335F /* FriendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B31892719B775004E335F /* FriendItemView.swift */; };
+		BF7B318C271D89C0004E335F /* FriendListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B318B271D89C0004E335F /* FriendListItem.swift */; };
+		BFE5F55F270F297C00253D53 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F55E270F297C00253D53 /* ProfileViewModel.swift */; };
+		BFE5F563270F2C1300253D53 /* GetProfileInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F562270F2C1300253D53 /* GetProfileInfoUseCase.swift */; };
+		BFE5F565270F30B000253D53 /* GetProfileInfoUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F564270F30B000253D53 /* GetProfileInfoUseCaseImpl.swift */; };
+		BFE5F567270F3C3D00253D53 /* Mach1Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F566270F3C3D00253D53 /* Mach1Profile.swift */; };
+		BFE5F56C271030EF00253D53 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F56B271030EF00253D53 /* ProfileView.swift */; };
+		BFE5F5722710411300253D53 /* profile.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE5F5712710411300253D53 /* profile.json */; };
+		BFE5F5742710482100253D53 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F5732710482100253D53 /* EditProfileView.swift */; };
+		BFE5F5762710491800253D53 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F5752710491800253D53 /* EditProfileViewModel.swift */; };
+		BFE5F57827104A2600253D53 /* ProfileForEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F57727104A2600253D53 /* ProfileForEdit.swift */; };
+		BFE5F57A27104A4800253D53 /* Mach1EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F57927104A4800253D53 /* Mach1EditProfile.swift */; };
+		BFE5F57C27104FAA00253D53 /* GetProfileForEditUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F57B27104FAA00253D53 /* GetProfileForEditUseCase.swift */; };
+		BFE5F57E2710500F00253D53 /* GetProfileForEditUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F57D2710500F00253D53 /* GetProfileForEditUseCaseImpl.swift */; };
+		BFE5F5802710528400253D53 /* Mach1BaseProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F57F2710528400253D53 /* Mach1BaseProfile.swift */; };
+		BFE5F58227106E3600253D53 /* editprofile.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE5F58127106E3600253D53 /* editprofile.json */; };
+		BFE5F584271078D800253D53 /* Mach1SavingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F583271078D800253D53 /* Mach1SavingProgress.swift */; };
+		BFE5F58727107D0400253D53 /* SaveProfileChangesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F58627107D0400253D53 /* SaveProfileChangesUseCase.swift */; };
+		BFE5F58927107D6700253D53 /* SaveProfileChangesUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F58827107D6700253D53 /* SaveProfileChangesUseCaseImpl.swift */; };
+		BFE5F58D27108CF000253D53 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F58C27108CF000253D53 /* LogoutUseCase.swift */; };
+		BFE5F58F27108D3100253D53 /* LogoutUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F58E27108D3100253D53 /* LogoutUseCaseImpl.swift */; };
+		BFE5F5912714585800253D53 /* FriendProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F5902714585800253D53 /* FriendProfile.swift */; };
+		BFE5F59327145C9400253D53 /* Mach1BaseFriendProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59227145C9400253D53 /* Mach1BaseFriendProfileView.swift */; };
+		BFE5F59527146CDD00253D53 /* friendprofile.json in Resources */ = {isa = PBXBuildFile; fileRef = BFE5F59427146CDD00253D53 /* friendprofile.json */; };
+		BFE5F59727146F8F00253D53 /* FriendProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59627146F8F00253D53 /* FriendProfileView.swift */; };
+		BFE5F59927146FC600253D53 /* FriendProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59827146FC600253D53 /* FriendProfileViewModel.swift */; };
+		BFE5F59B271470DE00253D53 /* GetFriendProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59A271470DE00253D53 /* GetFriendProfileUseCase.swift */; };
+		BFE5F59D2714716400253D53 /* GetFriendProfileUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE5F59C2714716400253D53 /* GetFriendProfileUseCaseImpl.swift */; };
+		BFF4EB84270B30CA001F5051 /* Mach1NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4EB83270B30CA001F5051 /* Mach1NavigationView.swift */; };
+		BFF4EB86270B4682001F5051 /* Mach1ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF4EB85270B4682001F5051 /* Mach1ProfileHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,7 +263,7 @@
 		98D22DB426EF4AE200285854 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		98D887DD2701FD4D00C09F2D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		98D887E5270206E900C09F2D /* SectionedPlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistsView.swift; sourceTree = "<group>"; };
-		98D887E72702072500C09F2D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		98D887E72702072500C09F2D /* Mach1BaseProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1BaseProfileView.swift; sourceTree = "<group>"; };
 		98E443702701ED000003338A /* AppRoutingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoutingView.swift; sourceTree = "<group>"; };
 		98EDCAA12704506700BC61D4 /* PlaylistDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailsView.swift; sourceTree = "<group>"; };
 		98EDCAA42704760400BC61D4 /* HeaderPlaylistDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderPlaylistDetailsView.swift; sourceTree = "<group>"; };
@@ -237,6 +280,49 @@
 		98F7310E270B259B0028D0C9 /* TracksRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRepositoryImpl.swift; sourceTree = "<group>"; };
 		98F73113270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistTracksUseCase.swift; sourceTree = "<group>"; };
 		98F73116270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistTracksUseCaseImpl.swift; sourceTree = "<group>"; };
+		BF6B1635270D9FFC00520C4C /* Mach1ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1ListView.swift; sourceTree = "<group>"; };
+		BF6B163C270DC8B000520C4C /* Mach1BaseEditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1BaseEditProfileView.swift; sourceTree = "<group>"; };
+		BF6B1643270EE99500520C4C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		BF6B1646270EEC6D00520C4C /* ProfileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDTO.swift; sourceTree = "<group>"; };
+		BF6B1649270EFE0900520C4C /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		BF6B164F270F199B00520C4C /* ProfileRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepositoryImpl.swift; sourceTree = "<group>"; };
+		BF7B317B2719A362004E335F /* GetPlaylistsForProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistsForProfileUseCase.swift; sourceTree = "<group>"; };
+		BF7B317D2719A3AF004E335F /* GetPlaylistsForProfileUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistsForProfileUseCaseImpl.swift; sourceTree = "<group>"; };
+		BF7B317F2719A543004E335F /* playlistsoffriend.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = playlistsoffriend.json; sourceTree = "<group>"; };
+		BF7B31812719B2FC004E335F /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		BF7B31832719B3C5004E335F /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		BF7B31852719B486004E335F /* GetFriendsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendsUseCase.swift; sourceTree = "<group>"; };
+		BF7B31872719B4CC004E335F /* GetFriendsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendsUseCaseImpl.swift; sourceTree = "<group>"; };
+		BF7B31892719B775004E335F /* FriendItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendItemView.swift; sourceTree = "<group>"; };
+		BF7B318B271D89C0004E335F /* FriendListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListItem.swift; sourceTree = "<group>"; };
+		BFE5F55E270F297C00253D53 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		BFE5F562270F2C1300253D53 /* GetProfileInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileInfoUseCase.swift; sourceTree = "<group>"; };
+		BFE5F564270F30B000253D53 /* GetProfileInfoUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileInfoUseCaseImpl.swift; sourceTree = "<group>"; };
+		BFE5F566270F3C3D00253D53 /* Mach1Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1Profile.swift; sourceTree = "<group>"; };
+		BFE5F56B271030EF00253D53 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BFE5F5712710411300253D53 /* profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile.json; sourceTree = "<group>"; };
+		BFE5F5732710482100253D53 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		BFE5F5752710491800253D53 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		BFE5F57727104A2600253D53 /* ProfileForEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileForEdit.swift; sourceTree = "<group>"; };
+		BFE5F57927104A4800253D53 /* Mach1EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1EditProfile.swift; sourceTree = "<group>"; };
+		BFE5F57B27104FAA00253D53 /* GetProfileForEditUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileForEditUseCase.swift; sourceTree = "<group>"; };
+		BFE5F57D2710500F00253D53 /* GetProfileForEditUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileForEditUseCaseImpl.swift; sourceTree = "<group>"; };
+		BFE5F57F2710528400253D53 /* Mach1BaseProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1BaseProfile.swift; sourceTree = "<group>"; };
+		BFE5F58127106E3600253D53 /* editprofile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = editprofile.json; sourceTree = "<group>"; };
+		BFE5F583271078D800253D53 /* Mach1SavingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1SavingProgress.swift; sourceTree = "<group>"; };
+		BFE5F58627107D0400253D53 /* SaveProfileChangesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProfileChangesUseCase.swift; sourceTree = "<group>"; };
+		BFE5F58827107D6700253D53 /* SaveProfileChangesUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProfileChangesUseCaseImpl.swift; sourceTree = "<group>"; };
+		BFE5F58C27108CF000253D53 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
+		BFE5F58E27108D3100253D53 /* LogoutUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCaseImpl.swift; sourceTree = "<group>"; };
+		BFE5F5902714585800253D53 /* FriendProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfile.swift; sourceTree = "<group>"; };
+		BFE5F59227145C9400253D53 /* Mach1BaseFriendProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1BaseFriendProfileView.swift; sourceTree = "<group>"; };
+		BFE5F59427146CDD00253D53 /* friendprofile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friendprofile.json; sourceTree = "<group>"; };
+		BFE5F59627146F8F00253D53 /* FriendProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileView.swift; sourceTree = "<group>"; };
+		BFE5F59827146FC600253D53 /* FriendProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileViewModel.swift; sourceTree = "<group>"; };
+		BFE5F59A271470DE00253D53 /* GetFriendProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendProfileUseCase.swift; sourceTree = "<group>"; };
+		BFE5F59C2714716400253D53 /* GetFriendProfileUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendProfileUseCaseImpl.swift; sourceTree = "<group>"; };
+		BFF4EB83270B30CA001F5051 /* Mach1NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1NavigationView.swift; sourceTree = "<group>"; };
+		BFF4EB85270B4682001F5051 /* Mach1ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1ProfileHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,10 +400,14 @@
 		980680172703386F00A4588A /* MockedData */ = {
 			isa = PBXGroup;
 			children = (
+				BFE5F5712710411300253D53 /* profile.json */,
+				BFE5F58127106E3600253D53 /* editprofile.json */,
+				BFE5F59427146CDD00253D53 /* friendprofile.json */,
 				9806801A2703448500A4588A /* sectionedplaylists.json */,
 				9806802027034A9500A4588A /* valid_token.json */,
 				9839C093270B44FC003DCF69 /* tracks.json */,
 				988E5DBD27102C54005FC3C4 /* friends.json */,
+				BF7B317F2719A543004E335F /* playlistsoffriend.json */,
 				9806801E270348FB00A4588A /* MockedResource.swift */,
 			);
 			path = MockedData;
@@ -368,9 +458,10 @@
 				983FC03C26FDF23900F98089 /* Interfaces */,
 				98E4436F2701ECF10003338A /* Routing */,
 				98B91E9226FB6783008EA8D2 /* Login */,
+				98D887DA2701FCDD00C09F2D /* Home */,
+				98D887E2270206C700C09F2D /* Profile */,
 				98BE388F270C349400B65B5D /* Track */,
 				988E5DA8271028FB005FC3C4 /* Friend */,
-				98D887DA2701FCDD00C09F2D /* Home */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -396,6 +487,7 @@
 		983465E526FB55CC00271537 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B164E270F194E00520C4C /* Profile */,
 				98B91EA726FB6B33008EA8D2 /* Login */,
 				9806800427030F0A00A4588A /* Playlist */,
 				98F7310D270B257D0028D0C9 /* Track */,
@@ -417,6 +509,7 @@
 		983465E726FB560E00271537 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B1642270EE94E00520C4C /* Profile */,
 				98B91E9D26FB6828008EA8D2 /* Login */,
 				9806800D2703128300A4588A /* Playlist */,
 				98F73109270B24EE0028D0C9 /* Track */,
@@ -428,6 +521,7 @@
 		983465E826FB561500271537 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B1648270EFDEC00520C4C /* Profile */,
 				98B91EA026FB685C008EA8D2 /* Login */,
 				98067FFE27030D8900A4588A /* Playlist */,
 				98F7310A270B24FE0028D0C9 /* Track */,
@@ -439,6 +533,7 @@
 		983465E926FB562400271537 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				BFE5F560270F2BB800253D53 /* Profile */,
 				98B91EAC26FB6E50008EA8D2 /* Login */,
 				980680072703120100A4588A /* Playlist */,
 				98F73115270B3D670028D0C9 /* Track */,
@@ -450,6 +545,7 @@
 		983FC03C26FDF23900F98089 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				BFE5F561270F2BFA00253D53 /* Profile */,
 				983FC04026FDF26900F98089 /* Login */,
 				9806800A2703124100A4588A /* Playlist */,
 				98F73112270B3D1C0028D0C9 /* Track */,
@@ -528,6 +624,8 @@
 			children = (
 				988E5DBF27102D95005FC3C4 /* SearchFriendView.swift */,
 				988E5DC327102E86005FC3C4 /* AddFriendItemView.swift */,
+				BF7B31812719B2FC004E335F /* FriendsView.swift */,
+				BF7B31892719B775004E335F /* FriendItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -536,6 +634,7 @@
 			isa = PBXGroup;
 			children = (
 				988E5DC127102E06005FC3C4 /* SearchFriendViewModel.swift */,
+				BF7B31832719B3C5004E335F /* FriendsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -544,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				988E5DAC27102954005FC3C4 /* FindFriendUseCase.swift */,
+				BF7B31852719B486004E335F /* GetFriendsUseCase.swift */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -552,6 +652,7 @@
 			isa = PBXGroup;
 			children = (
 				988E5DAF2710298E005FC3C4 /* Friend.swift */,
+				BF7B318B271D89C0004E335F /* FriendListItem.swift */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -568,6 +669,7 @@
 			isa = PBXGroup;
 			children = (
 				988E5DB527102A4B005FC3C4 /* FindFriendUseCaseImpl.swift */,
+				BF7B31872719B4CC004E335F /* GetFriendsUseCaseImpl.swift */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -700,6 +802,7 @@
 		98B91EA326FB6A92008EA8D2 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B1645270EEC2B00520C4C /* Profile */,
 				98BE3894270C363700B65B5D /* Track */,
 				9806800127030E1400A4588A /* Playlist */,
 				98B91EA426FB6AA9008EA8D2 /* Login */,
@@ -742,11 +845,15 @@
 				98BCEC3226F0B1A700691C16 /* Mach1TextField.swift */,
 				98827BDE26F3408000C6BA8E /* Mach1CircleImage.swift */,
 				98827BE026F3780000C6BA8E /* Mach1ProgressBar.swift */,
+				BFE5F583271078D800253D53 /* Mach1SavingProgress.swift */,
 				98827BE226F3895900C6BA8E /* Mach1CardImage.swift */,
 				98827BEA26F4B00200C6BA8E /* Mach1CorrugatedImage.swift */,
 				98B4EF0926FC6D7300C33AA9 /* Mach1View.swift */,
 				98B4EF0B26FC86D700C33AA9 /* Mach1Logo.swift */,
 				98B4EF0D26FC9C2800C33AA9 /* Mach1Alert.swift */,
+				BFF4EB83270B30CA001F5051 /* Mach1NavigationView.swift */,
+				BFF4EB85270B4682001F5051 /* Mach1ProfileHeaderView.swift */,
+				BF6B1635270D9FFC00520C4C /* Mach1ListView.swift */,
 				98BE38A0270C6FD200B65B5D /* Mach1OrientationCardView.swift */,
 				9848C82D270C8F360012F68F /* Mach1OrientationCardWithIndicatorsView.swift */,
 				9848C831270C93310012F68F /* Mach1DashedLine.swift */,
@@ -861,7 +968,6 @@
 			isa = PBXGroup;
 			children = (
 				98D887DF270206AE00C09F2D /* Playlist */,
-				98D887E2270206C700C09F2D /* Profile */,
 				98D887DB2701FD3300C09F2D /* View */,
 			);
 			path = Home;
@@ -907,22 +1013,18 @@
 			isa = PBXGroup;
 			children = (
 				98D887E4270206D400C09F2D /* View */,
-				98D887E3270206CD00C09F2D /* ViewModel */,
+				BFE5F55D270F296600253D53 /* ViewModel */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		98D887E3270206CD00C09F2D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		98D887E4270206D400C09F2D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				98D887E72702072500C09F2D /* ProfileView.swift */,
+				BFE5F5682710307100253D53 /* Base */,
+				BFE5F56B271030EF00253D53 /* ProfileView.swift */,
+				BFE5F5732710482100253D53 /* EditProfileView.swift */,
+				BFE5F59627146F8F00253D53 /* FriendProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -987,6 +1089,97 @@
 			path = Track;
 			sourceTree = "<group>";
 		};
+		BF6B1642270EE94E00520C4C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B1643270EE99500520C4C /* Profile.swift */,
+				BFE5F57727104A2600253D53 /* ProfileForEdit.swift */,
+				BFE5F5902714585800253D53 /* FriendProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF6B1645270EEC2B00520C4C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B1646270EEC6D00520C4C /* ProfileDTO.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF6B1648270EFDEC00520C4C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B1649270EFE0900520C4C /* ProfileRepository.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF6B164E270F194E00520C4C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B164F270F199B00520C4C /* ProfileRepositoryImpl.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BFE5F55D270F296600253D53 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BFE5F55E270F297C00253D53 /* ProfileViewModel.swift */,
+				BFE5F5752710491800253D53 /* EditProfileViewModel.swift */,
+				BFE5F59827146FC600253D53 /* FriendProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BFE5F560270F2BB800253D53 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BFE5F564270F30B000253D53 /* GetProfileInfoUseCaseImpl.swift */,
+				BFE5F58E27108D3100253D53 /* LogoutUseCaseImpl.swift */,
+				BFE5F57D2710500F00253D53 /* GetProfileForEditUseCaseImpl.swift */,
+				BFE5F58827107D6700253D53 /* SaveProfileChangesUseCaseImpl.swift */,
+				BFE5F59C2714716400253D53 /* GetFriendProfileUseCaseImpl.swift */,
+				BF7B317D2719A3AF004E335F /* GetPlaylistsForProfileUseCaseImpl.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BFE5F561270F2BFA00253D53 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BFE5F58527107CE000253D53 /* UseCases */,
+				BFE5F566270F3C3D00253D53 /* Mach1Profile.swift */,
+				BFE5F57927104A4800253D53 /* Mach1EditProfile.swift */,
+				BFE5F57F2710528400253D53 /* Mach1BaseProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BFE5F5682710307100253D53 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				98D887E72702072500C09F2D /* Mach1BaseProfileView.swift */,
+				BF6B163C270DC8B000520C4C /* Mach1BaseEditProfileView.swift */,
+				BFE5F59227145C9400253D53 /* Mach1BaseFriendProfileView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		BFE5F58527107CE000253D53 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				BFE5F562270F2C1300253D53 /* GetProfileInfoUseCase.swift */,
+				BFE5F58C27108CF000253D53 /* LogoutUseCase.swift */,
+				BFE5F57B27104FAA00253D53 /* GetProfileForEditUseCase.swift */,
+				BFE5F58627107D0400253D53 /* SaveProfileChangesUseCase.swift */,
+				BFE5F59A271470DE00253D53 /* GetFriendProfileUseCase.swift */,
+				BF7B317B2719A362004E335F /* GetPlaylistsForProfileUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1046,13 +1239,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7B31802719A543004E335F /* playlistsoffriend.json in Resources */,
 				98D22DB326EF405200285854 /* Preview Content in Resources */,
 				98D22D8926EF39B900285854 /* Icons.xcassets in Resources */,
 				98B5AF7726EF6BF90007C292 /* Localizable.strings in Resources */,
 				9806801B2703448500A4588A /* sectionedplaylists.json in Resources */,
 				9839C094270B44FC003DCF69 /* tracks.json in Resources */,
 				98B5AF8D26EF7B7E0007C292 /* ProximaNovaItalic.otf in Resources */,
+				BFE5F5722710411300253D53 /* profile.json in Resources */,
+				BFE5F59527146CDD00253D53 /* friendprofile.json in Resources */,
 				98B5AF8926EF7A480007C292 /* ProximaNovaSemibold.otf in Resources */,
+				BFE5F58227106E3600253D53 /* editprofile.json in Resources */,
 				988B7B9126EF98BA00622B89 /* Colors.xcassets in Resources */,
 				9806802127034A9500A4588A /* valid_token.json in Resources */,
 				98B5AF8726EF7A480007C292 /* ProximaNovaMedium.otf in Resources */,
@@ -1068,6 +1265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7B318C271D89C0004E335F /* FriendListItem.swift in Sources */,
 				98F73114270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift in Sources */,
 				98F73108270B20C20028D0C9 /* PlaylistDetailsRepositoryImpl.swift in Sources */,
 				98827BDF26F3408000C6BA8E /* Mach1CircleImage.swift in Sources */,
@@ -1077,11 +1275,23 @@
 				98EDCAA8270476E000BC61D4 /* TrackItemView.swift in Sources */,
 				983FC03126FDC17A00F98089 /* SignUpViewModel.swift in Sources */,
 				98B91EA926FB6B4A008EA8D2 /* SignInRepositoryImpl.swift in Sources */,
+				BFE5F5912714585800253D53 /* FriendProfile.swift in Sources */,
 				98E443712701ED000003338A /* AppRoutingView.swift in Sources */,
+				BFE5F59727146F8F00253D53 /* FriendProfileView.swift in Sources */,
+				BFE5F59B271470DE00253D53 /* GetFriendProfileUseCase.swift in Sources */,
+				BF7B318A2719B775004E335F /* FriendItemView.swift in Sources */,
 				980680162703340C00A4588A /* Mach1Sectioned.swift in Sources */,
 				981DAF9627070E680001CD04 /* UIApplicationExtensions.swift in Sources */,
 				9848C832270C93310012F68F /* Mach1DashedLine.swift in Sources */,
 				988B7B8126EF86E900622B89 /* InjectionFactory.swift in Sources */,
+				BFE5F56C271030EF00253D53 /* ProfileView.swift in Sources */,
+				BFE5F5802710528400253D53 /* Mach1BaseProfile.swift in Sources */,
+				98BCEC2D26F089CF00691C16 /* StyleConstants.swift in Sources */,
+				BFE5F59327145C9400253D53 /* Mach1BaseFriendProfileView.swift in Sources */,
+				9806800327030E2B00A4588A /* PlaylistDTO.swift in Sources */,
+				98B4EF0A26FC6D7300C33AA9 /* Mach1View.swift in Sources */,
+				9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */,
+				BFE5F57827104A2600253D53 /* ProfileForEdit.swift in Sources */,
 				988E5DC427102E86005FC3C4 /* AddFriendItemView.swift in Sources */,
 				98BCEC2D26F089CF00691C16 /* StyleConstants.swift in Sources */,
 				98F73104270B1F860028D0C9 /* GetPlaylistDetailsUseCase.swift in Sources */,
@@ -1090,6 +1300,7 @@
 				9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */,
 				988E5DB02710298E005FC3C4 /* Friend.swift in Sources */,
 				9806800C2703125B00A4588A /* GetSectionedPlaylistsUseCase.swift in Sources */,
+				BFE5F567270F3C3D00253D53 /* Mach1Profile.swift in Sources */,
 				988B7B9426EF9B2700622B89 /* Colors.swift in Sources */,
 				98F73117270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift in Sources */,
 				9806801D270346BF00A4588A /* ReadFile.swift in Sources */,
@@ -1101,26 +1312,35 @@
 				981DAF9D270725F80001CD04 /* PlaylistDetailsViewModel.swift in Sources */,
 				98B91E9C26FB680D008EA8D2 /* SignInViewModel.swift in Sources */,
 				98B5AF8026EF6DA30007C292 /* ConfigurationProperty.swift in Sources */,
+				BF6B1644270EE99500520C4C /* Profile.swift in Sources */,
 				98BE389D270C6EA600B65B5D /* PlayTrackViewModel.swift in Sources */,
 				983FC04426FDF9CA00F98089 /* SignInUseCase.swift in Sources */,
 				988E5DB627102A4B005FC3C4 /* FindFriendUseCaseImpl.swift in Sources */,
 				988B7B8626EF87E700622B89 /* WebSessionProvider.swift in Sources */,
+				BFE5F57C27104FAA00253D53 /* GetProfileForEditUseCase.swift in Sources */,
 				983FC03526FDC3A400F98089 /* SignUp.swift in Sources */,
+				BFE5F57A27104A4800253D53 /* Mach1EditProfile.swift in Sources */,
+				BFE5F57E2710500F00253D53 /* GetProfileForEditUseCaseImpl.swift in Sources */,
+				BF7B31822719B2FC004E335F /* FriendsView.swift in Sources */,
 				983FC03926FDC4A100F98089 /* SignUpRepositoryImpl.swift in Sources */,
 				9848C834270C95580012F68F /* AnyShape.swift in Sources */,
 				988E5DB3271029E8005FC3C4 /* FriendDTO.swift in Sources */,
 				98BE3893270C34EA00B65B5D /* PlayTrackView.swift in Sources */,
 				98B4EF0E26FC9C2800C33AA9 /* Mach1Alert.swift in Sources */,
+				BF7B31882719B4CC004E335F /* GetFriendsUseCaseImpl.swift in Sources */,
 				98F7310F270B259B0028D0C9 /* TracksRepositoryImpl.swift in Sources */,
 				98F7310C270B25480028D0C9 /* TracksRepository.swift in Sources */,
 				98F21731270EE6EB00FEBA1F /* GetFavouriteTracksUseCaseImpl.swift in Sources */,
 				981DAF9A270724AA0001CD04 /* Track.swift in Sources */,
 				98B91EA626FB6AB5008EA8D2 /* SignInDTO.swift in Sources */,
 				988B7B8F26EF96F400622B89 /* ButtonStyles.swift in Sources */,
+				BFE5F5742710482100253D53 /* EditProfileView.swift in Sources */,
 				98F73100270B1E8B0028D0C9 /* GetPlaylistDetailsUseCaseImpl.swift in Sources */,
 				98F2172F270EE64400FEBA1F /* FavouritesTracksViewModel.swift in Sources */,
 				980680092703122100A4588A /* GetSectionedPlaylistsUseCaseImpl.swift in Sources */,
+				BFE5F58F27108D3100253D53 /* LogoutUseCaseImpl.swift in Sources */,
 				988B7B8426EF87C700622B89 /* ApiCall.swift in Sources */,
+				BF6B164A270EFE0900520C4C /* ProfileRepository.swift in Sources */,
 				981DAF9427070B720001CD04 /* ToolbarView.swift in Sources */,
 				988B7B8B26EF884300622B89 /* UserAuthorization.swift in Sources */,
 				98B91E9A26FB67F8008EA8D2 /* SignInView.swift in Sources */,
@@ -1131,38 +1351,59 @@
 				983465E426FB4FF300271537 /* LoggerCategoryType.swift in Sources */,
 				98F21733270EE6F800FEBA1F /* GetFavouriteTracksUseCase.swift in Sources */,
 				98B5AF7E26EF6CDF0007C292 /* Translate.swift in Sources */,
+				BFE5F55F270F297C00253D53 /* ProfileViewModel.swift in Sources */,
 				98B91EB126FB6F3F008EA8D2 /* Token.swift in Sources */,
-				98D887E82702072500C09F2D /* ProfileView.swift in Sources */,
+				98D887E82702072500C09F2D /* Mach1BaseProfileView.swift in Sources */,
+				BF6B163D270DC8B000520C4C /* Mach1BaseEditProfileView.swift in Sources */,
+				98D887E82702072500C09F2D /* Mach1BaseProfileView.swift in Sources */,
 				98429481270DB8FD001614DF /* PlaybackStatusView.swift in Sources */,
 				98827BE726F48E1D00C6BA8E /* ViewExtension.swift in Sources */,
+				BFE5F59927146FC600253D53 /* FriendProfileViewModel.swift in Sources */,
 				98D887DE2701FD4D00C09F2D /* HomeView.swift in Sources */,
 				98B91EA226FB686B008EA8D2 /* SignInRepository.swift in Sources */,
+				BF7B317C2719A362004E335F /* GetPlaylistsForProfileUseCase.swift in Sources */,
 				98BCEC3326F0B1A700691C16 /* Mach1TextField.swift in Sources */,
+				BFE5F565270F30B000253D53 /* GetProfileInfoUseCaseImpl.swift in Sources */,
+				BF6B1650270F199B00520C4C /* ProfileRepositoryImpl.swift in Sources */,
 				98B4EF1326FCBE6300C33AA9 /* SignUpView.swift in Sources */,
 				98D22D8526EF39B800285854 /* Mach1_Spatial_Music_PlayerApp.swift in Sources */,
 				98B91E9F26FB6836008EA8D2 /* SignIn.swift in Sources */,
 				98B91EAB26FB6C41008EA8D2 /* StringExtensions.swift in Sources */,
+				BF6B1636270D9FFC00520C4C /* Mach1ListView.swift in Sources */,
+				BFE5F58927107D6700253D53 /* SaveProfileChangesUseCaseImpl.swift in Sources */,
 				98B5AF8B26EF7A8A0007C292 /* TextSyles.swift in Sources */,
 				9806800F2703129D00A4588A /* Playlist.swift in Sources */,
 				983465E126FB277D00271537 /* LoggerFactory.swift in Sources */,
+				BF7B31842719B3C5004E335F /* FriendsViewModel.swift in Sources */,
 				98BE389B270C6E0C00B65B5D /* OrientationSourceType.swift in Sources */,
 				98068014270333A700A4588A /* Mach1SectionedList.swift in Sources */,
+				BFE5F58D27108CF000253D53 /* LogoutUseCase.swift in Sources */,
 				983FC03326FDC39600F98089 /* SignUpRepository.swift in Sources */,
+				BFE5F5762710491800253D53 /* EditProfileViewModel.swift in Sources */,
 				98827BE126F3780000C6BA8E /* Mach1ProgressBar.swift in Sources */,
+				BFE5F58727107D0400253D53 /* SaveProfileChangesUseCase.swift in Sources */,
+				BF6B1647270EEC6D00520C4C /* ProfileDTO.swift in Sources */,
 				983FC04226FDF27F00F98089 /* SignUpCase.swift in Sources */,
 				98827BE326F3895900C6BA8E /* Mach1CardImage.swift in Sources */,
+				BFF4EB86270B4682001F5051 /* Mach1ProfileHeaderView.swift in Sources */,
 				9806801F270348FB00A4588A /* MockedResource.swift in Sources */,
+				BF7B317E2719A3AF004E335F /* GetPlaylistsForProfileUseCaseImpl.swift in Sources */,
+				BFE5F584271078D800253D53 /* Mach1SavingProgress.swift in Sources */,
 				988E5DBC27102B90005FC3C4 /* FriendRespositoryImpl.swift in Sources */,
+				BF7B31862719B486004E335F /* GetFriendsUseCase.swift in Sources */,
 				98EDCAA52704760400BC61D4 /* HeaderPlaylistDetailsView.swift in Sources */,
 				988E5DC027102D95005FC3C4 /* SearchFriendView.swift in Sources */,
 				98827BDB26F32CB100C6BA8E /* Mach1SegmentedPicker.swift in Sources */,
 				98F2172D270EE5FA00FEBA1F /* SearchFavoutireTracksView.swift in Sources */,
 				98827BEB26F4B00200C6BA8E /* Mach1CorrugatedImage.swift in Sources */,
+				BFF4EB84270B30CA001F5051 /* Mach1NavigationView.swift in Sources */,
 				98068011270314B700A4588A /* SectionedPlaylistsViewModel.swift in Sources */,
 				98B4EF0826FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift in Sources */,
 				98B4EF0C26FC86D700C33AA9 /* Mach1Logo.swift in Sources */,
+				BFE5F59D2714716400253D53 /* GetFriendProfileUseCaseImpl.swift in Sources */,
 				983FC03726FDC45100F98089 /* SignUpDTO.swift in Sources */,
 				98827BE926F4943200C6BA8E /* CorrugatedRectangle.swift in Sources */,
+				BFE5F563270F2C1300253D53 /* GetProfileInfoUseCase.swift in Sources */,
 				98D887E6270206E900C09F2D /* SectionedPlaylistsView.swift in Sources */,
 				988E5DB927102B37005FC3C4 /* FriendRepository.swift in Sources */,
 				988E5DC227102E06005FC3C4 /* SearchFriendViewModel.swift in Sources */,

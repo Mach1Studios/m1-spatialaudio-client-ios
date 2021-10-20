@@ -15,6 +15,10 @@ actor PlaylistDetailsRepositoryImpl: PlaylistDetailsRepository {
     func details(id: UUID) async throws -> PlaylistDTO {
         throw "Not implemented"
     }
+    
+    func getPlaylistsForProfile(profileId: UUID) async throws -> [PlaylistItemDTO] {
+        throw "Not implemented"
+    }
 }
 
 actor MockedPlaylistDetailsRepositoryImpl: PlaylistDetailsRepository {
@@ -26,5 +30,9 @@ actor MockedPlaylistDetailsRepositoryImpl: PlaylistDetailsRepository {
             .first { $0.id == id }
         guard let playlist = selectedPlaylist else { throw "Playlist not found" }
         return PlaylistDTO.init(id: playlist.id, title: playlist.title, url: playlist.url)
+    }
+    
+    func getPlaylistsForProfile(profileId: UUID) async throws -> [PlaylistItemDTO] {
+        return try ReadFile.json(resource: .PlaylistsOfFriend)
     }
 }

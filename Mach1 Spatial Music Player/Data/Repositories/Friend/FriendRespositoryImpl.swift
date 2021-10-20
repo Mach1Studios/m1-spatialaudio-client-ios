@@ -12,12 +12,20 @@ extension InjectedValues {
 }
 
 actor FriendRepositoryImpl: FriendRepository {
+    func getFriends() async throws -> [FriendDTO] {
+        throw "Not implemented"
+    }
+    
     func find(search: String?) async throws -> [FriendDTO] {
         throw "Not implemented"
     }
 }
 
 actor MockedFriendRepositoryImpl: FriendRepository {
+    func getFriends() async throws -> [FriendDTO] {
+        return try ReadFile.json(resource: .Friends)
+    }
+    
     func find(search: String?) async throws -> [FriendDTO] {
         let friends: [FriendDTO] = try ReadFile.json(resource: .Friends)
         guard let searchText = search, !searchText.isEmpty else { return friends }

@@ -8,6 +8,7 @@ class MockedRepositoryInjectionFactory {
         InjectedValues[\.signInRepository] = MockedSignInRepositoryImpl()
         InjectedValues[\.signUpRepository] = MockedSignUpRepositoryImpl()
         InjectedValues[\.sectionedPlaylistRepository] = MockedSectionedPlaylistRepositoryImpl()
+        InjectedValues[\.profileRepository] = MockedProfileRepositoryImpl()
         InjectedValues[\.playlistDetailsRepository] = MockedPlaylistDetailsRepositoryImpl()
         InjectedValues[\.tracksRepository] = MockedTracksRepositoryImpl()
         InjectedValues[\.friendRepository] = MockedFriendRepositoryImpl()

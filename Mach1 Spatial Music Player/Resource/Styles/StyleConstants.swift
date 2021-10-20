@@ -17,6 +17,7 @@ enum Mach1Font: String {
 }
 
 enum Mach1TextSize: CGFloat {
+    case Larger = 25.0
     case Large = 16.0
     case Medium = 14.0
     case Small = 12.0
@@ -45,6 +46,7 @@ struct Constants {
     }
     
     struct Fonts {
+        static let bigTitle: Font = .custom(Mach1Font.SemiBold.rawValue, size: Mach1TextSize.Larger.rawValue)
         static let title: Font = .custom(Mach1Font.SemiBold.rawValue, size: Mach1TextSize.Large.rawValue)
         static let subTitleBold: Font = .custom(Mach1Font.SemiBold.rawValue, size: Mach1TextSize.Medium.rawValue)
         static let subTitle: Font = .custom(Mach1Font.Medium.rawValue, size: Mach1TextSize.Medium.rawValue)
@@ -56,6 +58,8 @@ struct Constants {
     struct Image {
         enum Dimension: CGFloat {
             case VeryBig = 300
+            case MediumBig = 250
+            case Bigger = 170
             case Big = 120
             case Normal = 60
             case Small = 40
@@ -73,6 +77,7 @@ struct Constants {
             case NotFavourite = "heart" // 􀊴
             case Favourite = "heart.fill" // 􀊵
             case Favourites = "heart.circle" // 􀊸
+            case Find = "magnifyingglass.circle" // 􀒒
             case Option = "option" // 􀆕
             case Shuffle = "shuffle" // 􀊝
             case Repeat = "repeat" // 􀊞
