@@ -1,0 +1,8 @@
+platform :ios, '14.0'
+
+target 'Mach1AudioPlayerAPI' do
+  use_frameworks!
+
+  pod 'Mach1SpatialAPI'
+
+end

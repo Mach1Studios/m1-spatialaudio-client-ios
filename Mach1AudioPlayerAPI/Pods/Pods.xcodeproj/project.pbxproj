@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DBEF34A244EC025C7D17D69B69C3424 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		21A95E6AC2E3DB5082069FA8281E133A /* Mach1Point4D.h in Headers */ = {isa = PBXBuildFile; fileRef = B264F97F30B14E8C67D481998ADDF928 /* Mach1Point4D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39E03DCCD499962B5D5606E03A281C7F /* Mach1Decode-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C513A608C813561D0B0D90218EEFD34 /* Mach1Decode-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5488E1B78CA5104ABC0B560FEDD59C53 /* Mach1TranscodeCAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D820A687140E42626F917FE8AB87559 /* Mach1TranscodeCAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		579DD8A81E4CC9FCE2BFB6CD6F4EF39E /* Mach1SpatialAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D77BCC17842958EE7EF870E87740DE46 /* Mach1SpatialAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A3FE5EE33A6EA7DCDDE9AD4E9D05FD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7AEEBD33C624420D444C3E54ECC8011B /* Mach1Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BCF886894B521FF496D0565ABE37F3 /* Mach1Decode.swift */; };
+		85CBE55F124CDAB6E8D6232B3A002070 /* Mach1Point3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 81D5BA4905C7D1D70FBE4983F048F929 /* Mach1Point3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98CD4CBD6F68E9F82E4642C89895BAAB /* Mach1DecodePositionalCAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C243F82DF4DC789DFA55DDDD66FE749 /* Mach1DecodePositionalCAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E614C8AC48738B55AA971AFCA7F93B6 /* Mach1EncodeCAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = BA75F2A11EA1F40CB48F1E4D76521269 /* Mach1EncodeCAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A93D6F148DC33C38056B19B1487E4907 /* Mach1SpatialAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45274EE4CCBBB43F19367814C5ED0AB0 /* Mach1SpatialAPI-dummy.m */; };
+		B9D812FD19263630E017E849B27F9176 /* Pods-Mach1AudioPlayerAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0022365CD659257B7F3D527EACA895A5 /* Pods-Mach1AudioPlayerAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4B9DBF6215778D6EDA4F6ACF9465261 /* Mach1DecodePositional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F626B04BA78A2E5E3FF83BE474CF9C8 /* Mach1DecodePositional.swift */; };
+		DD77ECC5183850674D36F79CF968F0A1 /* Mach1Transcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394E06EE4DEEAC644715700037E1BE8 /* Mach1Transcode.swift */; };
+		E3AE3CF0579B573E2EE208A0550E0D61 /* Mach1DecodeCAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 48BE8B5EC514C3B69597CCA983AC3AB7 /* Mach1DecodeCAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F583D4E7D3560B7C6C5B58F66ABD497E /* Mach1Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B70CE3DC3FEB0D0E8F4DB5F29BD173A /* Mach1Encode.swift */; };
+		F7144E895BE0EA19F52B05DB16F2A7DD /* Pods-Mach1AudioPlayerAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C414938738968E5ADE2104782588C51 /* Pods-Mach1AudioPlayerAPI-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D5CF985F75FC59C1D23D5383F5B34CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAEE3743492430A6504840F7016F89BE;
+			remoteInfo = Mach1SpatialAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0022365CD659257B7F3D527EACA895A5 /* Pods-Mach1AudioPlayerAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mach1AudioPlayerAPI-umbrella.h"; sourceTree = "<group>"; };
+		03E1D4B670631E27FCEB07F13D001A5E /* libMach1DecodePositionalCAPI.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libMach1DecodePositionalCAPI.a; path = Mach1SpatialAPI/Lib/ios/libMach1DecodePositionalCAPI.a; sourceTree = "<group>"; };
+		07BEC60A258981F2BDAF4B577E8977A3 /* Pods-Mach1AudioPlayerAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Mach1AudioPlayerAPI.modulemap"; sourceTree = "<group>"; };
+		0C513A608C813561D0B0D90218EEFD34 /* Mach1Decode-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Mach1Decode-Bridging-Header.h"; path = "Mach1SpatialAPI/Classes/Mach1Decode-Bridging-Header.h"; sourceTree = "<group>"; };
+		0F626B04BA78A2E5E3FF83BE474CF9C8 /* Mach1DecodePositional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mach1DecodePositional.swift; path = Mach1SpatialAPI/Classes/Mach1DecodePositional.swift; sourceTree = "<group>"; };
+		0F6F27CCACF2A2317C11B5BD44990C58 /* libMach1EncodeCAPI.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libMach1EncodeCAPI.a; path = Mach1SpatialAPI/Lib/ios/libMach1EncodeCAPI.a; sourceTree = "<group>"; };
+		1394E06EE4DEEAC644715700037E1BE8 /* Mach1Transcode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mach1Transcode.swift; path = Mach1SpatialAPI/Classes/Mach1Transcode.swift; sourceTree = "<group>"; };
+		1C243F82DF4DC789DFA55DDDD66FE749 /* Mach1DecodePositionalCAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mach1DecodePositionalCAPI.h; path = Mach1SpatialAPI/Classes/Mach1DecodePositionalCAPI.h; sourceTree = "<group>"; };
+		1C414938738968E5ADE2104782588C51 /* Pods-Mach1AudioPlayerAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mach1AudioPlayerAPI-dummy.m"; sourceTree = "<group>"; };
+		267A8D80F41DC0E503EDFC1E49ED588C /* Pods-Mach1AudioPlayerAPI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mach1AudioPlayerAPI-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2FF963E0D292F27BA2F7B12AD55C2CF8 /* Pods-Mach1AudioPlayerAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mach1AudioPlayerAPI.release.xcconfig"; sourceTree = "<group>"; };
+		30277B0E12DED1529E339650175B0E2D /* Pods-Mach1AudioPlayerAPI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mach1AudioPlayerAPI-acknowledgements.plist"; sourceTree = "<group>"; };
+		3AC2C060EF42F1D2DD535696FC00A5CA /* Pods-Mach1AudioPlayerAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mach1AudioPlayerAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		45274EE4CCBBB43F19367814C5ED0AB0 /* Mach1SpatialAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mach1SpatialAPI-dummy.m"; sourceTree = "<group>"; };
+		48BE8B5EC514C3B69597CCA983AC3AB7 /* Mach1DecodeCAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mach1DecodeCAPI.h; path = Mach1SpatialAPI/Classes/Mach1DecodeCAPI.h; sourceTree = "<group>"; };
+		527A8116E3DDADF6E5F2BF47EAE750F0 /* Pods-Mach1AudioPlayerAPI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mach1AudioPlayerAPI-Info.plist"; sourceTree = "<group>"; };
+		57F99B783AE3A4B59C39ED5438248793 /* libMach1DecodeCAPI.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libMach1DecodeCAPI.a; path = Mach1SpatialAPI/Lib/ios/libMach1DecodeCAPI.a; sourceTree = "<group>"; };
+		5B70CE3DC3FEB0D0E8F4DB5F29BD173A /* Mach1Encode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mach1Encode.swift; path = Mach1SpatialAPI/Classes/Mach1Encode.swift; sourceTree = "<group>"; };
+		5D820A687140E42626F917FE8AB87559 /* Mach1TranscodeCAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mach1TranscodeCAPI.h; path = Mach1SpatialAPI/Classes/Mach1TranscodeCAPI.h; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		77AB88C39F5C7F3396116A0FD2221CD9 /* Mach1SpatialAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Mach1SpatialAPI.modulemap; sourceTree = "<group>"; };
+		81D5BA4905C7D1D70FBE4983F048F929 /* Mach1Point3D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mach1Point3D.h; path = Mach1SpatialAPI/Classes/Mach1Point3D.h; sourceTree = "<group>"; };
+		97829F01654BB99BF718F3D8AD9A22FF /* Mach1SpatialAPI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mach1SpatialAPI-prefix.pch"; sourceTree = "<group>"; };
+		97BCF886894B521FF496D0565ABE37F3 /* Mach1Decode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mach1Decode.swift; path = Mach1SpatialAPI/Classes/Mach1Decode.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B264F97F30B14E8C67D481998ADDF928 /* Mach1Point4D.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mach1Point4D.h; path = Mach1SpatialAPI/Classes/Mach1Point4D.h; sourceTree = "<group>"; };
+		BA75F2A11EA1F40CB48F1E4D76521269 /* Mach1EncodeCAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mach1EncodeCAPI.h; path = Mach1SpatialAPI/Classes/Mach1EncodeCAPI.h; sourceTree = "<group>"; };
+		CED9E1392B2FB380218FED7E1B6AE648 /* Mach1SpatialAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mach1SpatialAPI.release.xcconfig; sourceTree = "<group>"; };
+		D341AB9E6B3AF293A2775F254978225A /* Pods-Mach1AudioPlayerAPI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Mach1AudioPlayerAPI"; path = Pods_Mach1AudioPlayerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4831B279198316B1B83A47C3EFE5CEF /* libMach1TranscodeCAPI.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libMach1TranscodeCAPI.a; path = Mach1SpatialAPI/Lib/ios/libMach1TranscodeCAPI.a; sourceTree = "<group>"; };
+		D77BCC17842958EE7EF870E87740DE46 /* Mach1SpatialAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mach1SpatialAPI-umbrella.h"; sourceTree = "<group>"; };
+		DB006801AA2136E885B218AA7438A208 /* Mach1SpatialAPI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Mach1SpatialAPI-Info.plist"; sourceTree = "<group>"; };
+		E1BAA7E5CDB02B05E786F87A152AB7D6 /* Mach1SpatialAPI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Mach1SpatialAPI; path = Mach1SpatialAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2B88553C5A8761BC43502DED905FC29 /* Mach1SpatialAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mach1SpatialAPI.debug.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38CBAD542F5107A73EFF8D928267FD24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DBEF34A244EC025C7D17D69B69C3424 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B033D0D1AB40880B70B1BE9C3C18232B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3FE5EE33A6EA7DCDDE9AD4E9D05FD1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D9033E0F9B9B36344539D4DAD653262 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1BAA7E5CDB02B05E786F87A152AB7D6 /* Mach1SpatialAPI */,
+				D341AB9E6B3AF293A2775F254978225A /* Pods-Mach1AudioPlayerAPI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		54C4FCA2C8E6B48DB9BA099E71603FF4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77AB88C39F5C7F3396116A0FD2221CD9 /* Mach1SpatialAPI.modulemap */,
+				45274EE4CCBBB43F19367814C5ED0AB0 /* Mach1SpatialAPI-dummy.m */,
+				DB006801AA2136E885B218AA7438A208 /* Mach1SpatialAPI-Info.plist */,
+				97829F01654BB99BF718F3D8AD9A22FF /* Mach1SpatialAPI-prefix.pch */,
+				D77BCC17842958EE7EF870E87740DE46 /* Mach1SpatialAPI-umbrella.h */,
+				E2B88553C5A8761BC43502DED905FC29 /* Mach1SpatialAPI.debug.xcconfig */,
+				CED9E1392B2FB380218FED7E1B6AE648 /* Mach1SpatialAPI.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Mach1SpatialAPI";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		88F24D7283EEFA445E245E28E1206AEC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F808C49FFE5AA3FF058D1A5654572E3F /* Pods-Mach1AudioPlayerAPI */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B35D2C56D35612528045DA340E82D231 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57F99B783AE3A4B59C39ED5438248793 /* libMach1DecodeCAPI.a */,
+				03E1D4B670631E27FCEB07F13D001A5E /* libMach1DecodePositionalCAPI.a */,
+				0F6F27CCACF2A2317C11B5BD44990C58 /* libMach1EncodeCAPI.a */,
+				D4831B279198316B1B83A47C3EFE5CEF /* libMach1TranscodeCAPI.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				DAF5F77022169AECAB9C9BA9A4F101FE /* Pods */,
+				4D9033E0F9B9B36344539D4DAD653262 /* Products */,
+				88F24D7283EEFA445E245E28E1206AEC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAF5F77022169AECAB9C9BA9A4F101FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF8C5B4CE8A2DDAC2D34452994D62144 /* Mach1SpatialAPI */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F808C49FFE5AA3FF058D1A5654572E3F /* Pods-Mach1AudioPlayerAPI */ = {
+			isa = PBXGroup;
+			children = (
+				07BEC60A258981F2BDAF4B577E8977A3 /* Pods-Mach1AudioPlayerAPI.modulemap */,
+				267A8D80F41DC0E503EDFC1E49ED588C /* Pods-Mach1AudioPlayerAPI-acknowledgements.markdown */,
+				30277B0E12DED1529E339650175B0E2D /* Pods-Mach1AudioPlayerAPI-acknowledgements.plist */,
+				1C414938738968E5ADE2104782588C51 /* Pods-Mach1AudioPlayerAPI-dummy.m */,
+				527A8116E3DDADF6E5F2BF47EAE750F0 /* Pods-Mach1AudioPlayerAPI-Info.plist */,
+				0022365CD659257B7F3D527EACA895A5 /* Pods-Mach1AudioPlayerAPI-umbrella.h */,
+				3AC2C060EF42F1D2DD535696FC00A5CA /* Pods-Mach1AudioPlayerAPI.debug.xcconfig */,
+				2FF963E0D292F27BA2F7B12AD55C2CF8 /* Pods-Mach1AudioPlayerAPI.release.xcconfig */,
+			);
+			name = "Pods-Mach1AudioPlayerAPI";
+			path = "Target Support Files/Pods-Mach1AudioPlayerAPI";
+			sourceTree = "<group>";
+		};
+		FF8C5B4CE8A2DDAC2D34452994D62144 /* Mach1SpatialAPI */ = {
+			isa = PBXGroup;
+			children = (
+				97BCF886894B521FF496D0565ABE37F3 /* Mach1Decode.swift */,
+				0C513A608C813561D0B0D90218EEFD34 /* Mach1Decode-Bridging-Header.h */,
+				48BE8B5EC514C3B69597CCA983AC3AB7 /* Mach1DecodeCAPI.h */,
+				0F626B04BA78A2E5E3FF83BE474CF9C8 /* Mach1DecodePositional.swift */,
+				1C243F82DF4DC789DFA55DDDD66FE749 /* Mach1DecodePositionalCAPI.h */,
+				5B70CE3DC3FEB0D0E8F4DB5F29BD173A /* Mach1Encode.swift */,
+				BA75F2A11EA1F40CB48F1E4D76521269 /* Mach1EncodeCAPI.h */,
+				81D5BA4905C7D1D70FBE4983F048F929 /* Mach1Point3D.h */,
+				B264F97F30B14E8C67D481998ADDF928 /* Mach1Point4D.h */,
+				1394E06EE4DEEAC644715700037E1BE8 /* Mach1Transcode.swift */,
+				5D820A687140E42626F917FE8AB87559 /* Mach1TranscodeCAPI.h */,
+				B35D2C56D35612528045DA340E82D231 /* Frameworks */,
+				54C4FCA2C8E6B48DB9BA099E71603FF4 /* Support Files */,
+			);
+			name = Mach1SpatialAPI;
+			path = Mach1SpatialAPI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		56DC864487A0AE7D7F5C30297027BB87 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39E03DCCD499962B5D5606E03A281C7F /* Mach1Decode-Bridging-Header.h in Headers */,
+				E3AE3CF0579B573E2EE208A0550E0D61 /* Mach1DecodeCAPI.h in Headers */,
+				98CD4CBD6F68E9F82E4642C89895BAAB /* Mach1DecodePositionalCAPI.h in Headers */,
+				9E614C8AC48738B55AA971AFCA7F93B6 /* Mach1EncodeCAPI.h in Headers */,
+				85CBE55F124CDAB6E8D6232B3A002070 /* Mach1Point3D.h in Headers */,
+				21A95E6AC2E3DB5082069FA8281E133A /* Mach1Point4D.h in Headers */,
+				579DD8A81E4CC9FCE2BFB6CD6F4EF39E /* Mach1SpatialAPI-umbrella.h in Headers */,
+				5488E1B78CA5104ABC0B560FEDD59C53 /* Mach1TranscodeCAPI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB9292BBC96D2F5A50D1FEC7DF29CC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9D812FD19263630E017E849B27F9176 /* Pods-Mach1AudioPlayerAPI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BEC69C55A78396B4EB869C38B2976BF1 /* Pods-Mach1AudioPlayerAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69E18B69637AC20E9B5E1DD98A4A848D /* Build configuration list for PBXNativeTarget "Pods-Mach1AudioPlayerAPI" */;
+			buildPhases = (
+				5DB9292BBC96D2F5A50D1FEC7DF29CC4 /* Headers */,
+				28F8CC42D59B19578C6EC3D0399722B6 /* Sources */,
+				38CBAD542F5107A73EFF8D928267FD24 /* Frameworks */,
+				C1DB5EE41DB7315885393C58E7081366 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83FB41ABFE552E3E094CDA72DD73BE45 /* PBXTargetDependency */,
+			);
+			name = "Pods-Mach1AudioPlayerAPI";
+			productName = Pods_Mach1AudioPlayerAPI;
+			productReference = D341AB9E6B3AF293A2775F254978225A /* Pods-Mach1AudioPlayerAPI */;
+			productType = "com.apple.product-type.framework";
+		};
+		FAEE3743492430A6504840F7016F89BE /* Mach1SpatialAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D304B4E25A05DEA36214067A23D83CFF /* Build configuration list for PBXNativeTarget "Mach1SpatialAPI" */;
+			buildPhases = (
+				56DC864487A0AE7D7F5C30297027BB87 /* Headers */,
+				C6164905B066921F8865E96D93369BF7 /* Sources */,
+				B033D0D1AB40880B70B1BE9C3C18232B /* Frameworks */,
+				3013D55E47E17E32B35D79BA03F8DCDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mach1SpatialAPI;
+			productName = Mach1SpatialAPI;
+			productReference = E1BAA7E5CDB02B05E786F87A152AB7D6 /* Mach1SpatialAPI */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 4D9033E0F9B9B36344539D4DAD653262 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAEE3743492430A6504840F7016F89BE /* Mach1SpatialAPI */,
+				BEC69C55A78396B4EB869C38B2976BF1 /* Pods-Mach1AudioPlayerAPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3013D55E47E17E32B35D79BA03F8DCDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1DB5EE41DB7315885393C58E7081366 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28F8CC42D59B19578C6EC3D0399722B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7144E895BE0EA19F52B05DB16F2A7DD /* Pods-Mach1AudioPlayerAPI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6164905B066921F8865E96D93369BF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AEEBD33C624420D444C3E54ECC8011B /* Mach1Decode.swift in Sources */,
+				D4B9DBF6215778D6EDA4F6ACF9465261 /* Mach1DecodePositional.swift in Sources */,
+				F583D4E7D3560B7C6C5B58F66ABD497E /* Mach1Encode.swift in Sources */,
+				A93D6F148DC33C38056B19B1487E4907 /* Mach1SpatialAPI-dummy.m in Sources */,
+				DD77ECC5183850674D36F79CF968F0A1 /* Mach1Transcode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83FB41ABFE552E3E094CDA72DD73BE45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Mach1SpatialAPI;
+			target = FAEE3743492430A6504840F7016F89BE /* Mach1SpatialAPI */;
+			targetProxy = 6D5CF985F75FC59C1D23D5383F5B34CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		43FA01E55D2F4D6FBFA3CC038A0A9DEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FF963E0D292F27BA2F7B12AD55C2CF8 /* Pods-Mach1AudioPlayerAPI.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Mach1AudioPlayerAPI/Pods-Mach1AudioPlayerAPI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mach1AudioPlayerAPI/Pods-Mach1AudioPlayerAPI.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6E29E182AE95CEC064A0DF2A706DD77D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AC2C060EF42F1D2DD535696FC00A5CA /* Pods-Mach1AudioPlayerAPI.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Mach1AudioPlayerAPI/Pods-Mach1AudioPlayerAPI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mach1AudioPlayerAPI/Pods-Mach1AudioPlayerAPI.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		823093D82AC68F18E9EC605F202B8548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2B88553C5A8761BC43502DED905FC29 /* Mach1SpatialAPI.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Mach1SpatialAPI/Mach1SpatialAPI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Mach1SpatialAPI/Mach1SpatialAPI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Mach1SpatialAPI/Mach1SpatialAPI.modulemap";
+				PRODUCT_MODULE_NAME = Mach1SpatialAPI;
+				PRODUCT_NAME = Mach1SpatialAPI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EC537D0998C717FC8618807BCED40EFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CED9E1392B2FB380218FED7E1B6AE648 /* Mach1SpatialAPI.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Mach1SpatialAPI/Mach1SpatialAPI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Mach1SpatialAPI/Mach1SpatialAPI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Mach1SpatialAPI/Mach1SpatialAPI.modulemap";
+				PRODUCT_MODULE_NAME = Mach1SpatialAPI;
+				PRODUCT_NAME = Mach1SpatialAPI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
+				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69E18B69637AC20E9B5E1DD98A4A848D /* Build configuration list for PBXNativeTarget "Pods-Mach1AudioPlayerAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E29E182AE95CEC064A0DF2A706DD77D /* Debug */,
+				43FA01E55D2F4D6FBFA3CC038A0A9DEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D304B4E25A05DEA36214067A23D83CFF /* Build configuration list for PBXNativeTarget "Mach1SpatialAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				823093D82AC68F18E9EC605F202B8548 /* Debug */,
+				EC537D0998C717FC8618807BCED40EFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

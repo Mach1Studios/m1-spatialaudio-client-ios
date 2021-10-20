@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>Is request cache enabled</key>
+	<string>$(CF_REQUEST_CACHE_ENABLED)</string>
+	<key>Mach1 backend url</key>
+	<string>${CF_BACKEND_URL}</string>
+	<key>Max http connection per host</key>
+	<string>$(CF_HTTP_MAXIMUM_CONNECTIONS_PER_HOST)</string>
+	<key>Time out request</key>
+	<string>$(CF_TIME_OUT_INTERVAL_FOR_RESOURCE)</string>
+	<key>Time out resource</key>
+	<string>$(CF_TIME_OUT_INTERVAL_FOR_RESOURCE)</string>
+	<key>App name</key>
+	<string>${CF_APP_NAME}</string>
+	<key>Is log enabled</key>
+	<string>$(CF_LOG_ENABLED)</string>
+	<key>Need mocked repositories</key>
+	<string>$(CF_MOCKED_REPOSITORIES)</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ProximaNovaRegular.otf</string>
+		<string>ProximaNovaMedium.otf</string>
+		<string>ProximaNovaSemibold.otf</string>
+		<string>ProximaNovaItalic.otf</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>LaunchScreenBackground</string>
+		<key>UIImageName</key>
+		<string>Logo</string>
+	</dict>
+</dict>
+</plist>
