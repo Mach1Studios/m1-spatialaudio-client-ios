@@ -94,6 +94,10 @@ iOSInjectionProject/
 .Trashes
 Thumbs.db
 
+# Pods
+Pods/
+Podfile.lock 
+
 # Audio - Testing
 TestingAudioFiles/
 .aif
