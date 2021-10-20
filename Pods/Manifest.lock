@@ -1,0 +1,23 @@
+PODS:
+  - Mach1AudioPlayerAPI (0.0.1):
+    - Mach1SpatialAPI
+  - Mach1SpatialAPI (0.1.27)
+
+DEPENDENCIES:
+  - Mach1AudioPlayerAPI (from `../Mach1AudioPlayerAPI/`)
+
+SPEC REPOS:
+  trunk:
+    - Mach1SpatialAPI
+
+EXTERNAL SOURCES:
+  Mach1AudioPlayerAPI:
+    :path: "../Mach1AudioPlayerAPI/"
+
+SPEC CHECKSUMS:
+  Mach1AudioPlayerAPI: 94f82939d34e4d2be9d0b875b8a4209759ca3d14
+  Mach1SpatialAPI: 45390ddc6ff806d5d5fc70a83af020336e3ef599
+
+PODFILE CHECKSUM: ba7c897eba340a323aa8a6852d842e8d76325e19
+
+COCOAPODS: 1.11.2

@@ -1,0 +1,6 @@
+framework module Mach1AudioPlayerAPI {
+  umbrella header "Mach1AudioPlayerAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}

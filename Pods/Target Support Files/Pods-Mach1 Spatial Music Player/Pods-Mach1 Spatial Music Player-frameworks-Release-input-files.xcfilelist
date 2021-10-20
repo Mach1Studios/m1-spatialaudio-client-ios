@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Mach1AudioPlayerAPI/Mach1AudioPlayerAPI.framework
+${BUILT_PRODUCTS_DIR}/Mach1SpatialAPI/Mach1SpatialAPI.framework

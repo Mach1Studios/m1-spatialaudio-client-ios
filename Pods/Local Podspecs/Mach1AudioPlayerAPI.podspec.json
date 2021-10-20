@@ -1,0 +1,29 @@
+{
+  "name": "Mach1AudioPlayerAPI",
+  "version": "0.0.1",
+  "summary": "API helper for implementation of Mach1SpatialAPI",
+  "description": "This API helps you to implement Mach1SpatialAPI (https://cocoapods.org/pods/Mach1SpatialAPI) and use Motion Manager for detect device or headphones motion.",
+  "homepage": "http://dev.mach1.tech",
+  "license": {
+    "type": "Commercial",
+    "file": "LICENSE.txt"
+  },
+  "authors": {
+    "Mach1": "https://www.mach1.tech"
+  },
+  "platforms": {
+    "ios": "14.0"
+  },
+  "source": {
+    "git": "https://github.com/Mach1Studios/m1-spatialaudio-client-ios.git",
+    "tag": "0.0.1"
+  },
+  "swift_versions": "5.0",
+  "source_files": "Mach1AudioPlayerAPI/*.{h,m,swift}",
+  "dependencies": {
+    "Mach1SpatialAPI": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

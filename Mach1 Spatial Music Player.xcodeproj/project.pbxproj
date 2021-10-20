@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523553E886C54EB7202080BB /* Pods_Mach1_Spatial_Music_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C17311B19AAF3AF840B19C /* Pods_Mach1_Spatial_Music_Player.framework */; };
 		9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */; };
 		9806800327030E2B00A4588A /* PlaylistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800227030E2B00A4588A /* PlaylistDTO.swift */; };
 		9806800627030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */; };
@@ -36,10 +37,19 @@
 		983FC04226FDF27F00F98089 /* SignUpCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983FC04126FDF27F00F98089 /* SignUpCase.swift */; };
 		983FC04426FDF9CA00F98089 /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983FC04326FDF9CA00F98089 /* SignInUseCase.swift */; };
 		98429481270DB8FD001614DF /* PlaybackStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98429480270DB8FD001614DF /* PlaybackStatusView.swift */; };
-		9848C82E270C8F360012F68F /* Mach1OrientationCardWithIndicatorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9848C82D270C8F360012F68F /* Mach1OrientationCardWithIndicatorsView.swift */; };
 		9848C830270C91ED0012F68F /* Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9848C82F270C91ED0012F68F /* Lines.swift */; };
 		9848C832270C93310012F68F /* Mach1DashedLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9848C831270C93310012F68F /* Mach1DashedLine.swift */; };
 		9848C834270C95580012F68F /* AnyShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9848C833270C95580012F68F /* AnyShape.swift */; };
+		986502E9271F07FF00EF9EB9 /* 001.aif in Resources */ = {isa = PBXBuildFile; fileRef = 986502E0271F07FF00EF9EB9 /* 001.aif */; };
+		986502EA271F07FF00EF9EB9 /* 000.aif in Resources */ = {isa = PBXBuildFile; fileRef = 986502E1271F07FF00EF9EB9 /* 000.aif */; };
+		986502EB271F07FF00EF9EB9 /* 002.aif in Resources */ = {isa = PBXBuildFile; fileRef = 986502E2271F07FF00EF9EB9 /* 002.aif */; };
+		986502EC271F07FF00EF9EB9 /* 003.aif in Resources */ = {isa = PBXBuildFile; fileRef = 986502E3271F07FF00EF9EB9 /* 003.aif */; };
+		986502ED271F07FF00EF9EB9 /* 007.aif in Resources */ = {isa = PBXBuildFile; fileRef = 986502E4271F07FF00EF9EB9 /* 007.aif */; };
+		986502EE271F07FF00EF9EB9 /* 006.aif in Resources */ = {isa = PBXBuildFile; fileRef = 986502E5271F07FF00EF9EB9 /* 006.aif */; };
+		986502EF271F07FF00EF9EB9 /* 004.aif in Resources */ = {isa = PBXBuildFile; fileRef = 986502E6271F07FF00EF9EB9 /* 004.aif */; };
+		986502F0271F07FF00EF9EB9 /* 005.aif in Resources */ = {isa = PBXBuildFile; fileRef = 986502E7271F07FF00EF9EB9 /* 005.aif */; };
+		986502F1271F07FF00EF9EB9 /* stereo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 986502E8271F07FF00EF9EB9 /* stereo.wav */; };
+		9867E6CE271D7A8E00A9C575 /* head.obj in Resources */ = {isa = PBXBuildFile; fileRef = 9867E6CD271D7A8E00A9C575 /* head.obj */; };
 		98827BDB26F32CB100C6BA8E /* Mach1SegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98827BDA26F32CB100C6BA8E /* Mach1SegmentedPicker.swift */; };
 		98827BDF26F3408000C6BA8E /* Mach1CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98827BDE26F3408000C6BA8E /* Mach1CircleImage.swift */; };
 		98827BE126F3780000C6BA8E /* Mach1ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98827BE026F3780000C6BA8E /* Mach1ProgressBar.swift */; };
@@ -121,6 +131,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54CCE584E41E8D9001ACAA95 /* Pods-Mach1 Spatial Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.debug.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.debug.xcconfig"; sourceTree = "<group>"; };
 		98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistsRepository.swift; sourceTree = "<group>"; };
 		9806800227030E2B00A4588A /* PlaylistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDTO.swift; sourceTree = "<group>"; };
 		9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -150,10 +161,19 @@
 		983FC04126FDF27F00F98089 /* SignUpCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCase.swift; sourceTree = "<group>"; };
 		983FC04326FDF9CA00F98089 /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
 		98429480270DB8FD001614DF /* PlaybackStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackStatusView.swift; sourceTree = "<group>"; };
-		9848C82D270C8F360012F68F /* Mach1OrientationCardWithIndicatorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1OrientationCardWithIndicatorsView.swift; sourceTree = "<group>"; };
 		9848C82F270C91ED0012F68F /* Lines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lines.swift; sourceTree = "<group>"; };
 		9848C831270C93310012F68F /* Mach1DashedLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1DashedLine.swift; sourceTree = "<group>"; };
 		9848C833270C95580012F68F /* AnyShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyShape.swift; sourceTree = "<group>"; };
+		986502E0271F07FF00EF9EB9 /* 001.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = 001.aif; sourceTree = "<group>"; };
+		986502E1271F07FF00EF9EB9 /* 000.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = 000.aif; sourceTree = "<group>"; };
+		986502E2271F07FF00EF9EB9 /* 002.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = 002.aif; sourceTree = "<group>"; };
+		986502E3271F07FF00EF9EB9 /* 003.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = 003.aif; sourceTree = "<group>"; };
+		986502E4271F07FF00EF9EB9 /* 007.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = 007.aif; sourceTree = "<group>"; };
+		986502E5271F07FF00EF9EB9 /* 006.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = 006.aif; sourceTree = "<group>"; };
+		986502E6271F07FF00EF9EB9 /* 004.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = 004.aif; sourceTree = "<group>"; };
+		986502E7271F07FF00EF9EB9 /* 005.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = 005.aif; sourceTree = "<group>"; };
+		986502E8271F07FF00EF9EB9 /* stereo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stereo.wav; sourceTree = "<group>"; };
+		9867E6CD271D7A8E00A9C575 /* head.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = head.obj; sourceTree = "<group>"; };
 		98827BDA26F32CB100C6BA8E /* Mach1SegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1SegmentedPicker.swift; sourceTree = "<group>"; };
 		98827BDE26F3408000C6BA8E /* Mach1CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1CircleImage.swift; sourceTree = "<group>"; };
 		98827BE026F3780000C6BA8E /* Mach1ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1ProgressBar.swift; sourceTree = "<group>"; };
@@ -237,6 +257,8 @@
 		98F7310E270B259B0028D0C9 /* TracksRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRepositoryImpl.swift; sourceTree = "<group>"; };
 		98F73113270B3D400028D0C9 /* GetPlaylistTracksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistTracksUseCase.swift; sourceTree = "<group>"; };
 		98F73116270B3D840028D0C9 /* GetPlaylistTracksUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistTracksUseCaseImpl.swift; sourceTree = "<group>"; };
+		A1C17311B19AAF3AF840B19C /* Pods_Mach1_Spatial_Music_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mach1_Spatial_Music_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF24ED1BA4309A0024733536 /* Pods-Mach1 Spatial Music Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.release.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,12 +266,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523553E886C54EB7202080BB /* Pods_Mach1_Spatial_Music_Player.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		780F6AAB5BC4770165A2618D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1C17311B19AAF3AF840B19C /* Pods_Mach1_Spatial_Music_Player.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		98067FFE27030D8900A4588A /* Playlist */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +505,31 @@
 				98B5AF7F26EF6DA30007C292 /* ConfigurationProperty.swift */,
 			);
 			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		986502DF271F07FF00EF9EB9 /* TestingAudioFiles */ = {
+			isa = PBXGroup;
+			children = (
+				986502E0271F07FF00EF9EB9 /* 001.aif */,
+				986502E1271F07FF00EF9EB9 /* 000.aif */,
+				986502E2271F07FF00EF9EB9 /* 002.aif */,
+				986502E3271F07FF00EF9EB9 /* 003.aif */,
+				986502E4271F07FF00EF9EB9 /* 007.aif */,
+				986502E5271F07FF00EF9EB9 /* 006.aif */,
+				986502E6271F07FF00EF9EB9 /* 004.aif */,
+				986502E7271F07FF00EF9EB9 /* 005.aif */,
+				986502E8271F07FF00EF9EB9 /* stereo.wav */,
+			);
+			name = TestingAudioFiles;
+			path = ../../TestingAudioFiles;
+			sourceTree = "<group>";
+		};
+		9867E6CC271D7A8700A9C575 /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				9867E6CD271D7A8E00A9C575 /* head.obj */,
+			);
+			path = 3D;
 			sourceTree = "<group>";
 		};
 		98827BEC26F4B03E00C6BA8E /* Shapes */ = {
@@ -748,7 +804,6 @@
 				98B4EF0B26FC86D700C33AA9 /* Mach1Logo.swift */,
 				98B4EF0D26FC9C2800C33AA9 /* Mach1Alert.swift */,
 				98BE38A0270C6FD200B65B5D /* Mach1OrientationCardView.swift */,
-				9848C82D270C8F360012F68F /* Mach1OrientationCardWithIndicatorsView.swift */,
 				9848C831270C93310012F68F /* Mach1DashedLine.swift */,
 			);
 			path = Views;
@@ -806,6 +861,8 @@
 			children = (
 				98D22D8326EF39B800285854 /* Mach1 Spatial Music Player */,
 				98D22D8226EF39B800285854 /* Products */,
+				FA7B62160AB47CED6CDD4948 /* Pods */,
+				780F6AAB5BC4770165A2618D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -820,6 +877,7 @@
 		98D22D8326EF39B800285854 /* Mach1 Spatial Music Player */ = {
 			isa = PBXGroup;
 			children = (
+				986502DF271F07FF00EF9EB9 /* TestingAudioFiles */,
 				983465DE26F9CE3F00271537 /* Application */,
 				98D22DAE26EF3E5200285854 /* Configuration */,
 				98D22D9326EF3D8700285854 /* Resource */,
@@ -834,6 +892,7 @@
 		98D22D9326EF3D8700285854 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9867E6CC271D7A8700A9C575 /* 3D */,
 				980680172703386F00A4588A /* MockedData */,
 				98827BEC26F4B03E00C6BA8E /* Shapes */,
 				98BCEC3426F0EA0800691C16 /* Views */,
@@ -987,6 +1046,15 @@
 			path = Track;
 			sourceTree = "<group>";
 		};
+		FA7B62160AB47CED6CDD4948 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54CCE584E41E8D9001ACAA95 /* Pods-Mach1 Spatial Music Player.debug.xcconfig */,
+				DF24ED1BA4309A0024733536 /* Pods-Mach1 Spatial Music Player.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -994,9 +1062,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98D22D8F26EF39B900285854 /* Build configuration list for PBXNativeTarget "Mach1 Spatial Music Player" */;
 			buildPhases = (
+				B449B84BD9031DE94A4C118B /* [CP] Check Pods Manifest.lock */,
 				98D22D7D26EF39B800285854 /* Sources */,
 				98D22D7E26EF39B800285854 /* Frameworks */,
 				98D22D7F26EF39B800285854 /* Resources */,
+				7BBB92E8BC14D08D8456B64E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1046,22 +1116,74 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				986502F0271F07FF00EF9EB9 /* 005.aif in Resources */,
 				98D22DB326EF405200285854 /* Preview Content in Resources */,
 				98D22D8926EF39B900285854 /* Icons.xcassets in Resources */,
 				98B5AF7726EF6BF90007C292 /* Localizable.strings in Resources */,
 				9806801B2703448500A4588A /* sectionedplaylists.json in Resources */,
+				986502E9271F07FF00EF9EB9 /* 001.aif in Resources */,
 				9839C094270B44FC003DCF69 /* tracks.json in Resources */,
+				986502EA271F07FF00EF9EB9 /* 000.aif in Resources */,
+				986502EB271F07FF00EF9EB9 /* 002.aif in Resources */,
 				98B5AF8D26EF7B7E0007C292 /* ProximaNovaItalic.otf in Resources */,
+				986502F1271F07FF00EF9EB9 /* stereo.wav in Resources */,
+				986502EE271F07FF00EF9EB9 /* 006.aif in Resources */,
+				9867E6CE271D7A8E00A9C575 /* head.obj in Resources */,
 				98B5AF8926EF7A480007C292 /* ProximaNovaSemibold.otf in Resources */,
 				988B7B9126EF98BA00622B89 /* Colors.xcassets in Resources */,
+				986502ED271F07FF00EF9EB9 /* 007.aif in Resources */,
 				9806802127034A9500A4588A /* valid_token.json in Resources */,
 				98B5AF8726EF7A480007C292 /* ProximaNovaMedium.otf in Resources */,
 				98B5AF8826EF7A480007C292 /* ProximaNovaRegular.otf in Resources */,
+				986502EF271F07FF00EF9EB9 /* 004.aif in Resources */,
 				988E5DBE27102C54005FC3C4 /* friends.json in Resources */,
+				986502EC271F07FF00EF9EB9 /* 003.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BBB92E8BC14D08D8456B64E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B449B84BD9031DE94A4C118B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mach1 Spatial Music Player-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98D22D7D26EF39B800285854 /* Sources */ = {
@@ -1097,7 +1219,6 @@
 				98F73106270B20680028D0C9 /* PlaylistDetailsRepository.swift in Sources */,
 				98BE3899270C394C00B65B5D /* TrackItemInfoView.swift in Sources */,
 				98BE3896270C364600B65B5D /* TrackDTO.swift in Sources */,
-				9848C82E270C8F360012F68F /* Mach1OrientationCardWithIndicatorsView.swift in Sources */,
 				981DAF9D270725F80001CD04 /* PlaylistDetailsViewModel.swift in Sources */,
 				98B91E9C26FB680D008EA8D2 /* SignInViewModel.swift in Sources */,
 				98B5AF8026EF6DA30007C292 /* ConfigurationProperty.swift in Sources */,
@@ -1187,7 +1308,6 @@
 /* Begin XCBuildConfiguration section */
 		98D22D8D26EF39B900285854 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98D22DB426EF4AE200285854 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -1250,7 +1370,6 @@
 		};
 		98D22D8E26EF39B900285854 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98D22DB126EF3E9200285854 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -1307,7 +1426,7 @@
 		};
 		98D22D9026EF39B900285854 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98D22DB426EF4AE200285854 /* Development.xcconfig */;
+			baseConfigurationReference = 54CCE584E41E8D9001ACAA95 /* Pods-Mach1 Spatial Music Player.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(CF_APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1315,10 +1434,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mach1 Spatial Music Player/Resource/Preview Content\"";
+				DEVELOPMENT_TEAM = 296GZGJY4F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mach1 Spatial Music Player/Configuration/Mach1-Spatial-Music-Player-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "DEV - Mach1 Spatial Music Player";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1328,8 +1449,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "$(CF_APP_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(CF_APP_BUNDLE_IDENTIFIER)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mach1.spatial.music.player;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1340,7 +1461,7 @@
 		};
 		98D22D9126EF39B900285854 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98D22DB126EF3E9200285854 /* Release.xcconfig */;
+			baseConfigurationReference = DF24ED1BA4309A0024733536 /* Pods-Mach1 Spatial Music Player.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(CF_APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1352,6 +1473,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mach1 Spatial Music Player/Configuration/Mach1-Spatial-Music-Player-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "DEV - Mach1 Spatial Music Player";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1361,8 +1483,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "$(CF_APP_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(CF_APP_BUNDLE_IDENTIFIER)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mach1.spatial.music.player;
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

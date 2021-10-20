@@ -88,6 +88,7 @@ struct Constants {
             case NextTrack = "forward.circle" // 􀺅
             case PlayTrack = "play.circle" // 􀊕
             case PauseTrack = "pause.circle" // 􀊗
+            case InitReference3DModel = "wand.and.stars.inverse" // 􀜎
             case Logout = "escape" // 􀆧
         }
         enum Custom: String {
