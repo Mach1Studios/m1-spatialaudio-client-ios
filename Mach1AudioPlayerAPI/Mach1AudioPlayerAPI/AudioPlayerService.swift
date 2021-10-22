@@ -21,6 +21,13 @@ public class AudioPlayerService {
                 players[$0 * 2].prepareToPlay()
                 players[$0 * 2 + 1].prepareToPlay()
             }
+            //Setup the correct angle convention for orientation Euler input angles
+            mach1Decode.setPlatformType(type: Mach1PlatformiOS)
+            //Setup the expected spatial audio mix format for decoding
+            mach1Decode.setDecodeAlgoType(newAlgorithmType: Mach1DecodeAlgoSpatial)
+            //Setup for the safety filter speed:
+            //1.0 = no filter | 0.1 = slow filter
+            mach1Decode.setFilterSpeed(filterSpeed: 1.0)
         } catch {
             print("Error constructing AVAudioPlayers: \(error)")
         }
