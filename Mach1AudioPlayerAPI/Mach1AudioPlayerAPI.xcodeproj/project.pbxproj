@@ -11,6 +11,9 @@
 		98071A96271ED3E00054DAA0 /* Mach1SpatialAudioPlayerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98071A95271ED3E00054DAA0 /* Mach1SpatialAudioPlayerImpl.swift */; };
 		98071A9A271ED5630054DAA0 /* Mach13DSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98071A99271ED5630054DAA0 /* Mach13DSceneView.swift */; };
 		98071A9C271ED56D0054DAA0 /* float4x4Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98071A9B271ED56D0054DAA0 /* float4x4Ext.swift */; };
+		987639FD2722AA2400131C01 /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987639FC2722AA2400131C01 /* AudioPlayerService.swift */; };
+		987639FF2722AC5D00131C01 /* SceneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987639FE2722AC5D00131C01 /* SceneService.swift */; };
+		98763A012722BFA700131C01 /* OrientationSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98763A002722BFA700131C01 /* OrientationSourceType.swift */; };
 		98D7F255271EB0EB00C812FF /* Mach1AudioPlayerAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 98D7F254271EB0EB00C812FF /* Mach1AudioPlayerAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B2881ED3DA2964DCF2CF7529 /* Pods_Mach1AudioPlayerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CC6317E37473C133FEA71E /* Pods_Mach1AudioPlayerAPI.framework */; };
 /* End PBXBuildFile section */
@@ -23,6 +26,9 @@
 		98071A95271ED3E00054DAA0 /* Mach1SpatialAudioPlayerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach1SpatialAudioPlayerImpl.swift; sourceTree = "<group>"; };
 		98071A99271ED5630054DAA0 /* Mach13DSceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mach13DSceneView.swift; sourceTree = "<group>"; };
 		98071A9B271ED56D0054DAA0 /* float4x4Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = float4x4Ext.swift; sourceTree = "<group>"; };
+		987639FC2722AA2400131C01 /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
+		987639FE2722AC5D00131C01 /* SceneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneService.swift; sourceTree = "<group>"; };
+		98763A002722BFA700131C01 /* OrientationSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationSourceType.swift; sourceTree = "<group>"; };
 		98C2048E271EE7C400E9E9A5 /* Mach1AudioPlayerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mach1AudioPlayerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D7F254271EB0EB00C812FF /* Mach1AudioPlayerAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mach1AudioPlayerAPI.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +63,9 @@
 				98071A95271ED3E00054DAA0 /* Mach1SpatialAudioPlayerImpl.swift */,
 				98071A99271ED5630054DAA0 /* Mach13DSceneView.swift */,
 				98071A9B271ED56D0054DAA0 /* float4x4Ext.swift */,
+				987639FC2722AA2400131C01 /* AudioPlayerService.swift */,
+				987639FE2722AC5D00131C01 /* SceneService.swift */,
+				98763A002722BFA700131C01 /* OrientationSourceType.swift */,
 			);
 			path = Mach1AudioPlayerAPI;
 			sourceTree = "<group>";
@@ -184,10 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98763A012722BFA700131C01 /* OrientationSourceType.swift in Sources */,
+				987639FF2722AC5D00131C01 /* SceneService.swift in Sources */,
 				98071A94271ED30A0054DAA0 /* Mach1SpatialAudioPlayer.swift in Sources */,
 				98071A96271ED3E00054DAA0 /* Mach1SpatialAudioPlayerImpl.swift in Sources */,
 				98071A9A271ED5630054DAA0 /* Mach13DSceneView.swift in Sources */,
 				98071A9C271ED56D0054DAA0 /* float4x4Ext.swift in Sources */,
+				987639FD2722AA2400131C01 /* AudioPlayerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

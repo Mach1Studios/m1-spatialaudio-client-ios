@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct PlaybackStatusView: View {
+    var playPause: (() -> Void)
+    
     var body: some View {
         VStack {
             HStack {
@@ -9,10 +11,12 @@ struct PlaybackStatusView: View {
                     .frame(width: Constants.Image.Dimension.Small.rawValue, height: Constants.Image.Dimension.Small.rawValue)
                     .foregroundColor(.Mach1Gray)
                 Spacer()
-                Image(systemName: Constants.Image.System.PlayTrack.rawValue)
-                    .resizable()
-                    .frame(width: Constants.Image.Dimension.Normal.rawValue, height: Constants.Image.Dimension.Normal.rawValue)
-                    .foregroundColor(.Mach1Gray)
+                Button { playPause() } label: {
+                    Image(systemName: Constants.Image.System.PlayTrack.rawValue)
+                        .resizable()
+                        .frame(width: Constants.Image.Dimension.Normal.rawValue, height: Constants.Image.Dimension.Normal.rawValue)
+                        .foregroundColor(.Mach1Gray)
+                }
                 Spacer()
                 Image(systemName: Constants.Image.System.NextTrack.rawValue)
                     .resizable()
@@ -55,7 +59,7 @@ struct PlaybackStatusView: View {
 struct PlaybackStatusView_Previews: PreviewProvider {
     static var previews: some View {
         Mach1View {
-            PlaybackStatusView()
+            PlaybackStatusView() {}
         }
     }
 }

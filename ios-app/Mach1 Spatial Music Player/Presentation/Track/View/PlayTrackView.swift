@@ -1,20 +1,23 @@
 import SwiftUI
+import Mach1AudioPlayerAPI
+import SceneKit
 
 struct PlayTrackView: View {
     let track: Track
-    @StateObject var viewModel = PlayTrackViewModel()
+    @State private var orientationSource: OrientationSourceType = .Device
+    @StateObject private var viewModel = PlayTrackViewModel()
+    var spatialAudioPlayer: Mach1SpatialAudioPlayerImpl = Mach1SpatialAudioPlayerImpl(defaultScene, urls: testUrls)
     
     var body: some View {
         Mach1View {
             VStack {
                 self.header
-                Mach1SegmentedPicker($viewModel.orientationSource, options: OrientationSourceType.allCases)
+                Mach1SegmentedPicker($orientationSource, options: OrientationSourceType.allCases)
                     .padding(.top, Mach1Margin.VBig.rawValue)
-                Mach1OrientationCardWithIndicatorsView(width: UIScreen.main.bounds.width * 0.9)
-                    .padding(.top, Mach1Margin.VBig.rawValue)
-                PlaybackStatusView()
-                    .padding(.top, Mach1Margin.VBig.rawValue)
-                    .padding()
+                spatialAudioPlayer.view(CGSize(width: 200, height: 200))
+                PlaybackStatusView() {
+                    spatialAudioPlayer.playPause(orientationSource)
+                }.padding(.top, Mach1Margin.VBig.rawValue)
                 Spacer()
             }.padding()
         }
@@ -29,6 +32,21 @@ struct PlayTrackView: View {
         }
     }
 }
+
+// TODO: Only for testing
+fileprivate let defaultScene: SCNScene = {
+    let scene = SCNScene(named: "head.obj")
+    scene?.background.contents = UIColor(Color.Mach1Dark)
+    return scene!
+}()
+fileprivate let testUrls: [URL] = {
+    var urls: [URL] = []
+    for i in 0...7 {
+        urls.append(URL.init(fileURLWithPath: Bundle.main.path(forResource: "00" + String(i), ofType: "aif")!))
+    }
+    return urls
+}()
+
 
 // MARK: Preview
 
