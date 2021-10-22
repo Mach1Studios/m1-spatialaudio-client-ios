@@ -21,4 +21,4 @@ endif
 # Run via `make build` in command line
 build: setup
 	cd Mach1AudioPlayerAPI && pod install
-	cd ios-app && pod install
+	cd ios-app && pod install && pod update
