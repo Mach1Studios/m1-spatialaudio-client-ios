@@ -2,31 +2,26 @@ import AVFoundation
 import Mach1SpatialAPI
 import CoreMotion
 
-public class AudioPlayerService {
-    private let mach1Decode: Mach1Decode
+public class Mach1PlayerImpl: Mach1Player {
+    private let mach1Decode = Mach1Decode()
     private let range: ClosedRange = 0...7
     private var players: [AVAudioPlayer] = []
     private var referenceAttitude: CMAttitude? = nil
     
-    public init(_ mach1Decode: Mach1Decode, _ urls: [URL]) {
-        self.mach1Decode = mach1Decode
+    public init(_ urls: [URL]) {
         do {
             try self.range.forEach {
                 players.append(try AVAudioPlayer(contentsOf: urls[$0]))
                 players.append(try AVAudioPlayer(contentsOf: urls[$0]))
                 players[$0 * 2].numberOfLoops = 10
                 players[$0 * 2 + 1].numberOfLoops = 10
-                players[$0 * 2].pan = -1.0;
-                players[$0 * 2 + 1].pan = 1.0;
+                players[$0 * 2].pan = -1.0
+                players[$0 * 2 + 1].pan = 1.0
                 players[$0 * 2].prepareToPlay()
                 players[$0 * 2 + 1].prepareToPlay()
             }
-            //Setup the correct angle convention for orientation Euler input angles
             mach1Decode.setPlatformType(type: Mach1PlatformiOS)
-            //Setup the expected spatial audio mix format for decoding
             mach1Decode.setDecodeAlgoType(newAlgorithmType: Mach1DecodeAlgoSpatial)
-            //Setup for the safety filter speed:
-            //1.0 = no filter | 0.1 = slow filter
             mach1Decode.setFilterSpeed(filterSpeed: 1.0)
         } catch {
             print("Error constructing AVAudioPlayers: \(error)")
@@ -34,7 +29,9 @@ public class AudioPlayerService {
     }
     
     public func play() {
-        players.forEach { $0.play(atTime: players[0].deviceCurrentTime + 1.0) }
+        // TODO on switch 
+        let startTime = players[0].deviceCurrentTime + 1.0
+        players.forEach { $0.play(atTime: startTime) }
     }
     
     public func stop() {
@@ -46,27 +43,16 @@ public class AudioPlayerService {
         }
     }
     
-    public func onMotionManagerChanged(_ deviceMotion: CMDeviceMotion) {
+    public func onMotionManagerChanged(_ attitude: CMAttitude) {
         // https://developer.apple.com/documentation/coremotion/getting_processed_device-motion_data/understanding_reference_frames_and_device_attitude
-        if referenceAttitude == nil { self.referenceAttitude = deviceMotion.attitude }
+        if referenceAttitude == nil { self.referenceAttitude = attitude }
         guard let referenceAttitude = self.referenceAttitude else { return }
         
-        let currentAttitude = deviceMotion.attitude
+        let currentAttitude = attitude
         currentAttitude.multiply(byInverseOf: referenceAttitude)
-        var deviceYaw = currentAttitude.yaw * 180 / Double.pi
-        var devicePitch = currentAttitude.pitch * 180 / Double.pi
-        var deviceRoll = currentAttitude.roll * 180 / Double.pi
-        
-        /*
-        print("REFERENCE ATTITUDE YAW: \(referenceAttitude.yaw)")
-        print("REFERENCE ATTITUDE PITCH: \(referenceAttitude.pitch)")
-        print("REFERENCE ATTITUDE ROLL: \(referenceAttitude.roll)")
-        
-        print("CURRENT ATTITUDE YAW: \(currentAttitude.yaw)")
-        print("CURRENT ATTITUDE PITCH: \(currentAttitude.pitch)")
-        print("CURRENT ATTITUDE ROLL: \(currentAttitude.roll)")
-         */
-        
+        var deviceYaw = currentAttitude.yaw * 180 / .pi
+        var devicePitch = currentAttitude.pitch * 180 / .pi
+        var deviceRoll = currentAttitude.roll * 180 / .pi
         
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, windowScene.activationState == .foregroundActive, let _ = windowScene.windows.first {
             print("Window scene interface orientation \(windowScene.interfaceOrientation)")

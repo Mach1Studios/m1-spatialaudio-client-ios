@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.platform      = :ios, "14.0"
   spec.source        = { :git => 'https://github.com/Mach1Studios/m1-spatialaudio-client-ios.git', :tag => spec.version.to_s }
   spec.swift_version = "5.0"
-  spec.source_files  = 'Mach1AudioPlayerAPI/*.{h,m,swift}'
+  spec.source_files  = 'Mach1AudioPlayerAPI/*.{h,m,swift}', 'Mach1AudioPlayerAPI/**/*.{h,m,swift}'
 
   # Required dependencies
   spec.dependency 'Mach1SpatialAPI'

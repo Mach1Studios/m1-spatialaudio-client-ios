@@ -1,63 +1,43 @@
 import SwiftUI
 import CoreMotion
 import SceneKit
-import Mach1SpatialAPI
 
 public class Mach1SpatialAudioPlayerImpl: Mach1SpatialAudioPlayer {
     private var play: Bool = false
-    private var mach1Decode = Mach1Decode()
-    private let sceneService: SceneService
-    private let audioPlayer: AudioPlayerService
-    private var motionManager = CMMotionManager()
-    private var headPhoneMotionManager = CMHeadphoneMotionManager()
+    private let mach1Scene: Mach1Scene
+    private let mach1Player: Mach1Player
+    private var mach1MotionManger: Mach1MotionManger? = nil
     
     public init(_ scene: SCNScene, urls: [URL]) {
-        sceneService = SceneService(scene)
-        audioPlayer = AudioPlayerService(mach1Decode, urls)
+        mach1Scene = Mach1SceneImpl(scene)
+        mach1Player = Mach1PlayerImpl(urls)
     }
     
     public func view(_ sceneFrame: CGSize) -> some View {
-        return sceneService.getView(sceneFrame)
+        return mach1Scene.getView(sceneFrame)
     }
     
     public func playPause(_ orientationSourceType: OrientationSourceType) {
-        if (!motionManager.isDeviceMotionAvailable) {
-            print("Device motion manager is not available")
+        // TODO check if change orientationSourceType this will be triggered
+        // and maybe if type is changed then we need to reset at start or not?
+        mach1MotionManger = Mach1MotionManagerStrategy.apply(orientationSourceType)
+        do {
+            try mach1MotionManger?.checkAvailability()
+        } catch {
+            print(error)
             return
         }
         play = !play
         if (play) {
-            audioPlayer.play()
-            self.initDeviceMotionUpdates(orientationSourceType)
+            mach1Player.play()
+            mach1MotionManger?.start { deviceMotion in
+                self.mach1Player.onMotionManagerChanged(deviceMotion.attitude)
+                self.mach1Scene.onMotionManagerChanged(deviceMotion.attitude)
+            }
         }
         else {
-            audioPlayer.stop()
-            motionManager.stopDeviceMotionUpdates()
-        }
-    }
-    
-    private func initDeviceMotionUpdates(_ orientationSourceType: OrientationSourceType) {
-        switch orientationSourceType {
-        case .Device:
-            motionManager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: { (deviceMotion, error) -> Void in
-                if let deviceMotion = deviceMotion {
-                    self.audioPlayer.onMotionManagerChanged(deviceMotion)
-                    self.sceneService.onMotionManagerChanged(deviceMotion)
-                } else if let error = error {
-                    print("Error when detect device motion updates: \(error)")
-                }
-            })
-            break
-        case .Headphones:
-            headPhoneMotionManager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: { (deviceMotion, error) -> Void in
-                if let deviceMotion = deviceMotion {
-                    self.audioPlayer.onMotionManagerChanged(deviceMotion)
-                    self.sceneService.onMotionManagerChanged(deviceMotion)
-                } else if let error = error {
-                    print("Error when detect device motion updates: \(error)")
-                }
-            })
-            break
+            mach1Player.stop()
+            mach1MotionManger?.stop()
         }
     }
 }

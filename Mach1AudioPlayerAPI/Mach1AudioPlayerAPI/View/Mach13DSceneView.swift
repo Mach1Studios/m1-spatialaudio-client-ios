@@ -1,11 +1,11 @@
 import SwiftUI
 import SceneKit
 
-struct Mach13DSceneView: View {
+public struct Mach13DSceneView: View {
     let scene: SCNScene
     let sceneFrame: CGSize
     
-    var body: some View {
+    public var body: some View {
         SceneView(
             scene: scene,
             options: [.autoenablesDefaultLighting]
