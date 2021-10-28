@@ -36,7 +36,5 @@
 	<string>UIStatusBarStyleLightContent</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSMotionUsageDescription</key>
-	<string>This app uses motion APIs to visualize your headphone locations</string>
 </dict>
 </plist>

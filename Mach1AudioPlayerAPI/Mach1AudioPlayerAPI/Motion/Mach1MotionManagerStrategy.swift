@@ -23,6 +23,7 @@ class Mach1MotionManagerStrategy {
 }
 
 fileprivate class Mach1DeviceMotion: CMMotionManager, Mach1MotionManger {
+    private var isRunning = false
     
     func checkAvailability() throws {
         if !self.isDeviceMotionAvailable { throw Mach1AvailabilityMotionError.error("Device motion is not available") }
@@ -34,17 +35,23 @@ fileprivate class Mach1DeviceMotion: CMMotionManager, Mach1MotionManger {
                 print("Error device motion: \(String(describing: error))")
                 return
             }
+            self.isRunning = true
             update(deviceMotion)
         }
     }
     
     func stop() {
+        self.isRunning = false
         self.stopDeviceMotionUpdates()
+    }
+    
+    func isActive() -> Bool {
+        return self.isRunning
     }
 }
 
 fileprivate class Mach1HeadponesMotion: CMHeadphoneMotionManager, Mach1MotionManger {
-    
+    private var isRunning = false
     func checkAvailability() throws {
         if !self.isDeviceMotionAvailable { throw Mach1AvailabilityMotionError.error("Device motion is not available") }
     }
@@ -55,11 +62,17 @@ fileprivate class Mach1HeadponesMotion: CMHeadphoneMotionManager, Mach1MotionMan
                 print("Error device motion: \(String(describing: error))")
                 return
             }
+            self.isRunning = true
             update(deviceMotion)
         }
     }
     
     func stop() {
+        self.isRunning = false
         self.stopDeviceMotionUpdates()
+    }
+    
+    func isActive() -> Bool {
+        return self.isRunning
     }
 }

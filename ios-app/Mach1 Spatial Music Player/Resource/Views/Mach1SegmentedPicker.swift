@@ -4,13 +4,15 @@ import SwiftUI
 /**
     TYPE will be translated if exists in 'Localizable'
  */
-struct Mach1SegmentedPicker<TYPE: Hashable>: View {
+struct Mach1SegmentedPicker<TYPE: Hashable & Equatable>: View {
     let selectedType: Binding<TYPE>
     let options: [TYPE]
+    var onChange: (() -> Void)?
     
-    init(_ selectedType: Binding<TYPE>, options: [TYPE]) {
+    init(_ selectedType: Binding<TYPE>, options: [TYPE], onChange: (() -> Void)? = nil) {
         self.selectedType = selectedType
         self.options = options
+        self.onChange = onChange
         let mach1font = UIFont(name: Mach1Font.SemiBold.rawValue, size: Mach1TextSize.Medium.rawValue) ?? UIFont.systemFont(ofSize: Mach1TextSize.Medium.rawValue)
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.Mach1Yellow)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(Color.Mach1Dark), .font: mach1font], for: .selected)
@@ -25,6 +27,7 @@ struct Mach1SegmentedPicker<TYPE: Hashable>: View {
             }
         }
         .pickerStyle(.segmented)
+        .onChange(of: selectedType.wrappedValue) { _ in onChange?() }
     }
 }
 

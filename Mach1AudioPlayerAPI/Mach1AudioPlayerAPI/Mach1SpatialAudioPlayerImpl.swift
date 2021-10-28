@@ -17,10 +17,7 @@ public class Mach1SpatialAudioPlayerImpl: Mach1SpatialAudioPlayer {
         return mach1Scene.getView(sceneFrame)
     }
     
-    public func playPause(_ orientationSourceType: OrientationSourceType) {
-        // TODO check if change orientationSourceType this will be triggered
-        // and maybe if type is changed then we need to reset at start or not?
-        mach1MotionManger = Mach1MotionManagerStrategy.apply(orientationSourceType)
+    public func playPause() {
         do {
             try mach1MotionManger?.checkAvailability()
         } catch {
@@ -30,14 +27,32 @@ public class Mach1SpatialAudioPlayerImpl: Mach1SpatialAudioPlayer {
         play = !play
         if (play) {
             mach1Player.play()
-            mach1MotionManger?.start { deviceMotion in
-                self.mach1Player.onMotionManagerChanged(deviceMotion.attitude)
-                self.mach1Scene.onMotionManagerChanged(deviceMotion.attitude)
-            }
+            startListenMotion()
         }
         else {
             mach1Player.stop()
             mach1MotionManger?.stop()
+        }
+    }
+    
+    public func setSourceType(_ orientationSourceType: OrientationSourceType) {
+        mach1MotionManger?.stop()
+        self.mach1MotionManger = Mach1MotionManagerStrategy.apply(orientationSourceType)
+        mach1Scene.sourceTypeChanged()
+        if (play) { startListenMotion() }
+    }
+    
+    public func clear() {
+        mach1Scene.sourceTypeChanged()
+        mach1Player.stop()
+        mach1MotionManger?.stop()
+        mach1MotionManger = nil
+    }
+    
+    private func startListenMotion() {
+        mach1MotionManger?.start { deviceMotion in
+            self.mach1Player.onMotionManagerChanged(deviceMotion.attitude)
+            self.mach1Scene.onMotionManagerChanged(deviceMotion.attitude)
         }
     }
 }

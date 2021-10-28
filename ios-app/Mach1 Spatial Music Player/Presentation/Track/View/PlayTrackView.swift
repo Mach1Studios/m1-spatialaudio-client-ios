@@ -12,15 +12,17 @@ struct PlayTrackView: View {
         Mach1View {
             VStack {
                 self.header
-                Mach1SegmentedPicker($orientationSource, options: OrientationSourceType.allCases)
-                    .padding(.top, Mach1Margin.VBig.rawValue)
+                Mach1SegmentedPicker($orientationSource, options: OrientationSourceType.allCases) {
+                    spatialAudioPlayer.setSourceType(orientationSource)
+                }.padding(.top, Mach1Margin.VBig.rawValue)
                 spatialAudioPlayer.view(CGSize(width: 200, height: 200))
                 PlaybackStatusView() {
-                    spatialAudioPlayer.playPause(orientationSource)
+                    spatialAudioPlayer.playPause()
                 }.padding(.top, Mach1Margin.VBig.rawValue)
                 Spacer()
             }.padding()
-        }
+        }.onAppear { spatialAudioPlayer.setSourceType(orientationSource) }
+        .onDisappear { spatialAudioPlayer.clear() }
     }
     
     private var header: some View {

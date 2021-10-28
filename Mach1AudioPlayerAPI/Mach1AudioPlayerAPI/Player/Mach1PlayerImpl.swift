@@ -29,7 +29,6 @@ public class Mach1PlayerImpl: Mach1Player {
     }
     
     public func play() {
-        // TODO on switch 
         let startTime = players[0].deviceCurrentTime + 1.0
         players.forEach { $0.play(atTime: startTime) }
     }

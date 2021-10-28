@@ -1672,9 +1672,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4261E9CDFFC687EBD42E341F /* Pods-Mach1 Spatial Music Player.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(CF_APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mach1 Spatial Music Player/Resource/Preview Content\"";
@@ -1683,6 +1684,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mach1 Spatial Music Player/Configuration/Mach1-Spatial-Music-Player-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "DEV - Mach1 Spatial Music Player";
+				INFOPLIST_KEY_NSMotionUsageDescription = "This app uses motion APIs to visualize your headphone locations";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1706,9 +1708,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8F9B14B6E91B6A6E2337819D /* Pods-Mach1 Spatial Music Player.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(CF_APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mach1 Spatial Music Player/Resource/Preview Content\"";
@@ -1717,6 +1720,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mach1 Spatial Music Player/Configuration/Mach1-Spatial-Music-Player-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "DEV - Mach1 Spatial Music Player";
+				INFOPLIST_KEY_NSMotionUsageDescription = "This app uses motion APIs to visualize your headphone locations";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
