@@ -13,8 +13,8 @@ public class Mach1SceneImpl: Mach1Scene {
         self.scene = scene
     }
     
-    public func getView(_ sceneFrame: CGSize) -> Button<Mach13DSceneView> {
-        return Button { self.initSceneReference() }
+    public func getView(_ sceneFrame: CGSize, _ onSelected: @escaping () -> Void) -> Button<Mach13DSceneView> {
+        return Button { onSelected() }
                label: { Mach13DSceneView(scene: scene, sceneFrame: sceneFrame) }
     }
     
@@ -24,7 +24,7 @@ public class Mach1SceneImpl: Mach1Scene {
         self.needInitialReference = true
     }
     
-    private func initSceneReference() {
+    public func resetSceneReference() {
         guard let attitude = self.attitude else { return }
         self.referenceFrame = float4x4(rotationMatrix: attitude.rotationMatrix).inverse
     }
@@ -38,14 +38,13 @@ public class Mach1SceneImpl: Mach1Scene {
             simd_float4( 0.0, 0.0, 0.0, 1.0)
         ])
         scene.rootNode.childNodes.first?.simdTransform = mirrorTransform * rotation * referenceFrame
-
         if isFirstTime {
             isFirstTime = false
             return
         }
         self.attitude = attitude
         if self.needInitialReference {
-            self.initSceneReference()
+            self.resetSceneReference()
             self.needInitialReference = false
         }
     }

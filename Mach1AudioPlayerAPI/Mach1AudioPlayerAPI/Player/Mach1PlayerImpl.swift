@@ -6,6 +6,8 @@ public class Mach1PlayerImpl: Mach1Player {
     private let mach1Decode = Mach1Decode()
     private let range: ClosedRange = 0...7
     private var players: [AVAudioPlayer] = []
+    private var needUpdateReferenceAttitude = true
+    private var needUpdateReferenceAttitudeForHeadphones = true
     private var referenceAttitude: CMAttitude? = nil
     
     public init(_ urls: [URL]) {
@@ -42,44 +44,36 @@ public class Mach1PlayerImpl: Mach1Player {
         }
     }
     
-    public func onMotionManagerChanged(_ attitude: CMAttitude) {
-        // https://developer.apple.com/documentation/coremotion/getting_processed_device-motion_data/understanding_reference_frames_and_device_attitude
-        if referenceAttitude == nil { self.referenceAttitude = attitude }
-        guard let referenceAttitude = self.referenceAttitude else { return }
-        
-        let currentAttitude = attitude
-        currentAttitude.multiply(byInverseOf: referenceAttitude)
-        var deviceYaw = currentAttitude.yaw * 180 / .pi
-        var devicePitch = currentAttitude.pitch * 180 / .pi
-        var deviceRoll = currentAttitude.roll * 180 / .pi
-        
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, windowScene.activationState == .foregroundActive, let _ = windowScene.windows.first {
-            print("Window scene interface orientation \(windowScene.interfaceOrientation)")
-            switch windowScene.interfaceOrientation {
-            case .unknown:
-                print("Window Scene interface orientation UNKNOWN")
-                break
-            case .portrait:
-                deviceYaw += 90
-                devicePitch -= 90
-                break
-            case .portraitUpsideDown:
-                deviceYaw -= 90
-                devicePitch += 90
-                break
-            case .landscapeLeft:
-                deviceRoll += 90
-                break
-            case .landscapeRight:
-                deviceYaw += 180
-                deviceRoll -= 90
-                break
-            @unknown default:
-                print("Window Scene interface orientation DEFAULT unknown")
+    public func setNeedUpdateAttitudeReference() {
+        self.referenceAttitude = nil
+        needUpdateReferenceAttitude = true
+        needUpdateReferenceAttitudeForHeadphones = true
+    }
+    
+    public func onMotionManagerChanged(_ sourceType: OrientationSourceType?, _ deviceReferenceAttitude: CMAttitude?, _ attitude: CMAttitude) {
+        guard let sourceType = sourceType else { return }
+        switch sourceType {
+        case .Device:
+            if let referenceAttitude = deviceReferenceAttitude, needUpdateReferenceAttitude {
+                self.referenceAttitude = referenceAttitude
+                self.needUpdateReferenceAttitude = false
             }
-        } else {
-            print("Window scene is nil")
+        case .Headphones:
+            if needUpdateReferenceAttitudeForHeadphones {
+                referenceAttitude = attitude
+                needUpdateReferenceAttitudeForHeadphones = false
+                return
+            }
+            break
         }
+
+        // https://developer.apple.com/documentation/coremotion/getting_processed_device-motion_data/understanding_reference_frames_and_device_attitude
+        let currentAttitude = attitude
+        guard let referenceAttitude = referenceAttitude else { return }
+        currentAttitude.multiply(byInverseOf: referenceAttitude)
+        let deviceYaw = currentAttitude.yaw * 180 / .pi
+        let devicePitch = currentAttitude.pitch * 180 / .pi
+        let deviceRoll = currentAttitude.roll * 180 / .pi
         
         print("RESULT YAW \(deviceYaw)")
         print("RESULT PITCH \(devicePitch)")

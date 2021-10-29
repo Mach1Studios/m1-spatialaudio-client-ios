@@ -3,5 +3,6 @@ import CoreMotion
 protocol Mach1Player {
     func play()
     func stop()
-    func onMotionManagerChanged(_ attitude: CMAttitude)
+    func onMotionManagerChanged(_ sourceType: OrientationSourceType?, _ deviceReferenceAttitude: CMAttitude?, _ attitude: CMAttitude)
+    func setNeedUpdateAttitudeReference()
 }
