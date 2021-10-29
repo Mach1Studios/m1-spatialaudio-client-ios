@@ -22,9 +22,9 @@ public class Mach1PlayerImpl: Mach1Player {
                 players[$0 * 2].prepareToPlay()
                 players[$0 * 2 + 1].prepareToPlay()
             }
-            mach1Decode.setPlatformType(type: Mach1PlatformiOS)
+            mach1Decode.setPlatformType(type: Mach1PlatformDefault)
             mach1Decode.setDecodeAlgoType(newAlgorithmType: Mach1DecodeAlgoSpatial)
-            mach1Decode.setFilterSpeed(filterSpeed: 1.0)
+            mach1Decode.setFilterSpeed(filterSpeed: 0.95)
         } catch {
             print("Error constructing AVAudioPlayers: \(error)")
         }
@@ -71,7 +71,7 @@ public class Mach1PlayerImpl: Mach1Player {
         let currentAttitude = attitude
         guard let referenceAttitude = referenceAttitude else { return }
         currentAttitude.multiply(byInverseOf: referenceAttitude)
-        let deviceYaw = currentAttitude.yaw * 180 / .pi
+        let deviceYaw = -currentAttitude.yaw * 180 / .pi
         let devicePitch = currentAttitude.pitch * 180 / .pi
         let deviceRoll = currentAttitude.roll * 180 / .pi
         
@@ -79,8 +79,11 @@ public class Mach1PlayerImpl: Mach1Player {
         print("RESULT PITCH \(devicePitch)")
         print("RESULT ROLL \(deviceRoll)")
         
+        let orientation = Mach1Point3D(x: Float(deviceYaw), y: Float(devicePitch), z: Float(deviceRoll))
+        mach1Decode.setRotationDegrees(newRotationDegrees: orientation)
+        
         mach1Decode.beginBuffer()
-        let decodeArray: [Float]  = mach1Decode.decode(Yaw: Float(deviceYaw), Pitch: Float(devicePitch), Roll: Float(deviceRoll))
+        let decodeArray: [Float]  = mach1Decode.decodeCoeffs()
         mach1Decode.endBuffer()
         for i in range {
             players[i * 2].setVolume(Float(decodeArray[i * 2]), fadeDuration: 0)
