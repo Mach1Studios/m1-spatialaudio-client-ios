@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98058ED82739275500A35649 /* m1-debug-m1spatial.wav in Resources */ = {isa = PBXBuildFile; fileRef = 98058ED72739275500A35649 /* m1-debug-m1spatial.wav */; };
 		9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */; };
 		9806800327030E2B00A4588A /* PlaylistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800227030E2B00A4588A /* PlaylistDTO.swift */; };
 		9806800627030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */; };
@@ -169,7 +168,6 @@
 		4261E9CDFFC687EBD42E341F /* Pods-Mach1 Spatial Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.debug.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.debug.xcconfig"; sourceTree = "<group>"; };
 		8F9B14B6E91B6A6E2337819D /* Pods-Mach1 Spatial Music Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.release.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.release.xcconfig"; sourceTree = "<group>"; };
 		95D89E6410F7AA502F214F47 /* Pods-Mach1 Spatial Music Player.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.development.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.development.xcconfig"; sourceTree = "<group>"; };
-		98058ED72739275500A35649 /* m1-debug-m1spatial.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "m1-debug-m1spatial.wav"; sourceTree = "<group>"; };
 		98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistsRepository.swift; sourceTree = "<group>"; };
 		9806800227030E2B00A4588A /* PlaylistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDTO.swift; sourceTree = "<group>"; };
 		9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -1002,7 +1000,6 @@
 		98D22D9326EF3D8700285854 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				98058ED72739275500A35649 /* m1-debug-m1spatial.wav */,
 				98AE0BED2720246D0097D6D0 /* 3D */,
 				980680172703386F00A4588A /* MockedData */,
 				98827BEC26F4B03E00C6BA8E /* Shapes */,
@@ -1307,7 +1304,6 @@
 				BF7B31802719A543004E335F /* playlistsoffriend.json in Resources */,
 				98D22DB326EF405200285854 /* Preview Content in Resources */,
 				98D22D8926EF39B900285854 /* Icons.xcassets in Resources */,
-				98058ED82739275500A35649 /* m1-debug-m1spatial.wav in Resources */,
 				98B5AF7726EF6BF90007C292 /* Localizable.strings in Resources */,
 				9806801B2703448500A4588A /* sectionedplaylists.json in Resources */,
 				9839C094270B44FC003DCF69 /* tracks.json in Resources */,

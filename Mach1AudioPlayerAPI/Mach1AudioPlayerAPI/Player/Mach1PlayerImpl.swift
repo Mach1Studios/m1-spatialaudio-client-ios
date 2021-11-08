@@ -49,7 +49,6 @@ public class Mach1PlayerImpl: Mach1Player {
     
     public func play() {
         players.forEach { $0.play() }
-
     }
     
     public func stop() {
