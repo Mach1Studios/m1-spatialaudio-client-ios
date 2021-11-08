@@ -11,6 +11,7 @@ class Mach1MotionManagerStrategy {
         case .Device:
             guard let mach1DeviceMotion = self.mach1DeviceMotion else {
                 self.mach1DeviceMotion = Mach1DeviceMotion()
+                self.mach1DeviceMotion?.deviceMotionUpdateInterval = 1.0 / 60.0
                 return self.mach1DeviceMotion!
             }
             return mach1DeviceMotion

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98058ED82739275500A35649 /* m1-debug-m1spatial.wav in Resources */ = {isa = PBXBuildFile; fileRef = 98058ED72739275500A35649 /* m1-debug-m1spatial.wav */; };
 		9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */; };
 		9806800327030E2B00A4588A /* PlaylistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800227030E2B00A4588A /* PlaylistDTO.swift */; };
 		9806800627030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */; };
@@ -67,15 +68,6 @@
 		988E5DC227102E06005FC3C4 /* SearchFriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988E5DC127102E06005FC3C4 /* SearchFriendViewModel.swift */; };
 		988E5DC427102E86005FC3C4 /* AddFriendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988E5DC327102E86005FC3C4 /* AddFriendItemView.swift */; };
 		98AE0BEF272024C20097D6D0 /* head.obj in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BEE272024C20097D6D0 /* head.obj */; };
-		98AE0BFA272025BF0097D6D0 /* 007.aif in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BF1272025BF0097D6D0 /* 007.aif */; };
-		98AE0BFB272025BF0097D6D0 /* 006.aif in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BF2272025BF0097D6D0 /* 006.aif */; };
-		98AE0BFC272025BF0097D6D0 /* 005.aif in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BF3272025BF0097D6D0 /* 005.aif */; };
-		98AE0BFD272025BF0097D6D0 /* 003.aif in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BF4272025BF0097D6D0 /* 003.aif */; };
-		98AE0BFE272025BF0097D6D0 /* 004.aif in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BF5272025BF0097D6D0 /* 004.aif */; };
-		98AE0BFF272025BF0097D6D0 /* 001.aif in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BF6272025BF0097D6D0 /* 001.aif */; };
-		98AE0C00272025BF0097D6D0 /* stereo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BF7272025BF0097D6D0 /* stereo.wav */; };
-		98AE0C01272025BF0097D6D0 /* 002.aif in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BF8272025BF0097D6D0 /* 002.aif */; };
-		98AE0C02272025BF0097D6D0 /* 000.aif in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BF9272025BF0097D6D0 /* 000.aif */; };
 		98B4EF0826FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4EF0726FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift */; };
 		98B4EF0A26FC6D7300C33AA9 /* Mach1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4EF0926FC6D7300C33AA9 /* Mach1View.swift */; };
 		98B4EF0C26FC86D700C33AA9 /* Mach1Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4EF0B26FC86D700C33AA9 /* Mach1Logo.swift */; };
@@ -177,6 +169,7 @@
 		4261E9CDFFC687EBD42E341F /* Pods-Mach1 Spatial Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.debug.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.debug.xcconfig"; sourceTree = "<group>"; };
 		8F9B14B6E91B6A6E2337819D /* Pods-Mach1 Spatial Music Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.release.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.release.xcconfig"; sourceTree = "<group>"; };
 		95D89E6410F7AA502F214F47 /* Pods-Mach1 Spatial Music Player.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.development.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.development.xcconfig"; sourceTree = "<group>"; };
+		98058ED72739275500A35649 /* m1-debug-m1spatial.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "m1-debug-m1spatial.wav"; sourceTree = "<group>"; };
 		98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistsRepository.swift; sourceTree = "<group>"; };
 		9806800227030E2B00A4588A /* PlaylistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDTO.swift; sourceTree = "<group>"; };
 		9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedPlaylistRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -1009,6 +1002,7 @@
 		98D22D9326EF3D8700285854 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				98058ED72739275500A35649 /* m1-debug-m1spatial.wav */,
 				98AE0BED2720246D0097D6D0 /* 3D */,
 				980680172703386F00A4588A /* MockedData */,
 				98827BEC26F4B03E00C6BA8E /* Shapes */,
@@ -1310,27 +1304,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98AE0C00272025BF0097D6D0 /* stereo.wav in Resources */,
 				BF7B31802719A543004E335F /* playlistsoffriend.json in Resources */,
 				98D22DB326EF405200285854 /* Preview Content in Resources */,
 				98D22D8926EF39B900285854 /* Icons.xcassets in Resources */,
+				98058ED82739275500A35649 /* m1-debug-m1spatial.wav in Resources */,
 				98B5AF7726EF6BF90007C292 /* Localizable.strings in Resources */,
 				9806801B2703448500A4588A /* sectionedplaylists.json in Resources */,
 				9839C094270B44FC003DCF69 /* tracks.json in Resources */,
-				98AE0BFC272025BF0097D6D0 /* 005.aif in Resources */,
-				98AE0BFE272025BF0097D6D0 /* 004.aif in Resources */,
 				98B5AF8D26EF7B7E0007C292 /* ProximaNovaItalic.otf in Resources */,
 				BFE5F5722710411300253D53 /* profile.json in Resources */,
-				98AE0BFD272025BF0097D6D0 /* 003.aif in Resources */,
 				BFE5F59527146CDD00253D53 /* friendprofile.json in Resources */,
-				98AE0C02272025BF0097D6D0 /* 000.aif in Resources */,
-				98AE0BFB272025BF0097D6D0 /* 006.aif in Resources */,
 				98B5AF8926EF7A480007C292 /* ProximaNovaSemibold.otf in Resources */,
 				BFE5F58227106E3600253D53 /* editprofile.json in Resources */,
 				988B7B9126EF98BA00622B89 /* Colors.xcassets in Resources */,
-				98AE0BFF272025BF0097D6D0 /* 001.aif in Resources */,
-				98AE0BFA272025BF0097D6D0 /* 007.aif in Resources */,
-				98AE0C01272025BF0097D6D0 /* 002.aif in Resources */,
 				98AE0BEF272024C20097D6D0 /* head.obj in Resources */,
 				9806802127034A9500A4588A /* valid_token.json in Resources */,
 				98B5AF8726EF7A480007C292 /* ProximaNovaMedium.otf in Resources */,

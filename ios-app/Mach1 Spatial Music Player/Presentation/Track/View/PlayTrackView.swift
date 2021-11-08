@@ -6,7 +6,10 @@ struct PlayTrackView: View {
     let track: Track
     @State private var orientationSource: OrientationSourceType = .Device
     @StateObject private var viewModel = PlayTrackViewModel()
-    var spatialAudioPlayer: Mach1SpatialAudioPlayerImpl = Mach1SpatialAudioPlayerImpl(defaultScene, urls: testUrls)
+    var spatialAudioPlayer: Mach1SpatialAudioPlayerImpl = Mach1SpatialAudioPlayerImpl(
+        defaultScene,
+        url: URL.init(fileURLWithPath: Bundle.main.path(forResource: "m1-debug-m1spatial", ofType: "wav")!)
+    )
     
     var body: some View {
         Mach1View {
@@ -40,13 +43,6 @@ fileprivate let defaultScene: SCNScene = {
     let scene = SCNScene(named: "head.obj")
     scene?.background.contents = UIColor(Color.Mach1Dark)
     return scene!
-}()
-fileprivate let testUrls: [URL] = {
-    var urls: [URL] = []
-    for i in 0...7 {
-        urls.append(URL.init(fileURLWithPath: Bundle.main.path(forResource: "00" + String(i), ofType: "aif")!))
-    }
-    return urls
 }()
 
 

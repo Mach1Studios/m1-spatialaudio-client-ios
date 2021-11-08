@@ -1,6 +1,7 @@
 import SwiftUI
 import CoreMotion
 import SceneKit
+import MediaToolbox
 
 public class Mach1SpatialAudioPlayerImpl: Mach1SpatialAudioPlayer {
     private var play: Bool = false
@@ -9,9 +10,9 @@ public class Mach1SpatialAudioPlayerImpl: Mach1SpatialAudioPlayer {
     private var mach1MotionManger: Mach1MotionManger? = nil
     private var mach1MotionMangerScene: Mach1MotionManger? = nil
     
-    public init(_ scene: SCNScene, urls: [URL]) {
+    required public init(_ scene: SCNScene, url: URL) {
         mach1Scene = Mach1SceneImpl(scene)
-        mach1Player = Mach1PlayerImpl(urls)
+        mach1Player = Mach1PlayerImpl(url)
     }
     
     public func view(_ sceneFrame: CGSize) -> some View {
