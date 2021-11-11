@@ -115,6 +115,7 @@ public class Mach1PlayerImpl: Mach1Player {
     }
     
     private func logPlayersLatency() {
+        /*
         let interval: CMTime = CMTimeMakeWithSeconds(1, preferredTimescale: 1)
         players[7].addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main) { time in
             if self.players[7].currentItem?.status == .readyToPlay {
@@ -125,5 +126,6 @@ public class Mach1PlayerImpl: Mach1Player {
                 print(forPrint)
             }
         }
+        */
     }
 }
