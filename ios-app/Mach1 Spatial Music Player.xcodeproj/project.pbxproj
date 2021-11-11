@@ -125,6 +125,7 @@
 		BF6B1647270EEC6D00520C4C /* ProfileDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1646270EEC6D00520C4C /* ProfileDTO.swift */; };
 		BF6B164A270EFE0900520C4C /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B1649270EFE0900520C4C /* ProfileRepository.swift */; };
 		BF6B1650270F199B00520C4C /* ProfileRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B164F270F199B00520C4C /* ProfileRepositoryImpl.swift */; };
+		BF788B8C273D3EDF0027A0FA /* m1-debug-m1spatial.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF788B8B273D3EDF0027A0FA /* m1-debug-m1spatial.wav */; };
 		BF7B317C2719A362004E335F /* GetPlaylistsForProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B317B2719A362004E335F /* GetPlaylistsForProfileUseCase.swift */; };
 		BF7B317E2719A3AF004E335F /* GetPlaylistsForProfileUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7B317D2719A3AF004E335F /* GetPlaylistsForProfileUseCaseImpl.swift */; };
 		BF7B31802719A543004E335F /* playlistsoffriend.json in Resources */ = {isa = PBXBuildFile; fileRef = BF7B317F2719A543004E335F /* playlistsoffriend.json */; };
@@ -300,6 +301,7 @@
 		BF6B1646270EEC6D00520C4C /* ProfileDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDTO.swift; sourceTree = "<group>"; };
 		BF6B1649270EFE0900520C4C /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		BF6B164F270F199B00520C4C /* ProfileRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepositoryImpl.swift; sourceTree = "<group>"; };
+		BF788B8B273D3EDF0027A0FA /* m1-debug-m1spatial.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "m1-debug-m1spatial.wav"; sourceTree = "<group>"; };
 		BF7B317B2719A362004E335F /* GetPlaylistsForProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistsForProfileUseCase.swift; sourceTree = "<group>"; };
 		BF7B317D2719A3AF004E335F /* GetPlaylistsForProfileUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistsForProfileUseCaseImpl.swift; sourceTree = "<group>"; };
 		BF7B317F2719A543004E335F /* playlistsoffriend.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = playlistsoffriend.json; sourceTree = "<group>"; };
@@ -1000,6 +1002,7 @@
 		98D22D9326EF3D8700285854 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				BF788B8B273D3EDF0027A0FA /* m1-debug-m1spatial.wav */,
 				98AE0BED2720246D0097D6D0 /* 3D */,
 				980680172703386F00A4588A /* MockedData */,
 				98827BEC26F4B03E00C6BA8E /* Shapes */,
@@ -1314,6 +1317,7 @@
 				BFE5F58227106E3600253D53 /* editprofile.json in Resources */,
 				988B7B9126EF98BA00622B89 /* Colors.xcassets in Resources */,
 				98AE0BEF272024C20097D6D0 /* head.obj in Resources */,
+				BF788B8C273D3EDF0027A0FA /* m1-debug-m1spatial.wav in Resources */,
 				9806802127034A9500A4588A /* valid_token.json in Resources */,
 				98B5AF8726EF7A480007C292 /* ProximaNovaMedium.otf in Resources */,
 				98B5AF8826EF7A480007C292 /* ProximaNovaRegular.otf in Resources */,

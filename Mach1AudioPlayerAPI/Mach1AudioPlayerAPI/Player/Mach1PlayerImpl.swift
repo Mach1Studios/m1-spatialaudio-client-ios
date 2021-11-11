@@ -13,8 +13,17 @@ public class Mach1PlayerImpl: Mach1Player {
     private var players: [AVPlayer] = []
     private var prerollCount = 0
     private var prerollRate = 0
+    var syncClock: CMClock? = nil
     
     public init(_ url: URL) {
+//        let session = AVAudioSession.sharedInstance()
+//
+//        try! session.setCategory(.multiRoute, mode: .default, options: .duckOthers)
+//        try! session.setActive(true, options: .notifyOthersOnDeactivation)
+        
+        
+        CMAudioClockCreate(allocator: kCFAllocatorDefault, clockOut: &syncClock)
+        
         (0..<numberOfChannels).forEach {
             let audioTap = AudioTap(Int32($0), numberOfChannels: Int32(self.numberOfChannels))!
             audioTaps.append(audioTap)
@@ -44,11 +53,38 @@ public class Mach1PlayerImpl: Mach1Player {
                    
         let a = AVPlayer(playerItem: playerItem)
         a.automaticallyWaitsToMinimizeStalling = false
+        a.masterClock = syncClock!
         return a
     }
     
     public func play() {
-        players.forEach { $0.play() }
+        players.forEach { player in
+            player.preroll(atRate: 1.0) { prerolled in
+                self.onPrerolled()
+            }
+        }
+        let interval: CMTime = CMTimeMakeWithSeconds(1, preferredTimescale: 1)
+        players[7].addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main) { time in
+            if self.players[7].currentItem?.status == .readyToPlay {
+                let lastPlayerTime = CMTimeGetSeconds(self.players[7].currentTime())
+                let firstPlayerTime = CMTimeGetSeconds(self.players[0].currentTime())
+                let razklikja = lastPlayerTime - firstPlayerTime
+                let forPrint = "RAZLIKJA = \(razklikja); PRIMO \(firstPlayerTime); SECUNDO \(lastPlayerTime)"
+                print(forPrint)
+            }
+        }
+    }
+    
+    func onPrerolled() {
+        prerollCount += 1
+        if (prerollCount == 8) {
+            players.forEach {
+                $0.setRate(1.0, time: CMTime.invalid, atHostTime: CMClockGetTime(syncClock!))
+            }
+            players.forEach {
+                $0.play()
+            }
+        }
     }
     
     public func stop() {
