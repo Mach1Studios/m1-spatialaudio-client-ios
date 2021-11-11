@@ -12,18 +12,10 @@ public class Mach1PlayerImpl: Mach1Player {
     private var audioTaps: [AudioTap] = []
     private var players: [AVPlayer] = []
     private var prerollCount = 0
-    private var prerollRate = 0
     var syncClock: CMClock? = nil
     
     public init(_ url: URL) {
-//        let session = AVAudioSession.sharedInstance()
-//
-//        try! session.setCategory(.multiRoute, mode: .default, options: .duckOthers)
-//        try! session.setActive(true, options: .notifyOthersOnDeactivation)
-        
-        
         CMAudioClockCreate(allocator: kCFAllocatorDefault, clockOut: &syncClock)
-        
         (0..<numberOfChannels).forEach {
             let audioTap = AudioTap(Int32($0), numberOfChannels: Int32(self.numberOfChannels))!
             audioTaps.append(audioTap)
@@ -51,10 +43,10 @@ public class Mach1PlayerImpl: Mach1Player {
         audioMix.inputParameters = [params]
         playerItem.audioMix = audioMix
                    
-        let a = AVPlayer(playerItem: playerItem)
-        a.automaticallyWaitsToMinimizeStalling = false
-        a.masterClock = syncClock!
-        return a
+        let avPlayer = AVPlayer(playerItem: playerItem)
+        avPlayer.automaticallyWaitsToMinimizeStalling = false
+        avPlayer.masterClock = syncClock!
+        return avPlayer
     }
     
     public func play() {
@@ -63,16 +55,7 @@ public class Mach1PlayerImpl: Mach1Player {
                 self.onPrerolled()
             }
         }
-        let interval: CMTime = CMTimeMakeWithSeconds(1, preferredTimescale: 1)
-        players[7].addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main) { time in
-            if self.players[7].currentItem?.status == .readyToPlay {
-                let lastPlayerTime = CMTimeGetSeconds(self.players[7].currentTime())
-                let firstPlayerTime = CMTimeGetSeconds(self.players[0].currentTime())
-                let razklikja = lastPlayerTime - firstPlayerTime
-                let forPrint = "RAZLIKJA = \(razklikja); PRIMO \(firstPlayerTime); SECUNDO \(lastPlayerTime)"
-                print(forPrint)
-            }
-        }
+        logPlayersLatency()
     }
     
     func onPrerolled() {
@@ -128,6 +111,19 @@ public class Mach1PlayerImpl: Mach1Player {
         (0..<numberOfChannels).forEach {
             audioTaps[$0].leftVolume = decodeArray[$0 * 2]
             audioTaps[$0].rightVolume = decodeArray[$0 * 2 + 1]
+        }
+    }
+    
+    private func logPlayersLatency() {
+        let interval: CMTime = CMTimeMakeWithSeconds(1, preferredTimescale: 1)
+        players[7].addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main) { time in
+            if self.players[7].currentItem?.status == .readyToPlay {
+                let lastPlayerTime = CMTimeGetSeconds(self.players[7].currentTime())
+                let firstPlayerTime = CMTimeGetSeconds(self.players[0].currentTime())
+                let difference = lastPlayerTime - firstPlayerTime
+                let forPrint = "DIFF: \(difference) | FIRST | \(firstPlayerTime) | SECOND: \(lastPlayerTime)"
+                print(forPrint)
+            }
         }
     }
 }
