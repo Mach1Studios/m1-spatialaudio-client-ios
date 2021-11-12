@@ -100,5 +100,5 @@ Podfile.lock
 
 # Audio - Testing
 TestingAudioFiles/
-.aif
-.wav
+*.aif
+*.wav
