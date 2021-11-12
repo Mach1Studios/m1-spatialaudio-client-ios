@@ -9,70 +9,35 @@ public class Mach1PlayerImpl: Mach1Player {
     private var referenceAttitude: CMAttitude? = nil
     
     private var numberOfChannels: Int = 8
-    private var audioTaps: [AudioTap] = []
-    private var players: [AVPlayer] = []
-    private var prerollCount = 0
-    var syncClock: CMClock? = nil
+    private var audioTap: AudioTap
+    private var player: AVPlayer
     
     public init(_ url: URL) {
-        CMAudioClockCreate(allocator: kCFAllocatorDefault, clockOut: &syncClock)
-        (0..<numberOfChannels).forEach {
-            let audioTap = AudioTap(Int32($0), numberOfChannels: Int32(self.numberOfChannels))!
-            audioTaps.append(audioTap)
-            players.append(self.setupPlayer(with: url, audioTap: audioTap))
-        }
+        self.audioTap = AudioTap(8)
+        let asset = AVAsset(url: url)
+        let playerItem = AVPlayerItem(asset: asset)
+        var callbacks = audioTap.callbacks()
+        var tap: Unmanaged<MTAudioProcessingTap>?
+        MTAudioProcessingTapCreate(kCFAllocatorDefault, &callbacks, kMTAudioProcessingTapCreationFlag_PreEffects, &tap)
+        let track = asset.tracks[0]
+        let params = AVMutableAudioMixInputParameters(track: track)
+        params.audioTapProcessor = tap?.takeUnretainedValue()
+        let audioMix = AVMutableAudioMix()
+        audioMix.inputParameters = [params]
+        playerItem.audioMix = audioMix
+        self.player = AVPlayer(playerItem: playerItem)
         mach1Decode.setPlatformType(type: Mach1PlatformDefault)
         mach1Decode.setDecodeAlgoType(newAlgorithmType: Mach1DecodeAlgoSpatial)
         mach1Decode.setFilterSpeed(filterSpeed: 0.95)
     }
     
-    private func setupPlayer(with url: URL, audioTap: AudioTap) -> AVPlayer {
-        let asset = AVAsset(url: url)
-        let playerItem = AVPlayerItem(asset: asset)
-        
-        var callbacks = audioTap.callbacks()
-        
-        var tap: Unmanaged<MTAudioProcessingTap>?
-        MTAudioProcessingTapCreate(kCFAllocatorDefault, &callbacks, kMTAudioProcessingTapCreationFlag_PreEffects, &tap)
-        
-        let track = asset.tracks[0]
-        let params = AVMutableAudioMixInputParameters(track: track)
-        params.audioTapProcessor = tap?.takeUnretainedValue()
-        
-        let audioMix = AVMutableAudioMix()
-        audioMix.inputParameters = [params]
-        playerItem.audioMix = audioMix
-                   
-        let avPlayer = AVPlayer(playerItem: playerItem)
-        avPlayer.automaticallyWaitsToMinimizeStalling = false
-        avPlayer.masterClock = syncClock!
-        return avPlayer
-    }
-    
     public func play() {
-        players.forEach { player in
-            player.preroll(atRate: 1.0) { prerolled in
-                self.onPrerolled()
-            }
-        }
-        logPlayersLatency()
-    }
-    
-    func onPrerolled() {
-        prerollCount += 1
-        if (prerollCount == 8) {
-            players.forEach {
-                $0.setRate(1.0, time: CMTime.invalid, atHostTime: CMClockGetTime(syncClock!))
-            }
-            players.forEach {
-                $0.play()
-            }
-        }
+        player.play()
     }
     
     public func stop() {
         self.referenceAttitude = nil
-        players.forEach { $0.pause() }
+        player.pause()
     }
     
     public func setNeedUpdateAttitudeReference() {
@@ -106,26 +71,25 @@ public class Mach1PlayerImpl: Mach1Player {
         let orientation = Mach1Point3D(x: Float(deviceYaw), y: Float(devicePitch), z: Float(deviceRoll))
         mach1Decode.setRotationDegrees(newRotationDegrees: orientation)
         mach1Decode.beginBuffer()
-        let decodeArray: [Float]  = mach1Decode.decodeCoeffs()
+        let decodeArray: [Float] = mach1Decode.decodeCoeffs()
         mach1Decode.endBuffer()
-        (0..<numberOfChannels).forEach {
-            audioTaps[$0].leftVolume = decodeArray[$0 * 2]
-            audioTaps[$0].rightVolume = decodeArray[$0 * 2 + 1]
-        }
-    }
-    
-    private func logPlayersLatency() {
-        /*
-        let interval: CMTime = CMTimeMakeWithSeconds(1, preferredTimescale: 1)
-        players[7].addPeriodicTimeObserver(forInterval: interval, queue: DispatchQueue.main) { time in
-            if self.players[7].currentItem?.status == .readyToPlay {
-                let lastPlayerTime = CMTimeGetSeconds(self.players[7].currentTime())
-                let firstPlayerTime = CMTimeGetSeconds(self.players[0].currentTime())
-                let difference = lastPlayerTime - firstPlayerTime
-                let forPrint = "DIFF: \(difference) | FIRST | \(firstPlayerTime) | SECOND: \(lastPlayerTime)"
-                print(forPrint)
-            }
-        }
-        */
+        audioTap.one = decodeArray[0]
+        audioTap.two = decodeArray[1]
+        audioTap.three = decodeArray[2]
+        audioTap.four = decodeArray[3]
+        audioTap.five = decodeArray[4]
+        audioTap.six = decodeArray[5]
+        audioTap.seven = decodeArray[6]
+        audioTap.eight = decodeArray[7]
+        audioTap.nine = decodeArray[8]
+        audioTap.ten = decodeArray[9]
+        audioTap.eleven = decodeArray[10]
+        audioTap.twelve = decodeArray[11]
+        audioTap.thirteen = decodeArray[12]
+        audioTap.fourteen = decodeArray[13]
+        audioTap.fifteen = decodeArray[14]
+        audioTap.sixteen = decodeArray[15]
+        audioTap.seventeen = decodeArray[16]
+        audioTap.eighteen = decodeArray[17]
     }
 }

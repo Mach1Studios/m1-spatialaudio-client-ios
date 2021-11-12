@@ -5,12 +5,10 @@
 
 @interface AudioTap: NSObject
 
-- (instancetype)init:(int)channel numberOfChannels:(int)numberOfChannels;
+- (instancetype)init:(int)numberOfChannels;
 - (MTAudioProcessingTapCallbacks)callbacks;
 
-@property(nonatomic, assign) float leftVolume;
-@property(nonatomic, assign) float rightVolume;
-@property(nonatomic, assign) int channel;
+@property(nonatomic, assign) float one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, sqrtNumberChannels;
 @property(nonatomic, assign) int numberOfChannels;
 
 @end
