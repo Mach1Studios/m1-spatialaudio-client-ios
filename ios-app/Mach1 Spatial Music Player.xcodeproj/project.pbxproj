@@ -66,6 +66,7 @@
 		988E5DC027102D95005FC3C4 /* SearchFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988E5DBF27102D95005FC3C4 /* SearchFriendView.swift */; };
 		988E5DC227102E06005FC3C4 /* SearchFriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988E5DC127102E06005FC3C4 /* SearchFriendViewModel.swift */; };
 		988E5DC427102E86005FC3C4 /* AddFriendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988E5DC327102E86005FC3C4 /* AddFriendItemView.swift */; };
+		98ABEDAF273E633800A619B4 /* m1-debug-m1spatial.wav in Resources */ = {isa = PBXBuildFile; fileRef = 98ABEDAE273E633800A619B4 /* m1-debug-m1spatial.wav */; };
 		98AE0BEF272024C20097D6D0 /* head.obj in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BEE272024C20097D6D0 /* head.obj */; };
 		98B4EF0826FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4EF0726FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift */; };
 		98B4EF0A26FC6D7300C33AA9 /* Mach1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4EF0926FC6D7300C33AA9 /* Mach1View.swift */; };
@@ -227,6 +228,7 @@
 		988E5DBF27102D95005FC3C4 /* SearchFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendView.swift; sourceTree = "<group>"; };
 		988E5DC127102E06005FC3C4 /* SearchFriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewModel.swift; sourceTree = "<group>"; };
 		988E5DC327102E86005FC3C4 /* AddFriendItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendItemView.swift; sourceTree = "<group>"; };
+		98ABEDAE273E633800A619B4 /* m1-debug-m1spatial.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "m1-debug-m1spatial.wav"; sourceTree = "<group>"; };
 		98AE0BEE272024C20097D6D0 /* head.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = head.obj; sourceTree = "<group>"; };
 		98AE0BF1272025BF0097D6D0 /* 007.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = 007.aif; path = ../../../../TestingAudioFiles/007.aif; sourceTree = "<group>"; };
 		98AE0BF2272025BF0097D6D0 /* 006.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = 006.aif; path = ../../../../TestingAudioFiles/006.aif; sourceTree = "<group>"; };
@@ -1000,6 +1002,7 @@
 		98D22D9326EF3D8700285854 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				98ABEDAE273E633800A619B4 /* m1-debug-m1spatial.wav */,
 				98AE0BED2720246D0097D6D0 /* 3D */,
 				980680172703386F00A4588A /* MockedData */,
 				98827BEC26F4B03E00C6BA8E /* Shapes */,
@@ -1314,6 +1317,7 @@
 				BFE5F58227106E3600253D53 /* editprofile.json in Resources */,
 				988B7B9126EF98BA00622B89 /* Colors.xcassets in Resources */,
 				98AE0BEF272024C20097D6D0 /* head.obj in Resources */,
+				98ABEDAF273E633800A619B4 /* m1-debug-m1spatial.wav in Resources */,
 				9806802127034A9500A4588A /* valid_token.json in Resources */,
 				98B5AF8726EF7A480007C292 /* ProximaNovaMedium.otf in Resources */,
 				98B5AF8826EF7A480007C292 /* ProximaNovaRegular.otf in Resources */,
