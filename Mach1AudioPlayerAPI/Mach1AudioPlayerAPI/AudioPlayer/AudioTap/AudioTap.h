@@ -8,8 +8,9 @@
 - (instancetype)init:(int)numberOfChannels;
 - (MTAudioProcessingTapCallbacks)callbacks;
 
-@property(nonatomic, assign) float one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, sqrtNumberChannels;
+@property(nonatomic, assign) float sqrtNumberChannels;
 @property(nonatomic, assign) int numberOfChannels;
+@property(nonatomic, strong) NSMutableArray<NSNumber *> *volumens;
 
 @end
 

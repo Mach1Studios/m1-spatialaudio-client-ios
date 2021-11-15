@@ -73,23 +73,6 @@ public class Mach1PlayerImpl: Mach1Player {
         mach1Decode.beginBuffer()
         let decodeArray: [Float] = mach1Decode.decodeCoeffs()
         mach1Decode.endBuffer()
-        audioTap.one = decodeArray[0]
-        audioTap.two = decodeArray[1]
-        audioTap.three = decodeArray[2]
-        audioTap.four = decodeArray[3]
-        audioTap.five = decodeArray[4]
-        audioTap.six = decodeArray[5]
-        audioTap.seven = decodeArray[6]
-        audioTap.eight = decodeArray[7]
-        audioTap.nine = decodeArray[8]
-        audioTap.ten = decodeArray[9]
-        audioTap.eleven = decodeArray[10]
-        audioTap.twelve = decodeArray[11]
-        audioTap.thirteen = decodeArray[12]
-        audioTap.fourteen = decodeArray[13]
-        audioTap.fifteen = decodeArray[14]
-        audioTap.sixteen = decodeArray[15]
-        audioTap.seventeen = decodeArray[16]
-        audioTap.eighteen = decodeArray[17]
+        audioTap.volumens = NSMutableArray(array: decodeArray)
     }
 }
