@@ -75,4 +75,8 @@ public class Mach1PlayerImpl: Mach1Player {
         mach1Decode.endBuffer()
         audioTap.volumens = NSMutableArray(array: decodeArray)
     }
+    
+    func providePlayer() -> AVPlayer {
+        return self.player
+    }
 }

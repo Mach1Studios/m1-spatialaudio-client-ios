@@ -1,110 +1,98 @@
 import CoreMotion
 
-class Mach1MotionManagerStrategy {
-    private static var mach1DeviceMotion: Mach1DeviceMotion? = nil
-    private static var mach1HeadphonesMotion: Mach1HeadponesMotion? = nil
-    static var orientationSourceType: OrientationSourceType? = nil
+protocol OnPlayerMotion {
+    func onMotionUpdatePlayer(_ motion: CMDeviceMotion)
+}
+
+protocol OnSceneMotion {
+    func onMotionUpdateScene(_ motion: CMDeviceMotion)
+}
+
+protocol Mach1MotionManager {
+    func onChange(_ orientationSourceType: OrientationSourceType)
+    func getAttitude() -> CMAttitude?
+}
+
+class Mach1MotionManagerPlayerImpl: BaseMach1MotionManagerImpl {
+    init(_ motionManagerDelegate: CMHeadphoneMotionManagerDelegate, _ onPlayerMotion: OnPlayerMotion, _ onSceneMotion: OnSceneMotion) {
+        super.init(onPlayerMotion, onSceneMotion)
+        self.mach1HeadphonesMotion.delegate = motionManagerDelegate
+    }
+}
+
+class Mach1MotionManagerSceneImpl: BaseMach1MotionManagerImpl {
+}
+
+class BaseMach1MotionManagerImpl: Mach1MotionManager {
+    private var mach1DeviceMotion: CMMotionManager & Mach1CoreMotionManager
+    open var mach1HeadphonesMotion: CMHeadphoneMotionManager & Mach1CoreMotionManager
+    private var orientationSourceType: OrientationSourceType = .Device
     
-    static func apply(_ orientationSourceType: OrientationSourceType) -> Mach1MotionManger {
-        self.orientationSourceType = orientationSourceType
-        switch orientationSourceType {
-        case .Device:
-            guard let mach1DeviceMotion = self.mach1DeviceMotion else {
-                self.mach1DeviceMotion = Mach1DeviceMotion()
-                self.mach1DeviceMotion?.deviceMotionUpdateInterval = 1.0 / 60.0
-                return self.mach1DeviceMotion!
-            }
-            return mach1DeviceMotion
-        case .Headphones:
-            guard let mach1HeadphonesMotion = self.mach1HeadphonesMotion else {
-                self.mach1HeadphonesMotion = Mach1HeadponesMotion()
-                return self.mach1HeadphonesMotion!
-            }
-            return mach1HeadphonesMotion
-        }
+    init(_ onPlayerMotion: OnPlayerMotion, _ onSceneMotion: OnSceneMotion) {
+        self.mach1DeviceMotion = Mach1DeviceMotion(onPlayerMotion, onSceneMotion)
+        self.mach1DeviceMotion.deviceMotionUpdateInterval = 1.0 / 60.0
+        self.mach1HeadphonesMotion = Mach1HeadponesMotion(onPlayerMotion, onSceneMotion)
+        self.onChange(orientationSourceType)
     }
     
-    static func getMotionManager() -> CMAttitude? {
-        guard let orientationSourceType = self.orientationSourceType else { return nil }
+    func onChange(_ orientationSourceType: OrientationSourceType) {
+        self.orientationSourceType = orientationSourceType
+        self.mach1DeviceMotion.needObserve(self.orientationSourceType == .Device)
+        self.mach1HeadphonesMotion.needObserve(self.orientationSourceType == .Headphones)
+    }
+    
+    func getAttitude() -> CMAttitude? {
         switch orientationSourceType {
         case .Device:
-            return mach1DeviceMotion?.deviceMotion?.attitude
+            return mach1DeviceMotion.deviceMotion?.attitude
         case .Headphones:
-            return mach1HeadphonesMotion?.deviceMotion?.attitude
+            return mach1HeadphonesMotion.deviceMotion?.attitude
         }
     }
 }
 
-class Mach1MotionManagerSceneStrategy {
-    private static var mach1DeviceMotion: Mach1DeviceMotion? = nil
-    private static var mach1HeadphonesMotion: Mach1HeadponesMotion? = nil
-    static var orientationSourceType: OrientationSourceType? = nil
-    
-    static func apply(_ orientationSourceType: OrientationSourceType) -> Mach1MotionManger {
-        self.orientationSourceType = orientationSourceType
-        switch orientationSourceType {
-        case .Device:
-            guard let mach1DeviceMotion = self.mach1DeviceMotion else {
-                self.mach1DeviceMotion = Mach1DeviceMotion()
-                return self.mach1DeviceMotion!
-            }
-            return mach1DeviceMotion
-        case .Headphones:
-            guard let mach1HeadphonesMotion = self.mach1HeadphonesMotion else {
-                self.mach1HeadphonesMotion = Mach1HeadponesMotion()
-                return self.mach1HeadphonesMotion!
-            }
-            return mach1HeadphonesMotion
-        }
-    }
-    
-    static func getMotionManager() -> CMAttitude? {
-        guard let orientationSourceType = self.orientationSourceType else { return nil }
-        switch orientationSourceType {
-        case .Device:
-            return mach1DeviceMotion?.deviceMotion?.attitude
-        case .Headphones:
-            return mach1HeadphonesMotion?.deviceMotion?.attitude
-        }
-    }
+protocol Mach1CoreMotionManager {
+    init(_ onPlayerMotion: OnPlayerMotion, _ onSceneMotion: OnSceneMotion)
+    func needObserve(_ isOn: Bool)
 }
 
-fileprivate class Mach1DeviceMotion: CMMotionManager, Mach1MotionManger {
-    func checkAvailability() throws {
-        if !self.isDeviceMotionAvailable { throw Mach1AvailabilityMotionError.error("Device motion is not available") }
-    }
-    
-    func start(update: @escaping (CMDeviceMotion) -> Void) {
+fileprivate class Mach1DeviceMotion: CMMotionManager, Mach1CoreMotionManager {
+    private var isOn = false
+    required init(_ onPlayerMotion: OnPlayerMotion, _ onSceneMotion: OnSceneMotion) {
+        super.init()
+        if (!self.isDeviceMotionAvailable) { return }
         startDeviceMotionUpdates(to: OperationQueue.main) { deviceMotion, error in
             guard let deviceMotion = deviceMotion else {
                 print("Error device motion: \(String(describing: error))")
                 return
             }
-            update(deviceMotion)
+            if (!self.isOn) { return }
+            onPlayerMotion.onMotionUpdatePlayer(deviceMotion)
+            onSceneMotion.onMotionUpdateScene(deviceMotion)
         }
     }
-    
-    func stop() {
-        self.stopDeviceMotionUpdates()
+    func needObserve(_ isOn: Bool) {
+        self.isOn = isOn
     }
 }
 
-fileprivate class Mach1HeadponesMotion: CMHeadphoneMotionManager, Mach1MotionManger {
-    func checkAvailability() throws {
-        if !self.isDeviceMotionAvailable { throw Mach1AvailabilityMotionError.error("Device motion is not available") }
-    }
-
-    func start(update: @escaping (CMDeviceMotion) -> Void) {
+fileprivate class Mach1HeadponesMotion: CMHeadphoneMotionManager, Mach1CoreMotionManager {
+    private var isOn = false
+    required init(_ onPlayerMotion: OnPlayerMotion, _ onSceneMotion: OnSceneMotion) {
+        super.init()
+        if (!self.isDeviceMotionAvailable) { return }
         startDeviceMotionUpdates(to: OperationQueue.main) { deviceMotion, error in
             guard let deviceMotion = deviceMotion else {
                 print("Error device motion: \(String(describing: error))")
                 return
             }
-            update(deviceMotion)
+            if (!self.isOn) { return }
+            onPlayerMotion.onMotionUpdatePlayer(deviceMotion)
+            onSceneMotion.onMotionUpdateScene(deviceMotion)
         }
     }
-
-    func stop() {
-        self.stopDeviceMotionUpdates()
+    
+    func needObserve(_ isOn: Bool) {
+        self.isOn = isOn
     }
 }

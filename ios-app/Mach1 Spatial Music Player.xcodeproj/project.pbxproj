@@ -66,6 +66,11 @@
 		988E5DC027102D95005FC3C4 /* SearchFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988E5DBF27102D95005FC3C4 /* SearchFriendView.swift */; };
 		988E5DC227102E06005FC3C4 /* SearchFriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988E5DC127102E06005FC3C4 /* SearchFriendViewModel.swift */; };
 		988E5DC427102E86005FC3C4 /* AddFriendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988E5DC327102E86005FC3C4 /* AddFriendItemView.swift */; };
+		98A17B6D2742A1E1006FD542 /* AudioPlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A17B6C2742A1E1006FD542 /* AudioPlayerControlsView.swift */; };
+		98A17B6F2742A339006FD542 /* SecondsRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A17B6E2742A339006FD542 /* SecondsRepresentation.swift */; };
+		98A17B712742BA3D006FD542 /* PlayerTimeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A17B702742BA3D006FD542 /* PlayerTimeObserver.swift */; };
+		98A17B732742BA6D006FD542 /* PlayerItemObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A17B722742BA6D006FD542 /* PlayerItemObserver.swift */; };
+		98A17B752742BA85006FD542 /* PlayerDurationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A17B742742BA85006FD542 /* PlayerDurationObserver.swift */; };
 		98ABEDBB273EB16000A619B4 /* m1-debug-m1spatial.wav in Resources */ = {isa = PBXBuildFile; fileRef = 98ABEDBA273EB16000A619B4 /* m1-debug-m1spatial.wav */; };
 		98AE0BEF272024C20097D6D0 /* head.obj in Resources */ = {isa = PBXBuildFile; fileRef = 98AE0BEE272024C20097D6D0 /* head.obj */; };
 		98B4EF0826FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B4EF0726FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift */; };
@@ -228,17 +233,13 @@
 		988E5DBF27102D95005FC3C4 /* SearchFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendView.swift; sourceTree = "<group>"; };
 		988E5DC127102E06005FC3C4 /* SearchFriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendViewModel.swift; sourceTree = "<group>"; };
 		988E5DC327102E86005FC3C4 /* AddFriendItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendItemView.swift; sourceTree = "<group>"; };
+		98A17B6C2742A1E1006FD542 /* AudioPlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerControlsView.swift; sourceTree = "<group>"; };
+		98A17B6E2742A339006FD542 /* SecondsRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondsRepresentation.swift; sourceTree = "<group>"; };
+		98A17B702742BA3D006FD542 /* PlayerTimeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTimeObserver.swift; sourceTree = "<group>"; };
+		98A17B722742BA6D006FD542 /* PlayerItemObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerItemObserver.swift; sourceTree = "<group>"; };
+		98A17B742742BA85006FD542 /* PlayerDurationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDurationObserver.swift; sourceTree = "<group>"; };
 		98ABEDBA273EB16000A619B4 /* m1-debug-m1spatial.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "m1-debug-m1spatial.wav"; sourceTree = "<group>"; };
 		98AE0BEE272024C20097D6D0 /* head.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = head.obj; sourceTree = "<group>"; };
-		98AE0BF1272025BF0097D6D0 /* 007.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = 007.aif; path = ../../../../TestingAudioFiles/007.aif; sourceTree = "<group>"; };
-		98AE0BF2272025BF0097D6D0 /* 006.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = 006.aif; path = ../../../../TestingAudioFiles/006.aif; sourceTree = "<group>"; };
-		98AE0BF3272025BF0097D6D0 /* 005.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = 005.aif; path = ../../../../TestingAudioFiles/005.aif; sourceTree = "<group>"; };
-		98AE0BF4272025BF0097D6D0 /* 003.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = 003.aif; path = ../../../../TestingAudioFiles/003.aif; sourceTree = "<group>"; };
-		98AE0BF5272025BF0097D6D0 /* 004.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = 004.aif; path = ../../../../TestingAudioFiles/004.aif; sourceTree = "<group>"; };
-		98AE0BF6272025BF0097D6D0 /* 001.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = 001.aif; path = ../../../../TestingAudioFiles/001.aif; sourceTree = "<group>"; };
-		98AE0BF7272025BF0097D6D0 /* stereo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = stereo.wav; path = ../../../../TestingAudioFiles/stereo.wav; sourceTree = "<group>"; };
-		98AE0BF8272025BF0097D6D0 /* 002.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = 002.aif; path = ../../../../TestingAudioFiles/002.aif; sourceTree = "<group>"; };
-		98AE0BF9272025BF0097D6D0 /* 000.aif */ = {isa = PBXFileReference; lastKnownFileType = file; name = 000.aif; path = ../../../../TestingAudioFiles/000.aif; sourceTree = "<group>"; };
 		98B4EF0726FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedRepositoryInjectionFactory.swift; sourceTree = "<group>"; };
 		98B4EF0926FC6D7300C33AA9 /* Mach1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1View.swift; sourceTree = "<group>"; };
 		98B4EF0B26FC86D700C33AA9 /* Mach1Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mach1Logo.swift; sourceTree = "<group>"; };
@@ -490,7 +491,6 @@
 		983465DD26F9CE2A00271537 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				98AE0BF0272025940097D6D0 /* Audio */,
 				983FC03C26FDF23900F98089 /* Interfaces */,
 				98E4436F2701ECF10003338A /* Routing */,
 				98B91E9226FB6783008EA8D2 /* Login */,
@@ -498,6 +498,7 @@
 				98D887E2270206C700C09F2D /* Profile */,
 				98BE388F270C349400B65B5D /* Track */,
 				988E5DA8271028FB005FC3C4 /* Friend */,
+				98A17B6B2742A17F006FD542 /* AudioPlayer */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -726,28 +727,23 @@
 			path = Friend;
 			sourceTree = "<group>";
 		};
+		98A17B6B2742A17F006FD542 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				98A17B6C2742A1E1006FD542 /* AudioPlayerControlsView.swift */,
+				98A17B702742BA3D006FD542 /* PlayerTimeObserver.swift */,
+				98A17B722742BA6D006FD542 /* PlayerItemObserver.swift */,
+				98A17B742742BA85006FD542 /* PlayerDurationObserver.swift */,
+			);
+			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
 		98AE0BED2720246D0097D6D0 /* 3D */ = {
 			isa = PBXGroup;
 			children = (
 				98AE0BEE272024C20097D6D0 /* head.obj */,
 			);
 			path = 3D;
-			sourceTree = "<group>";
-		};
-		98AE0BF0272025940097D6D0 /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				98AE0BF9272025BF0097D6D0 /* 000.aif */,
-				98AE0BF6272025BF0097D6D0 /* 001.aif */,
-				98AE0BF8272025BF0097D6D0 /* 002.aif */,
-				98AE0BF4272025BF0097D6D0 /* 003.aif */,
-				98AE0BF5272025BF0097D6D0 /* 004.aif */,
-				98AE0BF3272025BF0097D6D0 /* 005.aif */,
-				98AE0BF2272025BF0097D6D0 /* 006.aif */,
-				98AE0BF1272025BF0097D6D0 /* 007.aif */,
-				98AE0BF7272025BF0097D6D0 /* stereo.wav */,
-			);
-			path = Audio;
 			sourceTree = "<group>";
 		};
 		98B4EF0F26FCBE4500C33AA9 /* SignUp */ = {
@@ -783,6 +779,7 @@
 				98B91EAA26FB6C41008EA8D2 /* StringExtensions.swift */,
 				9806801C270346BF00A4588A /* ReadFile.swift */,
 				981DAF9527070E670001CD04 /* UIApplicationExtensions.swift */,
+				98A17B6E2742A339006FD542 /* SecondsRepresentation.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1382,6 +1379,7 @@
 				98BE38A1270C6FD200B65B5D /* Mach1OrientationCardView.swift in Sources */,
 				9848C830270C91ED0012F68F /* Lines.swift in Sources */,
 				98EDCAA8270476E000BC61D4 /* TrackItemView.swift in Sources */,
+				98A17B6F2742A339006FD542 /* SecondsRepresentation.swift in Sources */,
 				983FC03126FDC17A00F98089 /* SignUpViewModel.swift in Sources */,
 				98B91EA926FB6B4A008EA8D2 /* SignInRepositoryImpl.swift in Sources */,
 				BFE5F5912714585800253D53 /* FriendProfile.swift in Sources */,
@@ -1435,6 +1433,7 @@
 				9848C834270C95580012F68F /* AnyShape.swift in Sources */,
 				988E5DB3271029E8005FC3C4 /* FriendDTO.swift in Sources */,
 				98BE3893270C34EA00B65B5D /* PlayTrackView.swift in Sources */,
+				98A17B6D2742A1E1006FD542 /* AudioPlayerControlsView.swift in Sources */,
 				98B4EF0E26FC9C2800C33AA9 /* Mach1Alert.swift in Sources */,
 				BF7B31882719B4CC004E335F /* GetFriendsUseCaseImpl.swift in Sources */,
 				98F7310F270B259B0028D0C9 /* TracksRepositoryImpl.swift in Sources */,
@@ -1455,6 +1454,7 @@
 				98B91E9A26FB67F8008EA8D2 /* SignInView.swift in Sources */,
 				988B7B8826EF87F400622B89 /* WebRepository.swift in Sources */,
 				98EDCAA22704506700BC61D4 /* PlaylistDetailsView.swift in Sources */,
+				98A17B712742BA3D006FD542 /* PlayerTimeObserver.swift in Sources */,
 				98827BE526F4816B00C6BA8E /* ImageExtensions.swift in Sources */,
 				983FC03B26FDC53100F98089 /* SignUpUseCaseImpl.swift in Sources */,
 				983465E426FB4FF300271537 /* LoggerCategoryType.swift in Sources */,
@@ -1476,6 +1476,7 @@
 				BF6B1650270F199B00520C4C /* ProfileRepositoryImpl.swift in Sources */,
 				98B4EF1326FCBE6300C33AA9 /* SignUpView.swift in Sources */,
 				98D22D8526EF39B800285854 /* Mach1_Spatial_Music_PlayerApp.swift in Sources */,
+				98A17B732742BA6D006FD542 /* PlayerItemObserver.swift in Sources */,
 				98B91E9F26FB6836008EA8D2 /* SignIn.swift in Sources */,
 				98B91EAB26FB6C41008EA8D2 /* StringExtensions.swift in Sources */,
 				BF6B1636270D9FFC00520C4C /* Mach1ListView.swift in Sources */,
@@ -1506,6 +1507,7 @@
 				98827BEB26F4B00200C6BA8E /* Mach1CorrugatedImage.swift in Sources */,
 				BFF4EB84270B30CA001F5051 /* Mach1NavigationView.swift in Sources */,
 				98068011270314B700A4588A /* SectionedPlaylistsViewModel.swift in Sources */,
+				98A17B752742BA85006FD542 /* PlayerDurationObserver.swift in Sources */,
 				98B4EF0826FC687D00C33AA9 /* MockedRepositoryInjectionFactory.swift in Sources */,
 				98B4EF0C26FC86D700C33AA9 /* Mach1Logo.swift in Sources */,
 				BFE5F59D2714716400253D53 /* GetFriendProfileUseCaseImpl.swift in Sources */,

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct PlaybackStatusView: View {
+    var isPlaying: Binding<Bool>
     var playPause: (() -> Void)
     
     var body: some View {
@@ -12,7 +13,7 @@ struct PlaybackStatusView: View {
                     .foregroundColor(.Mach1Gray)
                 Spacer()
                 Button { playPause() } label: {
-                    Image(systemName: Constants.Image.System.PlayTrack.rawValue)
+                    Image(systemName: isPlaying.wrappedValue ? Constants.Image.System.PauseTrack.rawValue : Constants.Image.System.PlayTrack.rawValue)
                         .resizable()
                         .frame(width: Constants.Image.Dimension.Normal.rawValue, height: Constants.Image.Dimension.Normal.rawValue)
                         .foregroundColor(.Mach1Gray)
@@ -23,33 +24,6 @@ struct PlaybackStatusView: View {
                     .frame(width: Constants.Image.Dimension.Small.rawValue, height: Constants.Image.Dimension.Small.rawValue)
                     .foregroundColor(.Mach1Gray)
             }
-            
-            VStack(spacing: Mach1Margin.VSmall.rawValue) {
-                HStack {
-                    Text("3:25").foregroundColor(.Mach1Yellow).textStyle(SmallBodyStyle())
-                    VLine()
-                        .stroke(lineWidth: Constants.LineWidth.normal)
-                        .foregroundColor(.Mach1Yellow)
-                        .frame(width: Constants.LineWidth.normal, height: 30)
-                    Text("8:07").foregroundColor(.Mach1Gray).textStyle(SmallBodyStyle())
-                }
-                HStack(spacing: 0) {
-                    HStack() {
-                        Spacer()
-                    HLine()
-                        .stroke(lineWidth: Constants.LineWidth.normal)
-                        .foregroundColor(.Mach1Yellow)
-                        .frame(width: 40, height: Constants.LineWidth.normal)
-                    }.frame(minWidth: 0, maxWidth: .infinity)
-                    HStack {
-                        HLine()
-                            .stroke(lineWidth: Constants.LineWidth.normal)
-                            .foregroundColor(.Mach1GrayLight)
-                            .frame(width: 70, height: Constants.LineWidth.normal)
-                        Spacer()
-                    }.frame(minWidth: 0, maxWidth: .infinity)
-                }
-            }.padding(.top, Mach1Margin.VBig.rawValue)
         }
     }
 }
@@ -59,7 +33,7 @@ struct PlaybackStatusView: View {
 struct PlaybackStatusView_Previews: PreviewProvider {
     static var previews: some View {
         Mach1View {
-            PlaybackStatusView() {}
+            PlaybackStatusView(isPlaying: .constant(true)) {}
         }
     }
 }

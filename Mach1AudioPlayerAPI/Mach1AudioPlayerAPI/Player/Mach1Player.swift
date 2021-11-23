@@ -5,4 +5,5 @@ protocol Mach1Player {
     func stop()
     func onMotionManagerChanged(_ sourceType: OrientationSourceType?, _ deviceReferenceAttitude: CMAttitude?, _ attitude: CMAttitude)
     func setNeedUpdateAttitudeReference()
+    func providePlayer() -> AVPlayer
 }
