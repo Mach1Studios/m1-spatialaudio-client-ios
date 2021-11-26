@@ -46,8 +46,7 @@ public class Mach1PlayerImpl: Mach1Player {
         needUpdateReferenceAttitudeForHeadphones = true
     }
     
-    public func onMotionManagerChanged(_ sourceType: OrientationSourceType?, _ deviceReferenceAttitude: CMAttitude?, _ attitude: CMAttitude) {
-        guard let sourceType = sourceType else { return }
+    public func onMotionManagerChanged(_ sourceType: OrientationSourceType, _ deviceReferenceAttitude: CMAttitude?, _ attitude: CMAttitude) {
         switch sourceType {
         case .Device:
             if let referenceAttitude = deviceReferenceAttitude, needUpdateReferenceAttitude {
@@ -65,11 +64,7 @@ public class Mach1PlayerImpl: Mach1Player {
         let currentAttitude = attitude
         guard let referenceAttitude = referenceAttitude else { return }
         currentAttitude.multiply(byInverseOf: referenceAttitude)
-        let deviceYaw = -currentAttitude.yaw * 180 / .pi
-        let devicePitch = currentAttitude.pitch * 180 / .pi
-        let deviceRoll = currentAttitude.roll * 180 / .pi
-        let orientation = Mach1Point3D(x: Float(deviceYaw), y: Float(devicePitch), z: Float(deviceRoll))
-        mach1Decode.setRotationDegrees(newRotationDegrees: orientation)
+        mach1Decode.setRotationDegrees(newRotationDegrees: RotationDegreeFactory.construct(currentAttitude, sourceType))
         mach1Decode.beginBuffer()
         let decodeArray: [Float] = mach1Decode.decodeCoeffs()
         mach1Decode.endBuffer()

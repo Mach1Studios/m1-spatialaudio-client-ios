@@ -22,6 +22,7 @@
 		987639FF2722AC5D00131C01 /* Mach1SceneImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987639FE2722AC5D00131C01 /* Mach1SceneImpl.swift */; };
 		98763A012722BFA700131C01 /* OrientationSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98763A002722BFA700131C01 /* OrientationSourceType.swift */; };
 		98D7F255271EB0EB00C812FF /* Mach1AudioPlayerAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 98D7F254271EB0EB00C812FF /* Mach1AudioPlayerAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98FB11E22750ED5F0010CEDC /* RotationDegreeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB11E12750ED5F0010CEDC /* RotationDegreeFactory.swift */; };
 		B2881ED3DA2964DCF2CF7529 /* Pods_Mach1AudioPlayerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CC6317E37473C133FEA71E /* Pods_Mach1AudioPlayerAPI.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		98A3BCE4274BE63900F0E2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		98C2048E271EE7C400E9E9A5 /* Mach1AudioPlayerAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mach1AudioPlayerAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D7F254271EB0EB00C812FF /* Mach1AudioPlayerAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mach1AudioPlayerAPI.h; sourceTree = "<group>"; };
+		98FB11E12750ED5F0010CEDC /* RotationDegreeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationDegreeFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				9858F71027294F9C005E95CD /* Mach1Player.swift */,
 				987639FC2722AA2400131C01 /* Mach1PlayerImpl.swift */,
+				98FB11E12750ED5F0010CEDC /* RotationDegreeFactory.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				98071A9A271ED5630054DAA0 /* Mach13DSceneView.swift in Sources */,
 				9858F71427295050005E95CD /* Mach1Scene.swift in Sources */,
 				985BBBE9274CE0A600DA02D7 /* OrientationSourceChange.swift in Sources */,
+				98FB11E22750ED5F0010CEDC /* RotationDegreeFactory.swift in Sources */,
 				9858F70E27294E38005E95CD /* Mach1AvailabilityMotionError.swift in Sources */,
 				98071A9C271ED56D0054DAA0 /* float4x4Ext.swift in Sources */,
 				981C5A472730332300248CFC /* AudioTap.m in Sources */,
