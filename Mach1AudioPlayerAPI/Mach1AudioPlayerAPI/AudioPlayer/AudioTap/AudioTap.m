@@ -6,16 +6,16 @@
 
 @synthesize sqrtNumberChannels;
 @synthesize numberOfChannels;
-@synthesize volumens;
+@synthesize spatialMixerCoeffs;
 
 - (instancetype) init:(int)numberOfChannels {
     self = [super init];
     if (self) {
         self.sqrtNumberChannels = sqrtf(numberOfChannels);
         self.numberOfChannels = numberOfChannels;
-        self.volumens = [[NSMutableArray<NSNumber *> alloc] init];
+        self.spatialMixerCoeffs = [[NSMutableArray<NSNumber *> alloc] init];
         for (int i = 0; i < numberOfChannels * 2 + 2; i++) {
-            [self.volumens addObject: @1.0];
+            [self.spatialMixerCoeffs addObject: @1.0];
         }
     }
     return self;
@@ -57,11 +57,11 @@ void process(MTAudioProcessingTapRef tap,
         float rightGeometricMean = 0;
         for (int i = 0; i < context.numberOfChannels; i++) {
             float *channel = (float*)bufferListInOut->mBuffers[i].mData;
-            leftGeometricMean += channel[j] * context.volumens[i * 2].floatValue;
-            rightGeometricMean += channel[j] * context.volumens[i * 2 + 1].floatValue;
+            leftGeometricMean += channel[j] * context.spatialMixerCoeffs[i * 2].floatValue;
+            rightGeometricMean += channel[j] * context.spatialMixerCoeffs[i * 2 + 1].floatValue;
         }
-        leftGeometricMean = (leftGeometricMean / context.sqrtNumberChannels) * context.volumens[context.numberOfChannels * 2].floatValue;
-        rightGeometricMean = (rightGeometricMean / context.sqrtNumberChannels) * context.volumens[context.numberOfChannels * 2 + 1].floatValue;
+        leftGeometricMean = (leftGeometricMean / context.sqrtNumberChannels) * context.spatialMixerCoeffs[context.numberOfChannels * 2].floatValue;
+        rightGeometricMean = (rightGeometricMean / context.sqrtNumberChannels) * context.spatialMixerCoeffs[context.numberOfChannels * 2 + 1].floatValue;
         for (int i = 2; i < context.numberOfChannels; i++) {
             float *thirdChannelOnwards = (float*)bufferListInOut->mBuffers[i].mData;
             thirdChannelOnwards[j] = 0;

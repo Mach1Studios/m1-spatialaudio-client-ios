@@ -68,7 +68,7 @@ public class Mach1PlayerImpl: Mach1Player {
         mach1Decode.beginBuffer()
         let decodeArray: [Float] = mach1Decode.decodeCoeffs()
         mach1Decode.endBuffer()
-        audioTap.volumens = NSMutableArray(array: decodeArray)
+        audioTap.spatialMixerCoeffs = NSMutableArray(array: decodeArray)
     }
     
     func providePlayer() -> AVPlayer {
