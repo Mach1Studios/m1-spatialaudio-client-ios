@@ -9,14 +9,17 @@ public class Mach1PlayerImpl: Mach1Player {
     private var referenceAttitude: CMAttitude? = nil
     
     private var numberOfChannels: Int = 8
-    private var audioTap: AudioTap
+    /// SpatialMixer class is a consolidated multichannel->stereo buffer mixer that includes Mach1Decode's coeffs for spatial playback based on orientation
+    private var spatialMixer: SpatialMixer
     private var player: AVPlayer
     
     public init(_ url: URL) {
-        self.audioTap = AudioTap(8)
+        // initialize for 8 channel input
+        // TODO: Replace with initialization based on `mach1Decode.setDecodeAlgoType(newAlgorithmType: Mach1DecodeAlgoSpatial)` channel count
+        self.spatialMixer = SpatialMixer(8)
         let asset = AVAsset(url: url)
         let playerItem = AVPlayerItem(asset: asset)
-        var callbacks = audioTap.callbacks()
+        var callbacks = spatialMixer.callbacks()
         var tap: Unmanaged<MTAudioProcessingTap>?
         MTAudioProcessingTapCreate(kCFAllocatorDefault, &callbacks, kMTAudioProcessingTapCreationFlag_PreEffects, &tap)
         let track = asset.tracks[0]
@@ -68,7 +71,7 @@ public class Mach1PlayerImpl: Mach1Player {
         mach1Decode.beginBuffer()
         let decodeArray: [Float] = mach1Decode.decodeCoeffs()
         mach1Decode.endBuffer()
-        audioTap.spatialMixerCoeffs = NSMutableArray(array: decodeArray)
+        spatialMixer.spatialMixerCoeffs = NSMutableArray(array: decodeArray)
     }
     
     func providePlayer() -> AVPlayer {

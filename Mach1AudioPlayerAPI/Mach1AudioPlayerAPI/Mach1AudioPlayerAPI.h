@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "AudioTap.h"
+#import "SpatialMixer.h"
 
 //! Project version number for Mach1AudioPlayerAPI.
 FOUNDATION_EXPORT double Mach1AudioPlayerAPIVersionNumber;

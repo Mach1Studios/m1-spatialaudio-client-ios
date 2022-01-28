@@ -3,7 +3,7 @@
 #ifndef AudioTap_h
 #define AudioTap_h
 
-@interface AudioTap: NSObject
+@interface SpatialMixer: NSObject
 
 - (instancetype)init:(int)numberOfChannels;
 - (MTAudioProcessingTapCallbacks)callbacks;
