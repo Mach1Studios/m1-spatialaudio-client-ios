@@ -1,8 +1,8 @@
 import Foundation
 
-struct FriendDTO: Decodable {
+struct FriendDTO : Codable, Equatable {
     let id: UUID
-    let name: String
-    let commonFriends: Int
+    let username: String
+    let commonFriends: Int?
     let image: String?
 }

@@ -2,6 +2,12 @@ import SwiftUI
 import Mach1AudioPlayerAPI
 import SceneKit
 
+//fileprivate func scene() -> SCNScene {
+//    let scene = SCNScene(named: "head.obj")!
+//    scene.background.contents = UIColor(Color.Mach1Dark)
+//    return scene
+//}
+
 struct PlayTrackView: View, OrientationSourceChange {
     let track: Track
     @Environment(\.verticalSizeClass) private var verticalSizeClass: UserInterfaceSizeClass?
@@ -9,9 +15,21 @@ struct PlayTrackView: View, OrientationSourceChange {
     @State private var orientationSource: OrientationSourceType = .Device
     @StateObject private var viewModel = PlayTrackViewModel()
     @State private var isPlaying = false
+    
+//    private static func scene() -> SCNScene {
+//        let scene = SCNScene(named: "head.obj")
+//        scene?.background.contents = UIColor(Color.Mach1Dark)
+//        return scene!
+//    }
+    
     var spatialAudioPlayer: Mach1SpatialAudioPlayerImpl = Mach1SpatialAudioPlayerImpl(
-        defaultScene,
-        url: URL.init(fileURLWithPath: Bundle.main.path(forResource: "m1-debug-m1spatial", ofType: "wav")!)
+        {
+            let scene = SCNScene(named: "head.obj")!
+            scene.background.contents = UIColor(Color.Mach1Dark)
+            return scene
+        }(),
+        url: URL(string: "http-mach1://192.168.0.38:3000/m1-debug-m1spatial.wav")!
+//        url: URL.init(fileURLWithPath: Bundle.main.path(forResource: "m1-debug-m1spatial", ofType: "wav")!)
     )
     
     var body: some View {
@@ -42,7 +60,9 @@ struct PlayTrackView: View, OrientationSourceChange {
             spatialAudioPlayer.observe(self)
             spatialAudioPlayer.setSourceType(orientationSource)
         }
-        .onDisappear { spatialAudioPlayer.clear() }
+        .onDisappear {
+            spatialAudioPlayer.clear()
+        }
     }
     
     private var spatialAudioPlayerView: some View {
@@ -95,12 +115,6 @@ struct PlayTrackView: View, OrientationSourceChange {
     }
 }
 
-fileprivate let defaultScene: SCNScene = {
-    let scene = SCNScene(named: "head.obj")
-    scene?.background.contents = UIColor(Color.Mach1Dark)
-    return scene!
-}()
-
 // MARK: Preview
 
 struct PlayTrackView_Previews: PreviewProvider {
@@ -111,7 +125,7 @@ struct PlayTrackView_Previews: PreviewProvider {
     }
     
     private static func findTrack() -> Track {
-        var track: Track = Track(TrackDTO(id: UUID.init(), name: "Name", description: "Description", url: nil))
+        var track: Track = Track(TrackDTO(id: UUID.init(), name: "Name", position: 0, description: "Description", url: nil))
         do {
             let tracks: [TrackDTO] = try ReadFile.json(resource: .Tracks)
             track = Track(tracks.first!)

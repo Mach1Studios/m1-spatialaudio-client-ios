@@ -3,7 +3,7 @@ import Foundation
 class MockedRepositoryInjectionFactory {
     private init() {}
     static func setUp() {
-        @ConfigurationProperty(key: "Need mocked repositories", defaultValue: false) var needMockedRepo: Bool
+        @config(.enableMockedRepositories) var needMockedRepo: Bool = false
         if !needMockedRepo { return }
         InjectedValues[\.signInRepository] = MockedSignInRepositoryImpl()
         InjectedValues[\.signUpRepository] = MockedSignUpRepositoryImpl()

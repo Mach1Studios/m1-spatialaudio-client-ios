@@ -8,5 +8,5 @@
 import Foundation
 
 protocol GetFriendProfileUseCase {
-    func execute(id: UUID) async throws -> FriendProfile
+    func execute(username: String) async throws -> FriendProfile
 }

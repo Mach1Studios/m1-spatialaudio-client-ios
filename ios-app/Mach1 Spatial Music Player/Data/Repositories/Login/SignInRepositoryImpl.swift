@@ -1,4 +1,5 @@
 import Foundation
+import Get
 
 private struct SignInRepositoryKey: InjectionKey {
     static var currentValue: SignInRepository = SignInRepositoryImpl()
@@ -12,8 +13,10 @@ extension InjectedValues {
 }
 
 actor SignInRepositoryImpl: SignInRepository {
+    @inject(\.apiClient) internal var apiClient: APIClient
+    
     func signIn(dto: SignInRequestDTO) async throws -> SignInResponseDTO {
-        throw "Not implemented"
+        return try await apiClient.send(.post("/auth/login", body: dto)).value
     }
 }
 

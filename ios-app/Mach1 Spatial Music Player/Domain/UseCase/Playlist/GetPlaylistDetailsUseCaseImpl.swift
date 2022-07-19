@@ -12,8 +12,8 @@ extension InjectedValues {
 }
 
 actor GetPlaylistDetailsUseCaseImpl: GetPlaylistDetailsUseCase {
-    @Inject(\.logger) private var logger: LoggerFactory
-    @Inject(\.playlistDetailsRepository) private var repository: PlaylistDetailsRepository
+    @inject(\.logger) private var logger: LoggerFactory
+    @inject(\.playlistDetailsRepository) private var repository: PlaylistDetailsRepository
     
     func execute(id: UUID) async throws -> Playlist {
         logger.info("USE CASE: \(type(of: self))", LoggerCategoryType.Playlist)

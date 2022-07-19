@@ -38,10 +38,10 @@ public class Mach1SceneImpl: Mach1Scene {
             simd_float4( 0.0, 0.0, 0.0, 1.0)
         ])
         scene.rootNode.childNodes.first?.simdTransform = mirrorTransform * rotation * referenceFrame
-        if isFirstTime {
-            isFirstTime = false
-            return
-        }
+//        if isFirstTime {
+//            isFirstTime = false
+//            return
+//        }
         self.attitude = attitude
         if self.needInitialReference {
             self.resetSceneReference()

@@ -6,17 +6,17 @@ enum Route {
 }
 
 class Routing: ObservableObject {
-    @Inject(\.authorization) private var userAuthorization: UserAuthorization
+    @inject(\.authentication) private var userAuthentication: UserAuthentication
     @Published var route : Route = .Login
     private var observer: NSKeyValueObservation?
     init() {
         self.direct()
-        observer = UserDefaults.standard.observe(\.token, options: [.new]) { [weak self] _, _ in self?.direct() }
+        observer = UserDefaults.standard.observe(\.token, options: [.initial, .new]) { [weak self] _, _ in self?.direct() }
     }
     deinit { observer?.invalidate() }
     private func direct() {
         DispatchQueue.main.async { [weak self] in
-            self?.route = self?.userAuthorization.getStatus() == .UNATHORIZED ? .Login : .Home
+            self?.route = self?.userAuthentication.status == .unauthenticated ? .Login : .Home
         }
     }
 }

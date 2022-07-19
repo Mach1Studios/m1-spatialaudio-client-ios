@@ -21,8 +21,8 @@ struct SectionedPlaylistItem: Codable, Equatable, Mach1SectionItem {
     
     init(_ dto: PlaylistItemDTO) {
         self.id = dto.id
-        self.title = dto.title
-        self.url = dto.url
+        self.title = dto.name
+        self.url = dto.url ?? "_"
     }
 }
 
@@ -33,8 +33,8 @@ struct Playlist: Codable {
     
     init(_ dto: PlaylistDTO) {
         self.id = dto.id
-        self.title = dto.title
-        self.url = dto.url
+        self.title = dto.name
+        self.url = dto.url ?? "_"
     }
 }
 

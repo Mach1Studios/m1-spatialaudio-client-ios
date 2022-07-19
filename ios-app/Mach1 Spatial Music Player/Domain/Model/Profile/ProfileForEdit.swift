@@ -24,8 +24,8 @@ struct ProfileForEdit: Codable, Equatable, Mach1EditProfile {
     init(_ dto: ProfileForEditResponseDTO) {
         self.userId = dto.id
         self.userLogin = dto.username
-        self.userCoverImage = dto.coverImage
-        self.userProfileImage = dto.profileImage
+        self.userCoverImage = dto.coverImage ?? "_"
+        self.userProfileImage = dto.profileImage ?? "_"
         self.userBiography = dto.biography
     }
 }

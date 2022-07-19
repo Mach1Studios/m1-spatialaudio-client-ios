@@ -19,8 +19,9 @@ extension InjectedValues {
 }
 
 actor GetProfileInfoUseCaseImpl: GetProfileInfoUseCase {
-    @Inject(\.logger) private var logger: LoggerFactory
-    @Inject(\.profileRepository) private var repository: ProfileRepository
+    @inject(\.logger) private var logger: LoggerFactory
+    @inject(\.profileRepository) private var repository: ProfileRepository
+    
     func execute() async throws -> Profile {
         logger.info("USE CASE: \(type(of: self))", LoggerCategoryType.Profile)
         let response = try await repository.getProfileInfo()

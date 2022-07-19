@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D265C27280B399D00CDF8F9 /* Get in Frameworks */ = {isa = PBXBuildFile; productRef = 0D265C26280B399D00CDF8F9 /* Get */; };
+		0D278BC7280BA46F00B0AB1C /* APIClientConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D278BC6280BA46F00B0AB1C /* APIClientConfiguration.swift */; };
 		9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98067FFF27030DA900A4588A /* SectionedPlaylistsRepository.swift */; };
 		9806800327030E2B00A4588A /* PlaylistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800227030E2B00A4588A /* PlaylistDTO.swift */; };
 		9806800627030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806800527030F4D00A4588A /* SectionedPlaylistRepositoryImpl.swift */; };
@@ -52,7 +54,7 @@
 		988B7B8426EF87C700622B89 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B7B8326EF87C700622B89 /* ApiCall.swift */; };
 		988B7B8626EF87E700622B89 /* WebSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B7B8526EF87E700622B89 /* WebSessionProvider.swift */; };
 		988B7B8826EF87F400622B89 /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B7B8726EF87F400622B89 /* WebRepository.swift */; };
-		988B7B8B26EF884300622B89 /* UserAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B7B8A26EF884300622B89 /* UserAuthorization.swift */; };
+		988B7B8B26EF884300622B89 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B7B8A26EF884300622B89 /* UserAuthentication.swift */; };
 		988B7B8F26EF96F400622B89 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B7B8E26EF96F400622B89 /* ButtonStyles.swift */; };
 		988B7B9126EF98BA00622B89 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 988B7B9026EF98BA00622B89 /* Colors.xcassets */; };
 		988B7B9426EF9B2700622B89 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988B7B9326EF9B2700622B89 /* Colors.swift */; };
@@ -171,6 +173,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D278BC6280BA46F00B0AB1C /* APIClientConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientConfiguration.swift; sourceTree = "<group>"; };
 		4261E9CDFFC687EBD42E341F /* Pods-Mach1 Spatial Music Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.debug.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.debug.xcconfig"; sourceTree = "<group>"; };
 		8F9B14B6E91B6A6E2337819D /* Pods-Mach1 Spatial Music Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.release.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.release.xcconfig"; sourceTree = "<group>"; };
 		95D89E6410F7AA502F214F47 /* Pods-Mach1 Spatial Music Player.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mach1 Spatial Music Player.development.xcconfig"; path = "Target Support Files/Pods-Mach1 Spatial Music Player/Pods-Mach1 Spatial Music Player.development.xcconfig"; sourceTree = "<group>"; };
@@ -219,7 +222,7 @@
 		988B7B8326EF87C700622B89 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 		988B7B8526EF87E700622B89 /* WebSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSessionProvider.swift; sourceTree = "<group>"; };
 		988B7B8726EF87F400622B89 /* WebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
-		988B7B8A26EF884300622B89 /* UserAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthorization.swift; sourceTree = "<group>"; };
+		988B7B8A26EF884300622B89 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
 		988B7B8E26EF96F400622B89 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		988B7B9026EF98BA00622B89 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		988B7B9326EF9B2700622B89 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -348,12 +351,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4F6593D6758C5DE348261CE /* Pods_Mach1_Spatial_Music_Player.framework in Frameworks */,
+				0D265C27280B399D00CDF8F9 /* Get in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D278BC5280BA41F00B0AB1C /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				0D278BC6280BA46F00B0AB1C /* APIClientConfiguration.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
 		478EFCF96F924467E8369907 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +472,7 @@
 		983465DA26F9CC7A00271537 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0D278BC5280BA41F00B0AB1C /* APIClient */,
 				983FC04526FDFF2400F98089 /* Wrapper */,
 				988B7B8926EF882600622B89 /* Authorization */,
 				983465E226FB4FD700271537 /* Logger */,
@@ -631,7 +644,7 @@
 		988B7B8926EF882600622B89 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				988B7B8A26EF884300622B89 /* UserAuthorization.swift */,
+				988B7B8A26EF884300622B89 /* UserAuthentication.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -1258,6 +1271,9 @@
 			dependencies = (
 			);
 			name = "Mach1 Spatial Music Player";
+			packageProductDependencies = (
+				0D265C26280B399D00CDF8F9 /* Get */,
+			);
 			productName = "Mach1 Spatial Music Player";
 			productReference = 98D22D8126EF39B800285854 /* Mach1 Spatial Music Player.app */;
 			productType = "com.apple.product-type.application";
@@ -1270,7 +1286,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					98D22D8026EF39B800285854 = {
 						CreatedOnToolsVersion = 13.0;
@@ -1287,6 +1303,9 @@
 				it,
 			);
 			mainGroup = 98D22D7826EF39B800285854;
+			packageReferences = (
+				0D265C25280B399D00CDF8F9 /* XCRemoteSwiftPackageReference "Get" */,
+			);
 			productRefGroup = 98D22D8226EF39B800285854 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1400,11 +1419,7 @@
 				9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */,
 				BFE5F57827104A2600253D53 /* ProfileForEdit.swift in Sources */,
 				988E5DC427102E86005FC3C4 /* AddFriendItemView.swift in Sources */,
-				98BCEC2D26F089CF00691C16 /* StyleConstants.swift in Sources */,
 				98F73104270B1F860028D0C9 /* GetPlaylistDetailsUseCase.swift in Sources */,
-				9806800327030E2B00A4588A /* PlaylistDTO.swift in Sources */,
-				98B4EF0A26FC6D7300C33AA9 /* Mach1View.swift in Sources */,
-				9806800027030DA900A4588A /* SectionedPlaylistsRepository.swift in Sources */,
 				988E5DB02710298E005FC3C4 /* Friend.swift in Sources */,
 				9806800C2703125B00A4588A /* GetSectionedPlaylistsUseCase.swift in Sources */,
 				BFE5F567270F3C3D00253D53 /* Mach1Profile.swift in Sources */,
@@ -1432,6 +1447,7 @@
 				983FC03926FDC4A100F98089 /* SignUpRepositoryImpl.swift in Sources */,
 				9848C834270C95580012F68F /* AnyShape.swift in Sources */,
 				988E5DB3271029E8005FC3C4 /* FriendDTO.swift in Sources */,
+				0D278BC7280BA46F00B0AB1C /* APIClientConfiguration.swift in Sources */,
 				98BE3893270C34EA00B65B5D /* PlayTrackView.swift in Sources */,
 				98A17B6D2742A1E1006FD542 /* AudioPlayerControlsView.swift in Sources */,
 				98B4EF0E26FC9C2800C33AA9 /* Mach1Alert.swift in Sources */,
@@ -1450,7 +1466,7 @@
 				988B7B8426EF87C700622B89 /* ApiCall.swift in Sources */,
 				BF6B164A270EFE0900520C4C /* ProfileRepository.swift in Sources */,
 				981DAF9427070B720001CD04 /* ToolbarView.swift in Sources */,
-				988B7B8B26EF884300622B89 /* UserAuthorization.swift in Sources */,
+				988B7B8B26EF884300622B89 /* UserAuthentication.swift in Sources */,
 				98B91E9A26FB67F8008EA8D2 /* SignInView.swift in Sources */,
 				988B7B8826EF87F400622B89 /* WebRepository.swift in Sources */,
 				98EDCAA22704506700BC61D4 /* PlaylistDetailsView.swift in Sources */,
@@ -1464,7 +1480,6 @@
 				98B91EB126FB6F3F008EA8D2 /* Token.swift in Sources */,
 				98D887E82702072500C09F2D /* Mach1BaseProfileView.swift in Sources */,
 				BF6B163D270DC8B000520C4C /* Mach1BaseEditProfileView.swift in Sources */,
-				98D887E82702072500C09F2D /* Mach1BaseProfileView.swift in Sources */,
 				98429481270DB8FD001614DF /* PlaybackStatusView.swift in Sources */,
 				98827BE726F48E1D00C6BA8E /* ViewExtension.swift in Sources */,
 				BFE5F59927146FC600253D53 /* FriendProfileViewModel.swift in Sources */,
@@ -1750,6 +1765,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0D265C25280B399D00CDF8F9 /* XCRemoteSwiftPackageReference "Get" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CreateAPI/Get.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0D265C26280B399D00CDF8F9 /* Get */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D265C25280B399D00CDF8F9 /* XCRemoteSwiftPackageReference "Get" */;
+			productName = Get;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98D22D7926EF39B800285854 /* Project object */;
 }

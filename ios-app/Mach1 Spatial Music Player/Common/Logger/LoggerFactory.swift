@@ -21,8 +21,9 @@ protocol LoggerFactory {
 }
 
 class LoggerFactoryImpl: LoggerFactory {
-    @ConfigurationProperty(key: "App name", defaultValue: "Mach1") var applicationName: String
-    @ConfigurationProperty(key: "Is log enabled", defaultValue: false) var isLogEnabled: Bool
+    @config(.appName) var applicationName: String = "Mach1 Spatial Audio Player"
+    @config(.enableLogging) var isLogEnabled: Bool = false
+    
     var loggers: [LoggerCategory: Logger] = [:]
     
     func info<T>(_ message: String, _ category: T) where T : RawRepresentable, T.RawValue == LoggerCategory {

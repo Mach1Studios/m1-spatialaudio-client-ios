@@ -1,6 +1,7 @@
 import Foundation
 
-@propertyWrapper struct Translate {
+@propertyWrapper
+struct Translate {
     var args: [Any] = []
     var wrappedValue: String {
         didSet { wrappedValue = NSLocalizedString(wrappedValue, comment: "") }

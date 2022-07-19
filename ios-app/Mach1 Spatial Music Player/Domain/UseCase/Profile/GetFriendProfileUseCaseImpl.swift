@@ -19,12 +19,12 @@ extension InjectedValues {
 }
 
 actor GetFriendProfileUseCaseImpl: GetFriendProfileUseCase {
-    @Inject(\.logger) private var logger: LoggerFactory
-    @Inject(\.profileRepository) private var repository: ProfileRepository
+    @inject(\.logger) private var logger: LoggerFactory
+    @inject(\.profileRepository) private var repository: ProfileRepository
     
-    func execute(id: UUID) async throws -> FriendProfile {
+    func execute(username: String) async throws -> FriendProfile {
         logger.info("USE CASE: \(type(of: self))", LoggerCategoryType.FriendProfile)
-        let response = try await repository.getFriendProfile(id: id)
+        let response = try await repository.getFriendProfile(username: username)
         logger.info("Response get friend profile: \(response)", LoggerCategoryType.FriendProfile)
         return FriendProfile(response)
     }

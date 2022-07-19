@@ -19,13 +19,13 @@ extension InjectedValues {
 }
 
 actor GetPlaylistsForProfileUseCaseImpl: GetPlaylistsForProfileUseCase {
-    @Inject(\.logger) private var logger: LoggerFactory
+    @inject(\.logger) private var logger: LoggerFactory
     @Inject(\.playlistDetailsRepository) private var playlistRepository: PlaylistDetailsRepository
     
-    func execute(profileId: UUID) async throws -> [SectionedPlaylistItem] {
+    func execute(username: String) async throws -> [SectionedPlaylistItem] {
         logger.info("USE CASE: \(type(of: self))", LoggerCategoryType.FriendProfile)
-        let response = try await playlistRepository.getPlaylistsForProfile(profileId: profileId)
+        let response = try await playlistRepository.getPlaylistsForProfile(username: username)
         logger.info("Response get friend's playlists: \(response)", LoggerCategoryType.FriendProfile)
-        return response.map { SectionedPlaylistItem($0) }
+        return response.playlists.map { SectionedPlaylistItem($0) }
     }
 }

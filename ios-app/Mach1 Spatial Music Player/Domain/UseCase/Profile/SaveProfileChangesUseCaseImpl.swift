@@ -19,8 +19,8 @@ extension InjectedValues {
 }
 
 actor SaveProfileChangesUseCaseImpl: SaveProfileChangesUseCase {
-    @Inject(\.logger) private var logger: LoggerFactory
-    @Inject(\.profileRepository) private var repository: ProfileRepository
+    @inject(\.logger) private var logger: LoggerFactory
+    @inject(\.profileRepository) private var repository: ProfileRepository
     
     func execute(params: ProfileForEdit, username: String, biography: String, coverImage: String, profileImage: String) async throws {
         logger.info("USE CASE: \(type(of: self))", LoggerCategoryType.EditProfile)
@@ -32,6 +32,6 @@ actor SaveProfileChangesUseCaseImpl: SaveProfileChangesUseCase {
         let dto = EditProfileRequestDTO(id: params.id, username: usernameTemp, coverImage: coverImageTemp, profileImage: profileImageTemp, biography: biographyTemp)
         
         logger.info("Saving profile changes: \(dto)", LoggerCategoryType.EditProfile)
-        try await repository.editProfile(dto: dto)
+        try await repository.editProfile(params.userLogin, dto: dto)
     }
 }

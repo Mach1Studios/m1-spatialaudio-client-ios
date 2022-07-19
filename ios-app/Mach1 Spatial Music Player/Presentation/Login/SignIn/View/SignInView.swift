@@ -17,7 +17,7 @@ struct SignInView: View {
                         Mach1Logo(dimension: .Big).padding(.bottom)
                         Mach1TextField(text: $viewModel.username, placeHolder: usernamePlaceHolder)
                         Mach1TextField(text: $viewModel.password, placeHolder: passwordPlaceholder)
-                        Button(loginPlaceholder) { Task.init(priority: .high) { await viewModel.singIn() } }
+                        Button(loginPlaceholder) { Task.init(priority: .high) { await viewModel.signIn() } }
                         .disabled(viewModel.username.isEmpty || viewModel.password.isEmpty)
                         .buttonStyle(Mach1ButtonStyle())
                         .padding(.top, Mach1Margin.Big.rawValue)

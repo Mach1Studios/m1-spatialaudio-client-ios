@@ -29,7 +29,7 @@ struct TrackItemView_Previews: PreviewProvider {
     }
     
     private static func findTrack() -> Track {
-        var track: Track = Track(TrackDTO(id: UUID.init(), name: "Name", description: "Description", url: nil))
+        var track: Track = Track(TrackDTO(id: UUID.init(), name: "Name", position: 0, description: "Description", url: nil))
         do {
             let tracks: [TrackDTO] = try ReadFile.json(resource: .Tracks)
             track = Track(tracks.first!)

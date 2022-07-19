@@ -29,7 +29,7 @@ struct Mach1ProfileHeaderView<T: Mach1BaseProfile>: View {
         
         VStack {
             ZStack {
-                Mach1CorrugatedImage(url: URL(string: profile != nil ? (profile?.coverImage ?? "") : ""), height: imageDimension, defaultImage: Constants.Image.Default.Person)
+                Mach1CorrugatedImage(url: URL(string: profile?.coverImage ?? "_"), height: imageDimension, defaultImage: Constants.Image.Default.PlayList)
                     .overlay(Mach1NavigationView(title: title ?? "", action: isRoot ? nil : {self.presentationMode.wrappedValue.dismiss()}).padding().offset(y: isRoot ? 25 : 0), alignment: .topLeading)
                 if isEditable {
                 Button("") {print("Edit")}
@@ -38,7 +38,7 @@ struct Mach1ProfileHeaderView<T: Mach1BaseProfile>: View {
                 
             }
             ZStack {
-                Mach1CircleImage(url: URL(string: profile != nil ? (profile?.profileImage ?? "") : ""), dimension: Constants.Image.Dimension.Bigger, defaultSystemImage: Constants.Image.Default.Person).withShadow()
+                Mach1CircleImage(url: URL(string: profile?.profileImage ?? "_"), dimension: Constants.Image.Dimension.Bigger, defaultSystemImage: Constants.Image.Default.Person).withShadow()
                 if isEditable {
                 Button("") {print("Edit")}
                 .buttonStyle(Mach1ImageButtonStyle(icon: Constants.Image.System.Camera.rawValue)).frame(width: Constants.Image.Dimension.Bigger.rawValue * 0.66, height: Constants.Image.Dimension.Bigger.rawValue, alignment: .bottomTrailing)

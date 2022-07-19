@@ -7,4 +7,844 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:Mach1 Spatial Music Player"
+      name = "Mach1 Spatial Music Player">
+      <Group
+         location = "group:Mach1 Spatial Music Player/Application"
+         name = "Application">
+         <FileRef
+            location = "group:Mach1 Spatial Music Player/Application/Mach1_Spatial_Music_PlayerApp.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Mach1 Spatial Music Player/Application/MockedRepositoryInjectionFactory.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Mach1 Spatial Music Player/Configuration"
+         name = "Configuration">
+         <FileRef
+            location = "group:Mach1 Spatial Music Player/Configuration/Mach1-Spatial-Music-Player-Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:Mach1 Spatial Music Player/Configuration/Development.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:Mach1 Spatial Music Player/Configuration/Release.xcconfig">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Mach1 Spatial Music Player/Resource"
+         name = "Resource">
+         <FileRef
+            location = "group:Mach1 Spatial Music Player/Resource/m1-debug-m1spatial.wav">
+         </FileRef>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Resource/3D"
+            name = "3D">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/3D/head.obj">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Resource/MockedData"
+            name = "MockedData">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/MockedData/profile.json">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/MockedData/editprofile.json">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/MockedData/friendprofile.json">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/MockedData/sectionedplaylists.json">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/MockedData/valid_token.json">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/MockedData/tracks.json">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/MockedData/friends.json">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/MockedData/playlistsoffriend.json">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/MockedData/MockedResource.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Resource/Shapes"
+            name = "Shapes">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Shapes/CorrugatedRectangle.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Shapes/Lines.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Shapes/AnyShape.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Resource/Views"
+            name = "Views">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1SegmentedPicker.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1TextField.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1CircleImage.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1ProgressBar.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1SavingProgress.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1CardImage.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1CorrugatedImage.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1View.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1Logo.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1Alert.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1NavigationView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1ProfileHeaderView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1ListView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1OrientationCardView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1OrientationCardWithIndicatorsView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Views/Mach1DashedLine.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Resource/Styles"
+            name = "Styles">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Styles/TextSyles.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Styles/ButtonStyles.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Styles/Colors.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Styles/StyleConstants.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Resource/Fonts"
+            name = "Fonts">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Fonts/ProximaNovaItalic.otf">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Fonts/ProximaNovaMedium.otf">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Fonts/ProximaNovaRegular.otf">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/Fonts/ProximaNovaSemibold.otf">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Mach1 Spatial Music Player/Resource/Preview Content">
+         </FileRef>
+         <FileRef
+            location = "group:Mach1 Spatial Music Player/Resource/Icons.xcassets">
+         </FileRef>
+         <FileRef
+            location = "group:Mach1 Spatial Music Player/Resource/Colors.xcassets">
+         </FileRef>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Resource"
+            name = "Localizable.strings">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/en.lproj/Localizable.strings">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Resource/it.lproj/Localizable.strings">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Mach1 Spatial Music Player/Common"
+         name = "Common">
+         <Group
+            location = "group:Mach1 Spatial Music Player/Common/Wrapper"
+            name = "Wrapper">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Wrapper/Translate.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Wrapper/ConfigurationProperty.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Common/Authorization"
+            name = "Authorization">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Authorization/UserAuthorization.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Common/Logger"
+            name = "Logger">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Logger/LoggerFactory.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Logger/LoggerCategoryType.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Common/DependencyInjection"
+            name = "DependencyInjection">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/DependencyInjection/InjectionFactory.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Common/Utils"
+            name = "Utils">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Utils/ImageExtensions.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Utils/ViewExtension.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Utils/StringExtensions.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Utils/ReadFile.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Utils/UIApplicationExtensions.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Common/Utils/SecondsRepresentation.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Mach1 Spatial Music Player/Presentation"
+         name = "Presentation">
+         <Group
+            location = "group:Mach1 Spatial Music Player/Presentation/Interfaces"
+            name = "Interfaces">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile"
+               name = "Profile">
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile/UseCases"
+                  name = "UseCases">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile/UseCases/GetProfileInfoUseCase.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile/UseCases/LogoutUseCase.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile/UseCases/GetProfileForEditUseCase.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile/UseCases/SaveProfileChangesUseCase.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile/UseCases/GetFriendProfileUseCase.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile/UseCases/GetPlaylistsForProfileUseCase.swift">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile/Mach1Profile.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile/Mach1EditProfile.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Profile/Mach1BaseProfile.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Login"
+               name = "Login">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Login/SignUpCase.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Login/SignInUseCase.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Playlist"
+               name = "Playlist">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Playlist/GetSectionedPlaylistsUseCase.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Playlist/Mach1Sectioned.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Playlist/GetPlaylistDetailsUseCase.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Track"
+               name = "Track">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Track/GetPlaylistTracksUseCase.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Track/GetFavouriteTracksUseCase.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Friend"
+               name = "Friend">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Friend/FindFriendUseCase.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Interfaces/Friend/GetFriendsUseCase.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Presentation/Routing"
+            name = "Routing">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Presentation/Routing/AppRoutingView.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Presentation/Login"
+            name = "Login">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Login/SignIn"
+               name = "SignIn">
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Presentation/Login/SignIn/View"
+                  name = "View">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Login/SignIn/View/SignInView.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Presentation/Login/SignIn/ViewModel"
+                  name = "ViewModel">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Login/SignIn/ViewModel/SignInViewModel.swift">
+                  </FileRef>
+               </Group>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Login/SignUp"
+               name = "SignUp">
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Presentation/Login/SignUp/View"
+                  name = "View">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Login/SignUp/View/SignUpView.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Presentation/Login/SignUp/ViewModel"
+                  name = "ViewModel">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Login/SignUp/ViewModel/SignUpViewModel.swift">
+                  </FileRef>
+               </Group>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Presentation/Home"
+            name = "Home">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist"
+               name = "Playlist">
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/View"
+                  name = "View">
+                  <Group
+                     location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/View/Base"
+                     name = "Base">
+                     <FileRef
+                        location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/View/Base/Mach1SectionedList.swift">
+                     </FileRef>
+                  </Group>
+                  <Group
+                     location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/View/Details"
+                     name = "Details">
+                     <FileRef
+                        location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/View/Details/PlaylistDetailsView.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/View/Details/HeaderPlaylistDetailsView.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/View/Details/ToolbarView.swift">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/View/SectionedPlaylistsView.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/ViewModel"
+                  name = "ViewModel">
+                  <Group
+                     location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/ViewModel/Details"
+                     name = "Details">
+                     <FileRef
+                        location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/ViewModel/Details/PlaylistDetailsViewModel.swift">
+                     </FileRef>
+                  </Group>
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Home/Playlist/ViewModel/SectionedPlaylistsViewModel.swift">
+                  </FileRef>
+               </Group>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Home/View"
+               name = "View">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Home/View/HomeView.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Presentation/Profile"
+            name = "Profile">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Profile/View"
+               name = "View">
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Presentation/Profile/View/Base"
+                  name = "Base">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Profile/View/Base/Mach1BaseProfileView.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Profile/View/Base/Mach1BaseEditProfileView.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Profile/View/Base/Mach1BaseFriendProfileView.swift">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Profile/View/ProfileView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Profile/View/EditProfileView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Profile/View/FriendProfileView.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Profile/ViewModel"
+               name = "ViewModel">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Profile/ViewModel/ProfileViewModel.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Profile/ViewModel/EditProfileViewModel.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Profile/ViewModel/FriendProfileViewModel.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Presentation/Track"
+            name = "Track">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Track/View"
+               name = "View">
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Presentation/Track/View/Base"
+                  name = "Base">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Presentation/Track/View/Base/TrackItemInfoView.swift">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Track/View/PlayTrackView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Track/View/TrackItemView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Track/View/PlaybackStatusView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Track/View/SearchFavoutireTracksView.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Track/ViewModel"
+               name = "ViewModel">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Track/ViewModel/PlayTrackViewModel.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Track/ViewModel/FavouritesTracksViewModel.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Presentation/Friend"
+            name = "Friend">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Friend/View"
+               name = "View">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Friend/View/SearchFriendView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Friend/View/AddFriendItemView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Friend/View/FriendsView.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Friend/View/FriendItemView.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Presentation/Friend/ViewModel"
+               name = "ViewModel">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Friend/ViewModel/SearchFriendViewModel.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Presentation/Friend/ViewModel/FriendsViewModel.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Presentation/AudioPlayer"
+            name = "AudioPlayer">
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Presentation/AudioPlayer/AudioPlayerControlsView.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Presentation/AudioPlayer/PlayerTimeObserver.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Presentation/AudioPlayer/PlayerItemObserver.swift">
+            </FileRef>
+            <FileRef
+               location = "group:Mach1 Spatial Music Player/Presentation/AudioPlayer/PlayerDurationObserver.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Mach1 Spatial Music Player/Domain"
+         name = "Domain">
+         <Group
+            location = "group:Mach1 Spatial Music Player/Domain/Model"
+            name = "Model">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/Model/Profile"
+               name = "Profile">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Model/Profile/Profile.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Model/Profile/ProfileForEdit.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Model/Profile/FriendProfile.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/Model/Login"
+               name = "Login">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Model/Login/SignIn.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Model/Login/Token.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Model/Login/SignUp.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/Model/Playlist"
+               name = "Playlist">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Model/Playlist/Playlist.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/Model/Track"
+               name = "Track">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Model/Track/Track.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/Model/Friend"
+               name = "Friend">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Model/Friend/Friend.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Model/Friend/FriendListItem.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Domain/Interfaces"
+            name = "Interfaces">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Profile"
+               name = "Profile">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Profile/ProfileRepository.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Login"
+               name = "Login">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Login/SignInRepository.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Login/SignUpRepository.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Playlist"
+               name = "Playlist">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Playlist/SectionedPlaylistsRepository.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Playlist/PlaylistDetailsRepository.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Track"
+               name = "Track">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Track/TracksRepository.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Friend"
+               name = "Friend">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/Interfaces/Friend/FriendRepository.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Domain/UseCase"
+            name = "UseCase">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/UseCase/Profile"
+               name = "Profile">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Profile/GetProfileInfoUseCaseImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Profile/LogoutUseCaseImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Profile/GetProfileForEditUseCaseImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Profile/SaveProfileChangesUseCaseImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Profile/GetFriendProfileUseCaseImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Profile/GetPlaylistsForProfileUseCaseImpl.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/UseCase/Login"
+               name = "Login">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Login/SignInUseCaseImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Login/SignUpUseCaseImpl.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/UseCase/Playlist"
+               name = "Playlist">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Playlist/GetSectionedPlaylistsUseCaseImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Playlist/GetPlaylistDetailsUseCaseImpl.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/UseCase/Track"
+               name = "Track">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Track/GetPlaylistTracksUseCaseImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Track/GetFavouriteTracksUseCaseImpl.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Domain/UseCase/Friend"
+               name = "Friend">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Friend/FindFriendUseCaseImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Domain/UseCase/Friend/GetFriendsUseCaseImpl.swift">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Mach1 Spatial Music Player/Data"
+         name = "Data">
+         <Group
+            location = "group:Mach1 Spatial Music Player/Data/Repositories"
+            name = "Repositories">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Data/Repositories/Profile"
+               name = "Profile">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Data/Repositories/Profile/ProfileRepositoryImpl.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Data/Repositories/Login"
+               name = "Login">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Data/Repositories/Login/SignInRepositoryImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Data/Repositories/Login/SignUpRepositoryImpl.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Data/Repositories/Playlist"
+               name = "Playlist">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Data/Repositories/Playlist/SectionedPlaylistRepositoryImpl.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Data/Repositories/Playlist/PlaylistDetailsRepositoryImpl.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Data/Repositories/Track"
+               name = "Track">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Data/Repositories/Track/TracksRepositoryImpl.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Data/Repositories/Friend"
+               name = "Friend">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Data/Repositories/Friend/FriendRespositoryImpl.swift">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Mach1 Spatial Music Player/Data/Network"
+            name = "Network">
+            <Group
+               location = "group:Mach1 Spatial Music Player/Data/Network/Utils"
+               name = "Utils">
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Data/Network/Utils/ApiCall.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Data/Network/Utils/WebSessionProvider.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Mach1 Spatial Music Player/Data/Network/Utils/WebRepository.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Mach1 Spatial Music Player/Data/Network/DTO"
+               name = "DTO">
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Profile"
+                  name = "Profile">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Profile/ProfileDTO.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Track"
+                  name = "Track">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Track/TrackDTO.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Playlist"
+                  name = "Playlist">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Playlist/PlaylistDTO.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Login"
+                  name = "Login">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Login/SignInDTO.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Login/SignUpDTO.swift">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Friend"
+                  name = "Friend">
+                  <FileRef
+                     location = "group:Mach1 Spatial Music Player/Data/Network/DTO/Friend/FriendDTO.swift">
+                  </FileRef>
+               </Group>
+            </Group>
+         </Group>
+      </Group>
+   </Group>
 </Workspace>

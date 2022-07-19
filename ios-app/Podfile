@@ -5,5 +5,6 @@ target 'Mach1 Spatial Music Player' do
   use_frameworks!
 
   pod 'Mach1AudioPlayerAPI', :path => '../Mach1AudioPlayerAPI/'
-
+  pod 'KeychainAccess'
+  
 end

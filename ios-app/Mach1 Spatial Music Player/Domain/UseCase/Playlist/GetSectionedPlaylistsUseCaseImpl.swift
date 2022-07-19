@@ -12,13 +12,13 @@ extension InjectedValues {
 }
 
 actor GetSectionedPlaylistsUseCaseImpl: GetSectionedPlaylistsUseCase {
-    @Inject(\.logger) private var logger: LoggerFactory
-    @Inject(\.sectionedPlaylistRepository) private var repository: SectionedPlaylistRepository
+    @inject(\.logger) private var logger: LoggerFactory
+    @inject(\.sectionedPlaylistRepository) private var repository: SectionedPlaylistRepository
     
     func execute() async throws -> [SectionedPlaylist] {
         logger.info("USE CASE: \(type(of: self))", LoggerCategoryType.Playlist)
         let response = try await repository.get()
         logger.info("Response get sectioned playlist: \(response)", LoggerCategoryType.Playlist)
-        return response.map { SectionedPlaylist($0) }
+        return response.map { SectionedPlaylist($0) }.filter { !$0.items.isEmpty }
     }
 }

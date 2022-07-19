@@ -43,7 +43,7 @@ public class Mach1SpatialAudioPlayerImpl: NSObject, Mach1SpatialAudioPlayer, CMH
         self.orientationSourceType = orientationSourceType
         self.mach1MotionManagerPlayer?.onChange(orientationSourceType)
         self.mach1MotionManagerScene?.onChange(orientationSourceType)
-        mach1Scene.sourceTypeChanged()
+        self.mach1Scene.sourceTypeChanged()
         self.isTypeChanged = true
     }
     

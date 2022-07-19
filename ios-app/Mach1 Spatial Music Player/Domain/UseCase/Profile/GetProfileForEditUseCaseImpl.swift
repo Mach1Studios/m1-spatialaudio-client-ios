@@ -19,8 +19,8 @@ extension InjectedValues {
 }
 
 actor GetProfileForEditUseCaseImpl: GetProfileForEditUseCase {
-    @Inject(\.logger) private var logger: LoggerFactory
-    @Inject(\.profileRepository) private var repository: ProfileRepository
+    @inject(\.logger) private var logger: LoggerFactory
+    @inject(\.profileRepository) private var repository: ProfileRepository
     
     func execute() async throws -> ProfileForEdit {
         logger.info("USE CASE: \(type(of: self))", LoggerCategoryType.EditProfile)

@@ -30,7 +30,7 @@ struct AddFriendItemView_Previews: PreviewProvider {
     }
     
     private static func findFriend() -> Friend {
-        var friend: Friend = Friend(FriendDTO(id: UUID.init(), name: "Name", commonFriends: 4, image: nil))
+        var friend: Friend = Friend(FriendDTO(id: UUID.init(), username: "Name", commonFriends: 4, image: nil))
         do {
             let friends: [FriendDTO] = try ReadFile.json(resource: .Friends)
             friend = Friend(friends.first!)

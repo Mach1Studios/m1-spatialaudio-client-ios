@@ -23,8 +23,8 @@ struct Profile: Codable, Equatable, Mach1Profile {
     init(_ dto: ProfileResponseDTO) {
         self.userId = dto.id
         self.userLogin = dto.username
-        self.userCoverImage = dto.coverImage
-        self.userProfileImage = dto.profileImage
-        self.userNumberOfFriends = dto.numberOfFriends
+        self.userCoverImage = dto.coverImage ?? "_"
+        self.userProfileImage = dto.profileImage ?? "_"
+        self.userNumberOfFriends = dto.numberOfFriends ?? 0
     }
 }

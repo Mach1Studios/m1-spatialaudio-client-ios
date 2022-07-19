@@ -1,7 +1,7 @@
 import Foundation
 
 struct SignInRequestDTO: Codable, Equatable {
-    let userName: String
+    let login: String
     let password: String
 }
 

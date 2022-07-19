@@ -41,8 +41,8 @@ struct FriendsView: View {
                 .buttonStyle(Mach1ImageButtonStyle(icon: Constants.Image.System.Back.rawValue, iconColor: .white)).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 25, alignment: .leading).padding(.horizontal).padding(.top, 10)
                     Text(friendsTitle).textStyle(NavigationStyle()).foregroundColor(.white).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 25, alignment: .leading).padding(.horizontal)
                 List {
-                    ForEach(items, id: \.friend.id) {
-                        FriendItemView(friend: $0, navigateTo: AnyView(FriendProfileView(friendId: $0.friend.id)))
+                    ForEach(items, id: \.friend.name) {
+                        FriendItemView(friend: $0, navigateTo: AnyView(FriendProfileView(username: $0.friend.name)))
                         
                     }
                     .listRowBackground(Color.Mach1Darkest)

@@ -14,6 +14,7 @@ class ProfileViewModel: ObservableObject {
     @Inject(\.logoutUseCase) private var logoutUseCase: LogoutUseCase
     @Published private(set) var uiState: ProfileState = .Loading
     
+    @MainActor
     func get() async {
         self.uiState = .Loading
         do {
@@ -24,6 +25,7 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
+    @MainActor
     func logout() async {
         do {
             try await logoutUseCase.execute()

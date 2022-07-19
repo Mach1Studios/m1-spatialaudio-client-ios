@@ -8,7 +8,7 @@ protocol ApiCall {
 }
 
 extension ApiCall {
-    func urlRequest(baseURL: String) throws -> URLRequest {
+    func urlRequest(_ baseURL: String) throws -> URLRequest {
         guard let url = URL(string: baseURL + path) else { throw ApiError.invalidURL }
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue

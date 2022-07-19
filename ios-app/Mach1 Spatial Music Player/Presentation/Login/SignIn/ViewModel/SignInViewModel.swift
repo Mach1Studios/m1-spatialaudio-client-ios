@@ -2,14 +2,20 @@ import Foundation
 import SwiftUI
 
 class SignInViewModel: ObservableObject {
-    @Inject(\.logger) private var logger: LoggerFactory
-    @Inject(\.signInUseCase) private var singInUseCase: SignInUseCase
+    @inject(\.logger) private var logger: LoggerFactory
+    @inject(\.signInUseCase) private var singInUseCase: SignInUseCase
+    @inject(\.authentication) private var userAuthentication: UserAuthentication {
+        didSet(auth) {
+            username = auth.username ?? ""
+            password = auth.password ?? ""
+        }
+    }
     @Published private(set) var uiState: SignInState = .Init
     @Published var username: String = ""
     @Published var password: String = ""
     
     @MainActor
-    func singIn() async {
+    func signIn() async {
         self.uiState = .Loading
         do {
             try await singInUseCase.execute(params: SignIn.init(username: username, password: password))

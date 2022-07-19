@@ -1,4 +1,5 @@
 import Foundation
+import Get
 
 private struct TracksRepositoryKey: InjectionKey {
     static var currentValue: TracksRepository = TracksRepositoryImpl()
@@ -12,8 +13,10 @@ extension InjectedValues {
 }
 
 actor TracksRepositoryImpl: TracksRepository {
-    func get(playlist: UUID) async throws -> [TrackDTO] {
-        throw "Not implemented"
+    @inject(\.apiClient) internal var apiClient: APIClient
+    
+    func get(playlist: UUID) async throws -> PlaylistTracksDTO {
+        return try await apiClient.send(.get("/playlists/\(playlist.uuidString.lowercased())")).value
     }
     
     func getFavourites(search: String?) async throws -> [TrackDTO] {
@@ -22,7 +25,7 @@ actor TracksRepositoryImpl: TracksRepository {
 }
 
 actor MockedTracksRepositoryImpl: TracksRepository {
-    func get(playlist: UUID) async throws -> [TrackDTO] {
+    func get(playlist: UUID) async throws -> PlaylistTracksDTO {
         return try ReadFile.json(resource: .Tracks)
     }
     

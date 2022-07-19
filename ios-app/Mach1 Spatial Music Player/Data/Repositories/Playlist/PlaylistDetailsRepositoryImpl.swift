@@ -1,4 +1,5 @@
 import Foundation
+import Get
 
 private struct PlaylistDetailsRepositoryKey: InjectionKey {
     static var currentValue: PlaylistDetailsRepository = PlaylistDetailsRepositoryImpl()
@@ -12,27 +13,30 @@ extension InjectedValues {
 }
 
 actor PlaylistDetailsRepositoryImpl: PlaylistDetailsRepository {
+    @inject(\.apiClient) internal var apiClient: APIClient
+    
     func details(id: UUID) async throws -> PlaylistDTO {
-        throw "Not implemented"
+        return try await apiClient.send(.get("/playlists/\(id.uuidString.lowercased())")).value
     }
     
-    func getPlaylistsForProfile(profileId: UUID) async throws -> [PlaylistItemDTO] {
-        throw "Not implemented"
+    func getPlaylistsForProfile(username: String) async throws -> UserPlaylistsDTO {
+        return try await apiClient.send(.get("/users/\(username)")).value
     }
 }
 
 actor MockedPlaylistDetailsRepositoryImpl: PlaylistDetailsRepository {
     func details(id: UUID) async throws -> PlaylistDTO {
-        let playlists: [SectionedPlaylistResponseDTO] = try ReadFile.json(resource: .SectionedPlaylists)
-        let selectedPlaylist = playlists
-            .map { $0.items }
-            .joined()
-            .first { $0.id == id }
-        guard let playlist = selectedPlaylist else { throw "Playlist not found" }
-        return PlaylistDTO.init(id: playlist.id, title: playlist.title, url: playlist.url)
+//        let playlists: [SectionedPlaylistResponseDTO] = try ReadFile.json(resource: .SectionedPlaylists)
+//        let selectedPlaylist = playlists
+//            .map { $0.items }
+//            .joined()
+//            .first { $0.id == id }
+//        guard let playlist = selectedPlaylist else { throw "Playlist not found" }
+//        return PlaylistDTO.init(id: playlist.id, name: playlist.name, url: playlist.url)
+        throw ""
     }
     
-    func getPlaylistsForProfile(profileId: UUID) async throws -> [PlaylistItemDTO] {
+    func getPlaylistsForProfile(username: String) async throws -> UserPlaylistsDTO {
         return try ReadFile.json(resource: .PlaylistsOfFriend)
     }
 }

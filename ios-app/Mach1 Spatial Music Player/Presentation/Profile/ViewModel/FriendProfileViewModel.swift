@@ -24,10 +24,10 @@ class FriendProfileViewModel: ObservableObject {
     var isTrackSelected: Bool = false
     
     @MainActor
-    func getProfile(id: UUID) async {
+    func getProfile(username: String) async {
         self.uiState = .Loading
         do {
-            profile = try await getFriendProfileUseCase.execute(id: id)
+            profile = try await getFriendProfileUseCase.execute(username: username)
             self.uiState = .GetFriendProfileSuccess(profile!)
         } catch {
             logger.error("Error when get profile info \(error)", LoggerCategoryType.Profile)
@@ -40,7 +40,7 @@ class FriendProfileViewModel: ObservableObject {
         self.uiState = .Loading
         do {
             if let friend = profile {
-                playlists = try await getPlaylistsForProfileUseCase.execute(profileId: UUID.init(uuidString: friend.id)!)
+                playlists = try await getPlaylistsForProfileUseCase.execute(username: friend.username)
                 self.uiState = .GetPlaylistsSuccess(profile!, playlists)
             }
         } catch {

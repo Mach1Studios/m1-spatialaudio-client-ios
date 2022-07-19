@@ -57,6 +57,14 @@ private struct Overlay: View {
 
 struct HeaderPlaylistDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderPlaylistDetailsView(playlist: Playlist(PlaylistDTO(id: UUID.init(), title: "Title", url: nil)))
+        HeaderPlaylistDetailsView(
+            playlist: Playlist(PlaylistDTO(
+                id: UUID.init(),
+                name: "Title",
+                isPublic: true,
+                owner: nil,
+                tracks: [],
+                url: nil
+            )))
     }
 }

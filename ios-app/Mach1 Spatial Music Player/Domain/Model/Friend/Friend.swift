@@ -8,8 +8,8 @@ struct Friend {
     
     init(_ dto: FriendDTO) {
         self.id = dto.id
-        self.name = dto.name
-        self.commonFriends = dto.commonFriends
-        self.image = dto.image
+        self.name = dto.username
+        self.commonFriends = dto.commonFriends ?? 0
+        self.image = dto.image ?? "_"
     }
 }

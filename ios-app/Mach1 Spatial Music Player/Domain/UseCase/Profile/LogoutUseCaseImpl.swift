@@ -19,11 +19,11 @@ extension InjectedValues {
 }
 
 actor LogoutUseCaseImpl: LogoutUseCase {
-    @Inject(\.logger) private var logger: LoggerFactory
-    @Inject(\.authorization) private var userAuthorization: UserAuthorization
+    @inject(\.logger) private var logger: LoggerFactory
+    @inject(\.authentication) private var userAuthentication: UserAuthentication
     
     func execute() async throws {
         logger.info("USE CASE: \(type(of: self))", LoggerCategoryType.Logout)
-        userAuthorization.invalidate()
+        userAuthentication.invalidate()
     }
 }

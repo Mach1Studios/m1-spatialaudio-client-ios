@@ -10,7 +10,7 @@ import Foundation
 protocol ProfileRepository {
     func getProfileInfo() async throws -> ProfileResponseDTO
     func getProfileForEdit() async throws -> ProfileForEditResponseDTO
-    func editProfile(dto: EditProfileRequestDTO) async throws -> Void
+    func editProfile(_ username: String, dto: EditProfileRequestDTO) async throws -> Void
     func changePassword(dto: ChangeProfilePasswordRequestDTO) async throws -> Void
-    func getFriendProfile(id: UUID) async throws -> FriendProfileResponseDTO
+    func getFriendProfile(username: String) async throws -> FriendProfileResponseDTO
 }

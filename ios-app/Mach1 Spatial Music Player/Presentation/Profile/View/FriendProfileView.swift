@@ -10,20 +10,20 @@ import SwiftUI
 struct FriendProfileView: View {
     @StateObject private var viewModel = FriendProfileViewModel()
     @Translate private var errorTitle = "Error"
-    private var friendId: UUID
+    private var username: String
     
-    init(friendId: UUID) {
+    init(username: String) {
         UITabBar.appearance().unselectedItemTintColor = UIColor(.Mach1Gray)
         UITabBar.appearance().backgroundColor = UIColor(.Mach1Darkest)
         UITabBar.appearance().barTintColor = UIColor(.Mach1Darkest)
-        self.friendId = friendId
-        print("FRIEND \(friendId)")
+        self.username = username
+        print("FRIEND \(username)")
     }
     
     var body: some View {
         Mach1View {
             observeUiState.task {
-                await viewModel.getProfile(id: friendId)
+                await viewModel.getProfile(username: username)
                 await viewModel.getPlaylists()
                 await viewModel.getTracks()
             }
@@ -49,6 +49,6 @@ struct FriendProfileView: View {
 
 struct ProfileFavouriteTracksView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendProfileView(friendId: UUID.init(uuidString: "4d9eff5f-2d95-4994-82f2-caf3959be2c8")!)
+        FriendProfileView(username: "Friendly")
     }
 }

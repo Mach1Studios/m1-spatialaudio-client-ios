@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Get
 
 private struct ProfileRepositoryKey: InjectionKey {
     static var currentValue: ProfileRepository = ProfileRepositoryImpl()
@@ -19,24 +20,26 @@ extension InjectedValues {
 }
 
 class ProfileRepositoryImpl: ProfileRepository {
+    @inject(\.apiClient) private var apiClient: APIClient
+    
     func getProfileInfo() async throws -> ProfileResponseDTO {
-        throw "Not implemented"
+        return try await apiClient.send(.get("/users/me")).value
     }
     
     func getProfileForEdit() async throws -> ProfileForEditResponseDTO {
-        throw "Not implemented"
+        return try await apiClient.send(.get("/users/me")).value
     }
     
-    func editProfile(dto: EditProfileRequestDTO) async throws -> Void {
-        throw "Not implemented"
+    func editProfile(_ username: String, dto: EditProfileRequestDTO) async throws -> Void {
+        try await apiClient.send(.patch("/users/\(username)", body: dto))
     }
     
     func changePassword(dto: ChangeProfilePasswordRequestDTO) async throws -> Void {
         throw "Not implemented"
     }
     
-    func getFriendProfile(id: UUID) async throws -> FriendProfileResponseDTO {
-        throw "Not implemented"
+    func getFriendProfile(username: String) async throws -> FriendProfileResponseDTO {
+        try await apiClient.send(.get("/users/\(username)")).value
     }
 }
 
@@ -49,27 +52,28 @@ class MockedProfileRepositoryImpl: ProfileRepository {
         return try ReadFile.json(resource: .EditProfile)
     }
     
-    func editProfile(dto: EditProfileRequestDTO) async throws -> Void {
-        print("Saving changes for: \(dto)")
+    func editProfile(_ username: String, dto: EditProfileRequestDTO) async throws -> Void {
+        print("Saving changes for \(username): \(dto)")
     }
     
     func changePassword(dto: ChangeProfilePasswordRequestDTO) async throws -> Void {
         
     }
     
-    func getFriendProfile(id: UUID) async throws -> FriendProfileResponseDTO {
-        let friends: [FriendProfileResponseDTO] = try ReadFile.json(resource: .FriendProfile)
-        let friend = friends.first(where: {
-            if let fid = UUID.init(uuidString: $0.id) {
-                    return fid == id
-                } else {
-                    return false
-                }
-        })
-        if let profile = friend {
-            return profile
-        } else {
-            throw "Friend profile does not exist"
-        }
+    func getFriendProfile(username: String) async throws -> FriendProfileResponseDTO {
+        throw ""
+//        let friends: [FriendProfileResponseDTO] = try ReadFile.json(resource: .FriendProfile)
+//        let friend = friends.first(where: {
+//            if let fid = UUID.init() {
+//                    return fid == id
+//                } else {
+//                    return false
+//                }
+//        })
+//        if let profile = friend {
+//            return profile
+//        } else {
+//            throw "Friend profile does not exist"
+//        }
     }
 }

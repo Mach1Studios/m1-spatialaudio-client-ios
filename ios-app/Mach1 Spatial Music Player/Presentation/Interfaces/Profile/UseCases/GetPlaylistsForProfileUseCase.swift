@@ -8,5 +8,5 @@
 import Foundation
 
 protocol GetPlaylistsForProfileUseCase {
-    func execute(profileId: UUID) async throws -> [SectionedPlaylistItem]
+    func execute(username: String) async throws -> [SectionedPlaylistItem]
 }

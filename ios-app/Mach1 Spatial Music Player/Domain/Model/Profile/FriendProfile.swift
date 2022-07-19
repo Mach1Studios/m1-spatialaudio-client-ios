@@ -22,8 +22,8 @@ struct FriendProfile: Codable, Equatable, Mach1BaseProfile {
     init(_ dto: FriendProfileResponseDTO) {
         self.userId = dto.id
         self.userLogin = dto.username
-        self.userCoverImage = dto.coverImage
-        self.userProfileImage = dto.profileImage
+        self.userCoverImage = dto.coverImage ?? "_"
+        self.userProfileImage = dto.profileImage ?? "_"
     }
     
 }

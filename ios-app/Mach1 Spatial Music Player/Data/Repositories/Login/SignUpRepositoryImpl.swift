@@ -1,4 +1,5 @@
 import Foundation
+import Get
 
 private struct SignUpRepositoryKey: InjectionKey {
     static var currentValue: SignUpRepository = SignUpRepositoryImpl()
@@ -12,8 +13,10 @@ extension InjectedValues {
 }
 
 actor SignUpRepositoryImpl: SignUpRepository {
+    @inject(\.apiClient) internal var apiClient: APIClient
+    
     func signUp(dto: SignUpRequestDTO) async throws -> SignUpResponseDTO {
-        throw "Not implemented"
+        return try await apiClient.send(.post("/register", body: dto)).value
     }
 }
 
