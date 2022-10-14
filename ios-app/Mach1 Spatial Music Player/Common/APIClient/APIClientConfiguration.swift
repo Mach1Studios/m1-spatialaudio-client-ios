@@ -9,7 +9,7 @@ import Foundation
 import Get
 
 private struct APIClientKey : InjectionKey {
-    static var currentValue: APIClient = APIClient(baseURL: URL(string: "http://192.168.0.38:3000/api")) {
+    static var currentValue: APIClient = APIClient(baseURL: URL(string: "http://192.168.0.100:8080/api")) {
         $0.delegate = Mach1APIClientDelegate()
     }
 }
@@ -33,6 +33,11 @@ final class Mach1APIClientDelegate : APIClientDelegate {
            status == 401 {
             return await refreshAccessToken()
         }
+        if case .unacceptableStatusCode(let status) = (error as? APIError),
+           status == 403 {
+            return await refreshAccessToken()
+        }
+        
         
         return false
     }

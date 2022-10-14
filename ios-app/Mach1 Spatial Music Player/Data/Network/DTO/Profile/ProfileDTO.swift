@@ -8,11 +8,16 @@
 import Foundation
 
 struct ProfileResponseDTO : Codable, Equatable {
-    let id: String
-    let username: String
+    let user: UserProfileDTO
     let coverImage: String?
     let profileImage: String?
     let numberOfFriends: Int?
+}
+
+struct UserProfileDTO : Codable, Equatable {
+    let id: String
+    let nickname:  String
+    let email: String
 }
 
 struct ProfileForEditResponseDTO : Codable, Equatable {
