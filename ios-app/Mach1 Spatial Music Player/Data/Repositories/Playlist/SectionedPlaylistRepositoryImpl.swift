@@ -16,7 +16,7 @@ actor SectionedPlaylistRepositoryImpl: SectionedPlaylistRepository {
     @inject(\.apiClient) internal var apiClient: APIClient
     
     func get() async throws -> [SectionedPlaylistResponseDTO] {
-        return try await apiClient.send(.get("/playlists/sectioned")).value
+        return try await apiClient.send(.get("/playlists/getByType")).value
     }
 }
 

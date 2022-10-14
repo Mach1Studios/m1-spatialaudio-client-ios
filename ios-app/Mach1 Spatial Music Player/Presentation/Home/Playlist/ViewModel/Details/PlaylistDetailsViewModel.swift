@@ -12,8 +12,9 @@ class PlaylistDetailsViewModel: ObservableObject {
     @MainActor
     func getPlaylist(id: UUID) async {
         do {
-            async let details = getPlaylistDetails.execute(id: id)
-            async let tracks = getPlaylistTracks.execute(id: id)
+            let tracks = try await getPlaylistTracks.execute(id: id)
+            let details = try await getPlaylistDetails.execute(id: id)
+            
             self.uiState = await .Success(try details, try tracks)
         } catch {
             logger.error("Error when get playlist \(id): \(error)", LoggerCategoryType.Playlist)

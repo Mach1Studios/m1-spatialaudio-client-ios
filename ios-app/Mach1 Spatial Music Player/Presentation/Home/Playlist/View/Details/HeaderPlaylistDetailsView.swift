@@ -55,16 +55,16 @@ private struct Overlay: View {
 
 // MARK: Preview
 
-struct HeaderPlaylistDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        HeaderPlaylistDetailsView(
-            playlist: Playlist(PlaylistDTO(
-                id: UUID.init(),
-                name: "Title",
-                isPublic: true,
-                owner: nil,
-                tracks: [],
-                url: nil
-            )))
-    }
-}
+//struct HeaderPlaylistDetailsView_Previews: PreviewProvider {
+//    static var previews: some View {
+        //HeaderPlaylistDetailsView(
+        //    playlist: Playlist(PlaylistDTO(
+        //        id: UUID.init(),
+        //        name: "Title",
+        //        isPublic: true,
+        //        owner: nil,
+        //        tracks: [],
+        //        url: nil
+        //    )))
+//    }
+//}

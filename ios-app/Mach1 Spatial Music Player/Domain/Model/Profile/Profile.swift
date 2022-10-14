@@ -21,8 +21,8 @@ struct Profile: Codable, Equatable, Mach1Profile {
     let userNumberOfFriends: Int
     
     init(_ dto: ProfileResponseDTO) {
-        self.userId = dto.id
-        self.userLogin = dto.username
+        self.userId = dto.user.id
+        self.userLogin = dto.user.nickname
         self.userCoverImage = dto.coverImage ?? "_"
         self.userProfileImage = dto.profileImage ?? "_"
         self.userNumberOfFriends = dto.numberOfFriends ?? 0

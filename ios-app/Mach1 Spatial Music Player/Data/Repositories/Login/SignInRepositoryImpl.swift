@@ -16,7 +16,7 @@ actor SignInRepositoryImpl: SignInRepository {
     @inject(\.apiClient) internal var apiClient: APIClient
     
     func signIn(dto: SignInRequestDTO) async throws -> SignInResponseDTO {
-        return try await apiClient.send(.post("/auth/login", body: dto)).value
+        return try await apiClient.send(.post("/auth", body: dto)).value
     }
 }
 

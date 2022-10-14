@@ -61,7 +61,7 @@ struct Mach1BaseProfileView: View {
 struct Mach1BaseProfileView_Previews: PreviewProvider {
     static var previews: some View {
         Mach1View {
-            Mach1BaseProfileView(profile: Profile(ProfileResponseDTO(id: "4d9eff5f-2d95-4994-82f2-caf3959be2c8", username: "Username", coverImage: nil, profileImage: nil, numberOfFriends: 2)))
+            // Mach1BaseProfileView(profile: Profile(ProfileResponseDTO(id: "4d9eff5f-2d95-4994-82f2-caf3959be2c8", username: "Username", coverImage: nil, profileImage: nil, numberOfFriends: 2)))
         }
     }
 }

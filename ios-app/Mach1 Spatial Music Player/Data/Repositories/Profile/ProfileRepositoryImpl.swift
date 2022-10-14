@@ -21,13 +21,12 @@ extension InjectedValues {
 
 class ProfileRepositoryImpl: ProfileRepository {
     @inject(\.apiClient) private var apiClient: APIClient
-    
     func getProfileInfo() async throws -> ProfileResponseDTO {
-        return try await apiClient.send(.get("/users/me")).value
+        return try await apiClient.send(.get("/profile")).value
     }
     
     func getProfileForEdit() async throws -> ProfileForEditResponseDTO {
-        return try await apiClient.send(.get("/users/me")).value
+        return try await apiClient.send(.get("/profile")).value
     }
     
     func editProfile(_ username: String, dto: EditProfileRequestDTO) async throws -> Void {
