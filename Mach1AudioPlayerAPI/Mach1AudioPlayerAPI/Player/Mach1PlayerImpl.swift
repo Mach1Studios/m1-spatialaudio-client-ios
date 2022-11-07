@@ -1,6 +1,7 @@
 import AVFoundation
 import Mach1SpatialAPI
 import CoreMotion
+// @available (iOS 15.0, *)
 
 public class Mach1PlayerImpl: NSObject, Mach1Player {
     private let mach1Decode = Mach1Decode()
@@ -13,7 +14,7 @@ public class Mach1PlayerImpl: NSObject, Mach1Player {
     private var spatialMixer: SpatialMixer
     private var player: AVPlayer?
     private let url: URL
-    
+
     public init(_ url: URL) {
         // initialize for 8 channel input
         // TODO: Replace with initialization based on `mach1Decode.setDecodeAlgoType(newAlgorithmType: Mach1DecodeAlgoSpatial)` channel count
@@ -31,7 +32,10 @@ public class Mach1PlayerImpl: NSObject, Mach1Player {
         var callbacks = spatialMixer.callbacks()
         var tap: Unmanaged<MTAudioProcessingTap>?
         MTAudioProcessingTapCreate(kCFAllocatorDefault, &callbacks, kMTAudioProcessingTapCreationFlag_PreEffects, &tap)
-        let track = asset.tracks[0]
+        let tracks = asset.tracks(withMediaType: AVMediaType.audio)
+
+
+        let track = tracks.first
         let params = AVMutableAudioMixInputParameters(track: track)
         params.audioTapProcessor = tap?.takeUnretainedValue()
         let audioMix = AVMutableAudioMix()
@@ -90,6 +94,7 @@ public class Mach1PlayerImpl: NSObject, Mach1Player {
     }
 }
 
+@available(iOS 15.0, *)
 extension Mach1PlayerImpl : AVAssetResourceLoaderDelegate {
     public func resourceLoader(_ resourceLoader: AVAssetResourceLoader, shouldWaitForLoadingOfRequestedResource loadingRequest: AVAssetResourceLoadingRequest) -> Bool {
         if let url = loadingRequest.request.url {

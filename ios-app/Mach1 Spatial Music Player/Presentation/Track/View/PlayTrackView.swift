@@ -10,6 +10,8 @@ import SceneKit
 
 struct PlayTrackView: View, OrientationSourceChange {
     let track: Track
+    // let trackId: UUID
+    let spatialAudioPlayer: Mach1SpatialAudioPlayerImpl
     @Environment(\.verticalSizeClass) private var verticalSizeClass: UserInterfaceSizeClass?
 
     @State private var orientationSource: OrientationSourceType = .Device
@@ -21,16 +23,18 @@ struct PlayTrackView: View, OrientationSourceChange {
 //        scene?.background.contents = UIColor(Color.Mach1Dark)
 //        return scene!
 //    }
-    
-    var spatialAudioPlayer: Mach1SpatialAudioPlayerImpl = Mach1SpatialAudioPlayerImpl(
-        {
-            let scene = SCNScene(named: "head.obj")!
-            scene.background.contents = UIColor(Color.Mach1Dark)
-            return scene
-        }(),
-        url: URL(string: "http-mach1://192.168.0.38:3000/m1-debug-m1spatial.wav")!
-//        url: URL.init(fileURLWithPath: Bundle.main.path(forResource: "m1-debug-m1spatial", ofType: "wav")!)
-    )
+    init(track: Track) {
+        self.track = track
+        self.spatialAudioPlayer = Mach1SpatialAudioPlayerImpl(
+            {
+                let scene = SCNScene(named: "head.obj")!
+                scene.background.contents = UIColor(Color.Mach1Dark)
+                return scene
+            }(),
+            url: URL(string: "http://192.168.0.100:8080/wav/static/\(track.name).wav")!
+        )
+        
+    }
     
     var body: some View {
         Mach1View {

@@ -1678,7 +1678,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mach1 Spatial Music Player/Resource/Preview Content\"";
-				DEVELOPMENT_TEAM = 296GZGJY4F;
+				DEVELOPMENT_TEAM = T8WURR7W22;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mach1 Spatial Music Player/Configuration/Mach1-Spatial-Music-Player-Info.plist";
@@ -1714,7 +1714,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mach1 Spatial Music Player/Resource/Preview Content\"";
-				DEVELOPMENT_TEAM = 296GZGJY4F;
+				DEVELOPMENT_TEAM = T8WURR7W22;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mach1 Spatial Music Player/Configuration/Mach1-Spatial-Music-Player-Info.plist";
