@@ -31,7 +31,7 @@ struct PlayTrackView: View, OrientationSourceChange {
                 scene.background.contents = UIColor(Color.Mach1Dark)
                 return scene
             }(),
-            url: URL(string: "http://192.168.0.100:8080/wav/static/\(track.name).wav")!
+            url: URL(string: "http://3.139.251.176/wav/static/\(track.name)")!
         )
         
     }

@@ -9,7 +9,7 @@ import Foundation
 import Get
 
 private struct APIClientKey : InjectionKey {
-    static var currentValue: APIClient = APIClient(baseURL: URL(string: "http://192.168.0.100:8080/api")) {
+    static var currentValue: APIClient = APIClient(baseURL: URL(string: "http://3.139.251.176/api")) {
         $0.delegate = Mach1APIClientDelegate()
     }
 }
